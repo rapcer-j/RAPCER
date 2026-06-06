@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pago de Proyecto Personalizado RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAATfH2beofxjDkdIXYgR25joeIsXHa73n_mma3wyneVfexR7tZ0GsC9iKqgRQVmPH-4E2qgQwuw5hGhn4&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+<main class="module">
+
+<nav class="nav">
+  <div class="nav-left">
+  <p>
+    Use this secure payment page only after RAPCER has reviewed and approved your custom project.
+  </p>
+</section>
+
+<section class="template-grid">
+  <div class="template-card">
+    <h2>Depósito de Proyecto Personalizado</h2>
+    <p>
+      Enter only the approved deposit amount provided by RAPCER.
+      Do not submit payment until your project details and deposit amount have been confirmed.
+    </p>
+
+    <div id="paypal-container-CJTRFLAWW7CUN"></div>
+
+    <p>
+      Once payment is confirmed, RAPCER will activate your custom project process.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "CJTRFLAWW7CUN"
+  }).render("#paypal-container-CJTRFLAWW7CUN");
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");

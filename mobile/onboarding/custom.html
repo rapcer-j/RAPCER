@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CUSTOM PROJECT ONBOARDING | RAPCER</title>
+
+<link rel="stylesheet" href="../module.css">
+
+<style>
+
+.services-select{
+margin-top:35px;
+padding:30px;
+border:1px solid rgba(0,255,210,.25);
+border-radius:28px;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(10px);
+}
+
+.services-select h3{
+font-size:34px;
+color:#20ffd2;
+margin-bottom:10px;
+}
+
+.services-select p{
+color:rgba(255,255,255,.75);
+margin-bottom:25px;
+}
+
+.service-category{
+margin-top:35px;
+}
+
+.service-category h4{
+font-size:24px;
+color:#5cecff;
+margin-bottom:15px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:14px;
+}
+
+.service-card{
+position:relative;
+cursor:pointer;
+}
+
+.service-card input{
+display:none;
+}
+
+.service-card span{
+display:block;
+padding:18px;
+border-radius:18px;
+border:1px solid rgba(0,255,210,.25);
+background:rgba(5,5,15,.75);
+color:white;
+font-weight:700;
+letter-spacing:.04em;
+transition:.25s ease;
+}
+
+.service-card span:hover{
+transform:translateY(-2px);
+border-color:#20ffd2;
+box-shadow:0 0 25px rgba(0,255,210,.18);
+}
+
+.service-card input:checked + span{
+background:linear-gradient(90deg,#20ffd2,#55d8ff,#ff00c8);
+color:#02020a;
+box-shadow:0 0 30px rgba(0,255,210,.45);
+}
+
+.service-card input:checked + span::before{
+content:"✓ ";
+font-weight:900;
+}
+
+.selected-preview{
+margin-top:30px;
+padding:22px;
+border-radius:22px;
+border:1px solid rgba(0,255,210,.25);
+background:rgba(0,0,0,.35);
+}
+
+.selected-preview h4{
+color:#20ffd2;
+margin-bottom:10px;
+}
+
+#selectedServicesPreview{
+line-height:1.8;
+color:white;
+}
+
+.confirmation-box{
+margin-top:40px;
+padding:30px;
+border-radius:28px;
+border:1px solid rgba(255,0,200,.25);
+background:rgba(15,0,20,.35);
+}
+
+.confirmation-box h3{
+font-size:34px;
+margin-bottom:20px;
+color:#20ffd2;
+}
+
+.confirmation-box p{
+font-size:18px;
+line-height:1.7;
+color:white;
+}
+
+.results-btn{
+display:inline-flex;
+margin-top:25px;
+padding:16px 28px;
+border-radius:18px;
+border:1px solid rgba(0,255,210,.35);
+text-decoration:none;
+font-weight:800;
+letter-spacing:.08em;
+color:white;
+transition:.25s ease;
+}
+
+.results-btn:hover{
+transform:translateY(-2px);
+background:linear-gradient(90deg,#20ffd2,#55d8ff,#ff00c8);
+color:#02020a;
+box-shadow:0 0 30px rgba(0,255,210,.45);
+}
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+
+<main class="module theme-packages">
+
+<nav class="nav">
+<div class="nav-left">
+</div>
+</nav>
+
+<section class="onboarding-header">
+<h1>CUSTOM PROJECT ONBOARDING</h1>
+
+<p class="lead">
+Tell RAPCER what your business needs before we start building.
+Do not send payment until RAPCER reviews and confirms your project.
+</p>
+</section>
+
+<section class="formbox">
+
+<h2>Business Information</h2>
+
+<form id="rapcerForm">
+
+<div class="formgrid">
+<input name="Full Name" placeholder="Full Name" required>
+<input name="Business Name" placeholder="Business Name" required>
+<input name="Phone / WhatsApp" placeholder="Phone / WhatsApp" required>
+<input name="Email" placeholder="Email" required>
+<input name="City / State / Country" placeholder="City / State / Country">
+<input name="Business Type" placeholder="Business Type">
+</div>
+
+</section>
+
+<section class="formbox">
+
+<h2>Online Presence</h2>
+
+<div class="formgrid">
+<input name="Instagram" placeholder="Instagram">
+<input name="Facebook" placeholder="Facebook">
+<input name="TikTok" placeholder="TikTok">
+<input name="Website / Current Link" placeholder="Website / Current Link">
+</div>
+
+</section>
+
+<section class="formbox">
+
+<h2>Project Details</h2>
+
+<textarea
+name="Project Description"
+placeholder="Describe what you want RAPCER to build or improve."
+required></textarea>
+
+<textarea
+name="Custom Features"
+placeholder="Do you need booking, payment, QR, Google Maps, automation or custom features?"
+required></textarea>
+
+</section>
+
+<section class="formbox services-select">
+
+<h3>Select RAPCER Services</h3>
+
+<p>
+Choose every service your business needs for this custom quote.
+</p>
+
+<div class="service-category">
+
+<h4>Página Web y Presencia Digital</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Website Creation">
+<span>Creación de Página Web</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Website Redesign">
+<span>Rediseño de Página Web</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Landing Page">
+<span>Landing Page</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="SEO Optimization">
+<span>SEO Optimization</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Google Maps Setup">
+<span>Configuración de Google Maps</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Mobile Optimization">
+<span>Optimización Móvil</span>
+</label>
+
+</div>
+</div>
+
+<div class="service-category">
+
+<h4>Sistemas de Negocio</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Booking System">
+<span>Sistema de Reservas</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Online Payments">
+<span>Pagos en Línea</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="QR System">
+<span>Sistema QR</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="E-Commerce Store">
+<span>Tienda E-Commerce</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Client Intake System">
+<span>Sistema de Registro de Clientes</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Custom Dashboard">
+<span>Dashboard Personalizado</span>
+</label>
+
+</div>
+</div>
+
+<div class="service-category">
+
+<h4>IA y Automatización</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="AI Chatbot">
+<span>Chatbot con IA</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Email Automation">
+<span>Automatización de Email</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="SMS Automation">
+<span>Automatización SMS</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Lead Automation">
+<span>Automatización de Prospectos</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Workflow Automation">
+<span>Automatización de Flujo de Trabajo</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Custom AI System">
+<span>Sistema IA Personalizado</span>
+</label>
+
+</div>
+</div>
+
+<div class="service-category">
+
+<h4>Branding y Marketing</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Logo Design">
+<span>Diseño de Logo</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Business Branding">
+<span>Branding de Negocio</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Marketing System">
+<span>Sistema de Marketing</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Social Media Integration">
+<span>Integración de Redes Sociales</span>
+</label>
+
+</div>
+</div>
+
+<div class="selected-preview">
+
+<h4>Servicios Seleccionados</h4>
+
+<div id="selectedServicesPreview">
+Nada seleccionado todavía.
+</div>
+
+</div>
+
+</section>
+
+<section class="confirmation-box">
+
+<h3>CUSTOM PROJECT CONFIRMATION</h3>
+
+<p>
+Payment is only requested after RAPCER reviews and approves your project.
+</p>
+
+
+
+</section>
+
+<div class="form-actions">
+<button type="submit">
+SUBMIT PROJECT REQUEST
+</button>
+</div>
+
+</form>
+
+</main>
+
+<script src="../../rapcer-language.js?v=13" defer></script>
+<script src="../module.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+emailjs.init({
+publicKey: "C7Navz7uxe7mFVifP"
+});
+
+const form = document.getElementById("rapcerForm");
+
+const preview = document.getElementById("selectedServicesPreview");
+
+function getValue(name) {
+const field = form.querySelector(`[name="${name}"]`);
+return field ? field.value : "";
+}
+
+function getSelectedServices() {
+return Array.from(
+document.querySelectorAll('input[name="Selected Services"]:checked')
+).map(item => item.value);
+}
+
+function updatePreview() {
+
+const selected = getSelectedServices();
+
+if(selected.length === 0){
+preview.innerHTML = "Nada seleccionado todavía.";
+return;
+}
+
+preview.innerHTML = selected.map(
+item => "✓ " + item
+).join("<br>");
+
+}
+
+document.querySelectorAll('input[name="Selected Services"]').forEach(box => {
+box.addEventListener("change", updatePreview);
+});
+
+form.addEventListener("submit", function(e) {
+
+e.preventDefault();
+
+const selected = getSelectedServices();
+
+if(selected.length === 0){
+alert("Selecciona al menos un servicio de RAPCER.");
+return;
+}
+
+const formData = {
+
+name: getValue("Full Name"),
+
+email: getValue("Email"),
+
+title: "CUSTOM PROJECT REQUEST",
+
+message: `
+
+Client Name:
+${getValue("Full Name")}
+
+Business Name:
+${getValue("Business Name")}
+
+Phone / WhatsApp:
+${getValue("Phone / WhatsApp")}
+
+Client Email:
+${getValue("Email")}
+
+Location:
+${getValue("City / State / Country")}
+
+Business Type:
+${getValue("Business Type")}
+
+Instagram:
+${getValue("Instagram")}
+
+Facebook:
+${getValue("Facebook")}
+
+TikTok:
+${getValue("TikTok")}
+
+Website / Current Link:
+${getValue("Website / Current Link")}
+
+Project Description:
+${getValue("Project Description")}
+
+Custom Features:
+${getValue("Custom Features")}
+
+Selected RAPCER Services:
+${selected.map(item => "- " + item).join("\n")}
+
+`
+
+};
+
+emailjs.send(
+"service_0gwo1eh",
+"template_0lpcu2b",
+formData
+)
+
+.then(function () {
+
+alert("Solicitud enviada correctamente. RAPCER revisará tu proyecto.");
+
+window.location.href =
+"../success/onboarding-received.html";
+
+})
+
+.catch(function(error) {
+
+console.error(error);
+
+alert(
+"Error al enviar: " +
+JSON.stringify(error)
+);
+
+});
+
+});
+
+});
+
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const fromPackage = params.get("package");
+  const plan = params.get("plan");
+
+  if (fromPackage !== "premium") return;
+
+  const headerTitle = document.querySelector(".onboarding-header h1, h1");
+  if (headerTitle) headerTitle.textContent = "PREMIUM PRIVATE QUOTE REQUEST";
+
+  const lead = document.querySelector(".onboarding-header .lead, .lead");
+  if (lead) {
+    lead.textContent = "Request private Premium infrastructure add-ons. RAPCER will review your selections and send a final approved quote.";
+  }
+
+  const confirmationTitle = Array.from(document.querySelectorAll("h3,h2"))
+    .find(el => el.textContent.trim().toLowerCase().includes("custom project confirmation"));
+
+  if (confirmationTitle && confirmationTitle.parentElement) {
+    confirmationTitle.parentElement.innerHTML = `
+      <h3>PREMIUM PRIVATE QUOTE CONFIRMATION</h3>
+      <p>
+        Your Premium base package starts with a $4,000 startup deposit and $699/mo managed service.
+        Any selected custom add-ons will be reviewed by RAPCER and added to your final quote after approval.
+      </p>
+      <p>
+        Payment is only requested after RAPCER reviews and approves your Premium custom quote.
+      </p>
+    `;
+  }
+
+  const selectedPreview = document.getElementById("selectedServicesPreview");
+  if (selectedPreview) {
+    selectedPreview.innerHTML = "No Premium add-ons selected yet.";
+  }
+
+  const form = document.getElementById("rapcerForm");
+
+  if (form) {
+    const hiddenPackage = document.createElement("input");
+    hiddenPackage.type = "hidden";
+    hiddenPackage.name = "Selected Package";
+    hiddenPackage.value = "PREMIUM CUSTOM QUOTE";
+
+    const hiddenBase = document.createElement("input");
+    hiddenBase.type = "hidden";
+    hiddenBase.name = "Premium Base";
+    hiddenBase.value = "$4,000 startup deposit + $699/mo managed service";
+
+    form.appendChild(hiddenPackage);
+    form.appendChild(hiddenBase);
+  }
+});
+</script>
+
+<script>
+(function(){
+  function translateOnboardingFull(){
+    var lang = localStorage.getItem("rapcerLang") || "en";
+    if(lang !== "es") return;
+
+    var map = {
+      "STARTER PACKAGE":"PAQUETE INICIAL",
+      "GROWTH PACKAGE":"PAQUETE CRECIMIENTO",
+      "PREMIUM PACKAGE":"PAQUETE PREMIUM",
+      "CUSTOM PACKAGE":"PAQUETE PERSONALIZADO",
+      "CUSTOM PROJECT":"PROYECTO PERSONALIZADO",
+
+      "STARTER BUSINESS SETUP":"CONFIGURACIÓN DE NEGOCIO INICIAL",
+      "GROWTH BUSINESS SETUP":"CONFIGURACIÓN DE NEGOCIO EN CRECIMIENTO",
+      "PREMIUM BUSINESS SETUP":"CONFIGURACIÓN DE NEGOCIO PREMIUM",
+      "CUSTOM PROJECT ONBOARDING":"ONBOARDING DE PROYECTO PERSONALIZADO",
+
+      "What Starter Includes":"Qué Incluye el Paquete Inicial",
+      "What Growth Includes":"Qué Incluye el Paquete Crecimiento",
+      "What Premium Includes":"Qué Incluye el Paquete Premium",
+      "What Custom Includes":"Qué Incluye el Proyecto Personalizado",
+
+      "Starter Does Not Include":"Qué No Incluye el Paquete Inicial",
+      "Growth Does Not Include":"Qué No Incluye el Paquete Crecimiento",
+      "Premium Does Not Include":"Qué No Incluye el Paquete Premium",
+      "Custom Does Not Include":"Qué No Incluye el Proyecto Personalizado",
+
+      "Starter Onboarding Form":"Formulario de Onboarding Inicial",
+      "Growth Onboarding Form":"Formulario de Onboarding Crecimiento",
+      "Premium Onboarding Form":"Formulario de Onboarding Premium",
+      "Custom Onboarding Form":"Formulario de Onboarding Personalizado",
+
+      "Business Information":"Información del Negocio",
+      "Online Presence":"Presencia en Línea",
+      "Starter Project Details":"Detalles del Proyecto Inicial",
+      "Growth Project Details":"Detalles del Proyecto Crecimiento",
+      "Premium Project Details":"Detalles del Proyecto Premium",
+      "Custom Project Details":"Detalles del Proyecto Personalizado",
+      "Photo & Video Session":"Sesión de Fotos y Video",
+      "Package Confirmation":"Confirmación del Paquete",
+      "Project Confirmation":"Confirmación del Proyecto",
+
+      "Professional landing page":"Landing page profesional",
+      "Mobile responsive design":"Diseño adaptable a móvil",
+      "10 business photos":"10 fotos del negocio",
+      "1 promotional video up to 60 seconds":"1 video promocional de hasta 60 segundos",
+      "Instagram, Facebook and TikTok connection":"Conexión con Instagram, Facebook y TikTok",
+      "WhatsApp business contact button":"Botón de contacto por WhatsApp Business",
+      "Google Business profile connection":"Conexión con perfil de Google Business",
+      "Monthly visual content update":"Actualización mensual de contenido visual",
+      "Hosting and maintenance":"Hosting y mantenimiento",
+
+      "Multi-page website":"Sitio web de varias páginas",
+      "Advanced social integration":"Integración avanzada de redes sociales",
+      "QR integration":"Integración de QR",
+      "Google Maps optimization":"Optimización de Google Maps",
+      "Lead/contact system":"Sistema de contactos y prospectos",
+      "Booking system":"Sistema de reservas",
+      "Business automation":"Automatización de negocio",
+
+      "Advanced website systems":"Sistemas web avanzados",
+      "Premium UI/UX":"Diseño UI/UX premium",
+      "Advanced automation":"Automatización avanzada",
+      "CRM & workflows":"CRM y flujos de trabajo",
+      "Premium integrations":"Integraciones premium",
+      "Priority support":"Soporte prioritario",
+      "Dedicated system structure":"Estructura de sistema dedicada",
+
+      "Booking systems":"Sistemas de reservas",
+      "Online payment systems":"Sistemas de pago en línea",
+      "Payment integration":"Integración de pagos",
+      "Automation systems":"Sistemas de automatización",
+      "Automation setup":"Configuración de automatización",
+      "CRM or dashboards":"CRM o dashboards",
+      "E-commerce stores":"Tiendas e-commerce",
+      "Custom applications":"Aplicaciones personalizadas",
+      "Custom portals":"Portales personalizados",
+      "Business applications":"Aplicaciones de negocio",
+      "Advanced AI systems":"Sistemas avanzados de IA",
+      "Custom digital buildout":"Construcción digital personalizada",
+
+      "SUBMIT STARTER REQUEST":"ENVIAR SOLICITUD INICIAL",
+      "SUBMIT GROWTH REQUEST":"ENVIAR SOLICITUD CRECIMIENTO",
+      "SUBMIT PREMIUM REQUEST":"ENVIAR SOLICITUD PREMIUM",
+      "SUBMIT CUSTOM REQUEST":"ENVIAR SOLICITUD PERSONALIZADA"
+    };
+
+    document.querySelectorAll("h1,h2,h3,span,li,button,.package-badge,.onboarding-note").forEach(function(el){
+      var t = el.textContent.trim();
+      if(map[t]) el.textContent = map[t];
+    });
+
+    var placeholders = {
+      "Full Name":"Nombre completo",
+      "Business Name":"Nombre del negocio",
+      "Phone / WhatsApp":"Teléfono / WhatsApp",
+      "Email":"Correo electrónico",
+      "City / State / Country":"Ciudad / Estado / País",
+      "Business Type":"Tipo de negocio",
+      "Instagram":"Instagram",
+      "Facebook":"Facebook",
+      "TikTok":"TikTok",
+      "Google Business Profile link if available":"Link de Google Business si está disponible",
+      "Current website if any":"Página web actual si tiene",
+      "Customer WhatsApp number":"WhatsApp para clientes",
+      "What services or products does your business offer?":"¿Qué servicios o productos ofrece tu negocio?",
+      "Business hours / working days":"Horario del negocio / días de trabajo",
+      "List team members, barbers, stylists or workers you want shown on the page.":"Lista los miembros del equipo, barberos, estilistas o trabajadores que quieres mostrar en la página.",
+      "Preferred colors, style, logo ideas or example websites you like.":"Colores preferidos, estilo, ideas del logo o páginas de ejemplo que te gusten.",
+      "Tell us if you already have logo, photos, videos, menu, flyers or other materials ready.":"Dinos si ya tienes logo, fotos, videos, menú, flyers u otros materiales listos.",
+      "Best day for photo/video session":"Mejor día para la sesión de fotos/video",
+      "Best time for photo/video session":"Mejor hora para la sesión de fotos/video",
+      "Business location for shoot":"Ubicación del negocio para la sesión",
+      "What should RAPCER capture?":"¿Qué debe capturar RAPCER?",
+      "Describe your custom project needs":"Describe las necesidades de tu proyecto personalizado",
+      "What systems, pages, automation or tools do you need?":"¿Qué sistemas, páginas, automatizaciones o herramientas necesitas?",
+      "Project goals":"Objetivos del proyecto",
+      "Estimated budget":"Presupuesto estimado",
+      "Expected launch date":"Fecha esperada de lanzamiento"
+    };
+
+    document.querySelectorAll("input, textarea").forEach(function(el){
+      var p = el.getAttribute("placeholder");
+      if(p && placeholders[p]) el.setAttribute("placeholder", placeholders[p]);
+
+      if(el.value === "STARTER PACKAGE") el.value = "PAQUETE INICIAL";
+      if(el.value === "GROWTH PACKAGE") el.value = "PAQUETE CRECIMIENTO";
+      if(el.value === "PREMIUM PACKAGE") el.value = "PAQUETE PREMIUM";
+      if(el.value === "CUSTOM PACKAGE") el.value = "PAQUETE PERSONALIZADO";
+      if(el.value === "CUSTOM PROJECT") el.value = "PROYECTO PERSONALIZADO";
+    });
+  }
+
+  window.addEventListener("load", function(){
+    setTimeout(translateOnboardingFull, 250);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  function forceCustomES(){
+    if((localStorage.getItem("rapcerLang") || "en") !== "es") return;
+
+    function text(sel,v){var e=document.querySelector(sel); if(e)e.textContent=v;}
+    function ph(n,v){var e=document.querySelector('[name="'+n+'"]'); if(e)e.setAttribute("placeholder",v);}
+
+    text(".package-badge","PROYECTO PERSONALIZADO");
+    text(".onboarding-header h1","ONBOARDING DE PROYECTO PERSONALIZADO");
+
+    document.querySelectorAll("h2").forEach(function(e){
+      var t=e.textContent.trim();
+      if(t==="Business Information") e.textContent="Información del Negocio";
+      if(t==="Online Presence") e.textContent="Presencia en Línea";
+      if(t==="Project Details") e.textContent="Detalles del Proyecto";
+    });
+
+    document.querySelectorAll("h3,h4").forEach(function(e){
+      var t=e.textContent.trim();
+      if(t==="CUSTOM PROJECT CONFIRMATION") e.textContent="CONFIRMACIÓN DEL PROYECTO PERSONALIZADO";
+      if(t==="Sistemas de Negocio") e.textContent="Sistemas de Negocio";
+      if(t==="IA y Automatización") e.textContent="IA y Automatización";
+    });
+
+    document.querySelectorAll("span").forEach(function(e){
+      var map={
+        "Booking System":"Sistema de Reservas",
+        "Online Payments":"Pagos en Línea",
+        "Email Automation":"Automatización de Email",
+        "SMS Automation":"Automatización SMS",
+        "Lead Automation":"Automatización de Prospectos",
+        "Workflow Automation":"Automatización de Flujo de Trabajo",
+        "Business Branding":"Branding de Negocio"
+      };
+      var t=e.textContent.trim();
+      if(map[t]) e.textContent=map[t];
+    });
+
+    ph("Full Name","Nombre completo");
+    ph("Business Name","Nombre del negocio");
+    ph("Phone / WhatsApp","Teléfono / WhatsApp");
+    ph("Email","Correo electrónico");
+    ph("Business Location","Ciudad / Estado / País");
+    ph("Business Type","Tipo de negocio");
+    ph("Project Description","Describe qué quieres que RAPCER construya o mejore");
+
+    var leads=document.querySelectorAll(".lead");
+    leads.forEach(function(e){
+      if(e.textContent.includes("Payment is only requested")){
+        e.textContent="El pago solo se solicita después de que RAPCER revise y apruebe tu proyecto.";
+      }
+    });
+
+    var btn=document.querySelector(".form-actions button, button[type='submit']");
+    if(btn) btn.textContent="ENVIAR SOLICITUD PERSONALIZADA";
+  }
+
+  window.addEventListener("load",function(){setTimeout(forceCustomES,500);});
+})();
+</script>
+<script>
+window.addEventListener("load",function(){
+setTimeout(function(){
+if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
+
+document.querySelectorAll("h2,h3,h4,span,p").forEach(e=>{
+let t=e.textContent.trim();
+let m={
+"Select RAPCER Services":"Selecciona Servicios RAPCER",
+"Choose every service your business needs for this custom quote.":"Elige los servicios que tu negocio necesita para esta cotización personalizada.",
+"Página Web y Presencia Digital":"Página Web y Presencia Digital",
+"Website Creation":"Creación de Página Web",
+"Website Redesign":"Rediseño de Página Web",
+"Landing Page":"Landing Page",
+"SEO Optimization":"Optimización SEO",
+"Google Maps Setup":"Configuración de Google Maps",
+"Mobile Optimization":"Optimización Móvil",
+"QR System":"Sistema QR",
+"E-Commerce Store":"Tienda E-commerce",
+"Client Intake System":"Sistema de Registro de Clientes",
+"Custom Dashboard":"Dashboard Personalizado",
+"AI Chatbot":"Chatbot con IA",
+"Custom AI System":"Sistema IA Personalizado",
+"Logo Design":"Diseño de Logo",
+"Marketing System":"Sistema de Marketing",
+"Social Media Integration":"Integración de Redes Sociales",
+"Servicios Seleccionados":"Servicios Seleccionados",
+"Nada seleccionado todavía.":"Nada seleccionado todavía.",
+"Payment is only requested after RAPCER reviews and approves your project.":"El pago solo se solicita después de que RAPCER revise y apruebe tu proyecto."
+};
+if(m[t])e.textContent=m[t];
+});
+
+document.querySelectorAll("textarea").forEach(e=>{
+if(e.placeholder==="Do you need booking, payment, QR, Google Maps, automation or custom features?")e.placeholder="¿Necesitas reservas, pagos, QR, Google Maps, automatización o funciones personalizadas?";
+});
+
+let b=document.querySelector(".form-actions button,button[type='submit']");
+if(b)b.textContent="ENVIAR SOLICITUD PERSONALIZADA";
+},900);
+});
+</script>
+
+<script>
+window.addEventListener("load",function(){
+setTimeout(function(){
+if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
+
+document.querySelectorAll("h1,h2,h3,h4,span,p,button").forEach(function(e){
+let t=e.textContent.trim();
+let m={
+"CUSTOM PROJECT ONBOARDING":"ONBOARDING DE PROYECTO PERSONALIZADO",
+"Business Information":"Información del Negocio",
+"Online Presence":"Presencia en Línea",
+"Project Details":"Detalles del Proyecto",
+"Select RAPCER Services":"Selecciona Servicios RAPCER",
+"Choose every service your business needs for this custom quote.":"Elige los servicios que tu negocio necesita para esta cotización personalizada.",
+"Página Web y Presencia Digital":"Página Web y Presencia Digital",
+"Sistemas de Negocio":"Sistemas de Negocio",
+"IA y Automatización":"IA y Automatización",
+"Branding y Marketing":"Branding y Marketing",
+"Servicios Seleccionados":"Servicios Seleccionados",
+"Nada seleccionado todavía.":"Nada seleccionado todavía.",
+"CUSTOM PROJECT CONFIRMATION":"CONFIRMACIÓN DEL PROYECTO PERSONALIZADO",
+"Payment is only requested after RAPCER reviews and approves your project.":"El pago solo se solicita después de que RAPCER revise y apruebe tu proyecto.",
+"SUBMIT CUSTOM REQUEST":"ENVIAR SOLICITUD PERSONALIZADA",
+
+"Website Creation":"Creación de Página Web",
+"Website Redesign":"Rediseño de Página Web",
+"Landing Page":"Landing Page",
+"SEO Optimization":"Optimización SEO",
+"Google Maps Setup":"Configuración de Google Maps",
+"Mobile Optimization":"Optimización Móvil",
+"Booking System":"Sistema de Reservas",
+"Online Payments":"Pagos en Línea",
+"QR System":"Sistema QR",
+"E-Commerce Store":"Tienda E-commerce",
+"Client Intake System":"Sistema de Registro de Clientes",
+"Custom Dashboard":"Dashboard Personalizado",
+"AI Chatbot":"Chatbot con IA",
+"Email Automation":"Automatización de Email",
+"SMS Automation":"Automatización SMS",
+"Lead Automation":"Automatización de Prospectos",
+"Workflow Automation":"Automatización de Flujo de Trabajo",
+"Custom AI System":"Sistema IA Personalizado",
+"Logo Design":"Diseño de Logo",
+"Business Branding":"Branding de Negocio",
+"Marketing System":"Sistema de Marketing",
+"Social Media Integration":"Integración de Redes Sociales"
+};
+if(m[t])e.textContent=m[t];
+});
+
+let ph={
+"Full Name":"Nombre completo",
+"Business Name":"Nombre del negocio",
+"Phone / WhatsApp":"Teléfono / WhatsApp",
+"Email":"Correo electrónico",
+"City / State / Country":"Ciudad / Estado / País",
+"Business Type":"Tipo de negocio",
+"Instagram":"Instagram",
+"Facebook":"Facebook",
+"TikTok":"TikTok",
+"Current website if any":"Página web actual si tiene",
+"Describe what you want RAPCER to build or improve.":"Describe qué quieres que RAPCER construya o mejore",
+"Do you need booking, payment, QR, Google Maps, automation or custom features?":"¿Necesitas reservas, pagos, QR, Google Maps, automatización o funciones personalizadas?"
+};
+
+document.querySelectorAll("input,textarea").forEach(function(e){
+let p=e.getAttribute("placeholder");
+if(ph[p])e.setAttribute("placeholder",ph[p]);
+});
+
+let btn=document.querySelector("button[type='submit'],.form-actions button");
+if(btn)btn.textContent="ENVIAR SOLICITUD PERSONALIZADA";
+
+},900);
+});
+</script>

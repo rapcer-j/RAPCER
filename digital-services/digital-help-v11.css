@@ -1,0 +1,164 @@
+/* RAPCER DIGITAL HELP V11 FINAL SAFE */
+
+body {
+  top: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+header {
+  flex-wrap: wrap !important;
+}
+
+
+
+
+
+.rapcer-flow {
+  max-width: 900px;
+  margin: 22px auto 20px auto;
+  padding: 12px 16px;
+  text-align: center;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.5;
+  background: rgba(255,255,255,.72);
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+}
+
+.rapcer-flow strong {
+  color: #168bff;
+}
+
+.rapcer-actions-card,
+.rapcer-paypal-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  margin-bottom: 18px;
+}
+
+.rapcer-actions-card h2,
+.rapcer-paypal-box h2 {
+  color: #168bff;
+  margin-bottom: 10px;
+}
+
+.rapcer-action-buttons {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.rapcer-action-buttons a {
+  display: block;
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 10px;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+}
+
+.rapcer-btn-blue {
+  background: #168bff;
+}
+
+.rapcer-btn-dark {
+  background: #07111f;
+}
+
+.rapcer-btn-gold {
+  background: #f2b233;
+  color: #07111f !important;
+}
+
+.rapcer-paypal-box {
+  overflow: hidden !important;
+}
+
+.rapcer-paypal-box iframe {
+  max-width: 100% !important;
+}
+
+.note {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+@media(max-width:700px) {
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 26px 18px !important;
+    gap: 14px !important;
+  }
+
+  header h1 {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  
+
+  .rapcer-flow {
+    border-radius: 16px !important;
+    font-size: 13px !important;
+    margin: 18px 16px !important;
+  }
+
+  .rapcer-action-buttons {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.service-actions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+
+.service-actions .btn{
+  text-align:center;
+  border-radius:10px;
+  padding:15px 18px;
+  font-weight:900;
+}
+
+.service-actions .primary{
+  background:#2f8cff;
+  color:#fff;
+}
+
+.service-actions .dark{
+  background:#07111f;
+  color:#fff;
+}
+
+.service-actions .pay{
+  background:#f5b335;
+  color:#000;
+}
+
+@media(max-width:700px){
+  .service-actions{
+    grid-template-columns:1fr;
+  }
+}

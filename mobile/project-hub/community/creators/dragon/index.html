@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>RAPCER Community | Creators</title>
+<link rel="stylesheet" href="../../module.css">
+
+<style>
+.community-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  margin-top:35px;
+}
+.community-card{
+  padding:28px;
+  border-radius:24px;
+  border:1px solid rgba(0,255,210,.25);
+  background:rgba(0,0,0,.32);
+  backdrop-filter:blur(10px);
+}
+.community-card small{
+  color:#66fff1;
+  letter-spacing:.18em;
+  font-size:12px;
+}
+.community-card h2{
+  margin:14px 0;
+  color:white;
+  font-size:28px;
+}
+.community-card p{
+  color:rgba(255,255,255,.75);
+  line-height:1.7;
+  font-size:16px;
+}
+.creator-list{
+  margin-top:30px;
+  display:grid;
+  gap:16px;
+}
+.creator-slot{
+  padding:18px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<main class="module">
+
+<nav class="nav">
+  <a href="../../../app-mobile.html" class="btn">← RAPCER</a>
+  <a href="../index.html" class="btn">PROJECT HUB</a>
+</nav>
+
+<section class="agreement-hero">
+  <span class="package-badge">RAPCER COMMUNITY</span>
+  <h1>Creators, Streamers & Community Projects</h1>
+  <p>
+    This is the official community space inside RAPCER. Here we will organize creators,
+    streamers, gamers, content partners, and community-driven projects.
+  </p>
+</section>
+
+<section class="community-grid">
+
+  <div class="community-card">
+    <small>CREATOR PROGRAM</small>
+    <h2>RAPCER Creators</h2>
+    <p>Landing pages, creator profiles, social links, clips, traffic, and community promotion.</p>
+  </div>
+
+  <div class="community-card">
+    <small>STREAMERS</small>
+    <h2>Gaming & Live Content</h2>
+    <p>Each streamer can have a personal RAPCER landing page connected to their channels.</p>
+  </div>
+
+  <div class="community-card">
+    <small>COMMUNITY</small>
+    <h2>Events & Groups</h2>
+    <p>Space for events, teams, churches, organizations, and local community projects.</p>
+  </div>
+
+</section>
+
+<section id="creators" class="section">
+  <h2 style="color:white;margin-top:45px;">Creator Landing Slots</h2>
+
+  <div class="creator-list">
+    <a class="creator-slot" href="creators/blackfrog809pro/index.html">BlackFrog809 Pro — Founder / Streamer</a>
+    <a class="creator-slot" href="creators/dragon/index.html">Dragon — Creator Slot</a>
+    <a class="creator-slot" href="creators/jonathan/index.html">Jonathan — Creator Slot</a>
+    <a class="creator-slot" href="resources/index.html">Creator Resources — Coming Soon</a>
+  </div>
+</section>
+
+</main>
+
+<script src="../../../../../rapcer-language.js?v=16" defer></script>
+</body>
+</html>
+
+<script>
+window.addEventListener("load",function(){
+setTimeout(function(){
+if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
+
+document.querySelectorAll("h1,h2,h3,h4,p,span,a,button,div").forEach(function(e){
+let t=e.textContent.trim();
+let m={
+"PROJECT HUB":"CENTRO DE PROYECTOS",
+"SMALL BUSINESS":"NEGOCIO PEQUEÑO",
+"GROWING BUSINESS":"NEGOCIO EN CRECIMIENTO",
+"ENTERPRISE":"EMPRESA",
+"RAPCER CORE":"NÚCLEO RAPCER",
+"COMMUNITY":"COMUNIDAD",
+
+"Creators, Streamers & Community Projects":"Creadores, Streamers y Proyectos Comunitarios",
+"Creator profiles, live links, Discord groups, events and community growth tools.":"Perfiles de creadores, enlaces en vivo, grupos de Discord, eventos y herramientas de crecimiento comunitario.",
+"Creator Social Links":"Redes Sociales de Creadores",
+"Gaming & Live Content":"Gaming y Contenido en Vivo",
+"Events & Groups":"Eventos y Grupos",
+"Twitch, Kick, YouTube Live and active streamers.":"Twitch, Kick, YouTube Live y streamers activos.",
+"Discord servers, GTA groups, tournaments and community events.":"Servidores de Discord, grupos de GTA, torneos y eventos comunitarios.",
+"RAPCER Community Access":"Acceso a la Comunidad RAPCER",
+"Creator access is managed by RAPCER. Approved creators, streamers and community groups will appear inside the official community sections.":"El acceso de creadores es administrado por RAPCER. Los creadores, streamers y grupos aprobados aparecerán dentro de las secciones oficiales de la comunidad.",
+
+"Join RAPCER Creators":"Unirse a Creadores RAPCER",
+"SAVE":"GUARDAR",
+"Add name and URL":"Agrega nombre y URL",
+"Social Media":"Redes Sociales",
+"Live Streaming":"Transmisión en Vivo",
+"Discord / Events":"Discord / Eventos",
+
+"Behind RAPCER":"Detrás de RAPCER",
+"Back to Project Hub":"Volver al Centro de Proyectos",
+"Back to Mobile Home":"Volver al Inicio Mobile",
+
+"Coming Soon":"Próximamente",
+"We are building the next generation creator ecosystem inside RAPCER: creators, streamers, live content, Discord communities, events and digital growth tools.":"Estamos construyendo la próxima generación del ecosistema de creadores dentro de RAPCER: creadores, streamers, contenido en vivo, comunidades de Discord, eventos y herramientas de crecimiento digital.",
+"← Back to Community":"← Volver a Comunidad",
+"RAPCER Home":"Inicio RAPCER",
+
+"Creator Landing Slots":"Espacios de Landing para Creadores",
+"Creator Resources — Coming Soon":"Recursos para Creadores — Próximamente",
+"Each streamer can have a personal RAPCER landing page connected to their channels.":"Cada streamer puede tener una landing personal de RAPCER conectada a sus canales.",
+"No Discord or event links added yet.":"Aún no hay enlaces de Discord o eventos agregados."
+};
+if(m[t])e.textContent=m[t];
+});
+
+},500);
+});
+</script>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CUSTOM PROJECT ONBOARDING | RAPCER</title>
+
+<link rel="stylesheet" href="../module.css">
+
+<style>
+
+.services-select{
+margin-top:35px;
+padding:30px;
+border:1px solid rgba(0,255,210,.25);
+border-radius:28px;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(10px);
+}
+
+.services-select h3{
+font-size:34px;
+color:#20ffd2;
+margin-bottom:10px;
+}
+
+.services-select p{
+color:rgba(255,255,255,.75);
+margin-bottom:25px;
+}
+
+.service-category{
+margin-top:35px;
+}
+
+.service-category h4{
+font-size:24px;
+color:#5cecff;
+margin-bottom:15px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:14px;
+}
+
+.service-card{
+position:relative;
+cursor:pointer;
+}
+
+.service-card input{
+display:none;
+}
+
+.service-card span{
+display:block;
+padding:18px;
+border-radius:18px;
+border:1px solid rgba(0,255,210,.25);
+background:rgba(5,5,15,.75);
+color:white;
+font-weight:700;
+letter-spacing:.04em;
+transition:.25s ease;
+}
+
+.service-card span:hover{
+transform:translateY(-2px);
+border-color:#20ffd2;
+box-shadow:0 0 25px rgba(0,255,210,.18);
+}
+
+.service-card input:checked + span{
+background:linear-gradient(90deg,#20ffd2,#55d8ff,#ff00c8);
+color:#02020a;
+box-shadow:0 0 30px rgba(0,255,210,.45);
+}
+
+.service-card input:checked + span::before{
+content:"✓ ";
+font-weight:900;
+}
+
+.selected-preview{
+margin-top:30px;
+padding:22px;
+border-radius:22px;
+border:1px solid rgba(0,255,210,.25);
+background:rgba(0,0,0,.35);
+}
+
+.selected-preview h4{
+color:#20ffd2;
+margin-bottom:10px;
+}
+
+#selectedServicesPreview{
+line-height:1.8;
+color:white;
+}
+
+.confirmation-box{
+margin-top:40px;
+padding:30px;
+border-radius:28px;
+border:1px solid rgba(255,0,200,.25);
+background:rgba(15,0,20,.35);
+}
+
+.confirmation-box h3{
+font-size:34px;
+margin-bottom:20px;
+color:#20ffd2;
+}
+
+.confirmation-box p{
+font-size:18px;
+line-height:1.7;
+color:white;
+}
+
+.results-btn{
+display:inline-flex;
+margin-top:25px;
+padding:16px 28px;
+border-radius:18px;
+border:1px solid rgba(0,255,210,.35);
+text-decoration:none;
+font-weight:800;
+letter-spacing:.08em;
+color:white;
+transition:.25s ease;
+}
+
+.results-btn:hover{
+transform:translateY(-2px);
+background:linear-gradient(90deg,#20ffd2,#55d8ff,#ff00c8);
+color:#02020a;
+box-shadow:0 0 30px rgba(0,255,210,.45);
+}
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+
+<main class="module theme-packages">
+
+<nav class="nav">
+<div class="nav-left">
+</div>
+</nav>
+
+<section class="onboarding-header">
+<h1>CUSTOM PROJECT ONBOARDING</h1>
+
+<p class="lead">
+Tell RAPCER what your business needs before we start building.
+Do not send payment until RAPCER reviews and confirms your project.
+</p>
+</section>
+
+<section class="formbox">
+
+<h2>Business Information</h2>
+
+<form id="rapcerForm">
+
+<div class="formgrid">
+<input name="Full Name" placeholder="Full Name" required>
+<input name="Business Name" placeholder="Business Name" required>
+<input name="Phone / WhatsApp" placeholder="Phone / WhatsApp" required>
+<input name="Email" placeholder="Email" required>
+<input name="City / State / Country" placeholder="City / State / Country">
+<input name="Business Type" placeholder="Business Type">
+</div>
+
+</section>
+
+<section class="formbox">
+
+<h2>Online Presence</h2>
+
+<div class="formgrid">
+<input name="Instagram" placeholder="Instagram">
+<input name="Facebook" placeholder="Facebook">
+<input name="TikTok" placeholder="TikTok">
+<input name="Website / Current Link" placeholder="Website / Current Link">
+</div>
+
+</section>
+
+<section class="formbox">
+
+<h2>Project Details</h2>
+
+<textarea
+name="Project Description"
+placeholder="Describe what you want RAPCER to build or improve."
+required></textarea>
+
+<textarea
+name="Custom Features"
+placeholder="Do you need booking, payment, QR, Google Maps, automation or custom features?"
+required></textarea>
+
+</section>
+
+<section class="formbox services-select">
+
+<h3>Select RAPCER Services</h3>
+
+<p>
+Choose every service your business needs for this custom quote.
+</p>
+
+<div class="service-category">
+
+<h4>Website & Digital Presence</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Website Creation">
+<span>Website Creation</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Website Redesign">
+<span>Website Redesign</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Landing Page">
+<span>Landing Page</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="SEO Optimization">
+<span>SEO Optimization</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Google Maps Setup">
+<span>Google Maps Setup</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Mobile Optimization">
+<span>Mobile Optimization</span>
+</label>
+
+</div>
+</div>
+
+<div class="service-category">
+
+<h4>Business Systems</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Booking System">
+<span>Booking System</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Online Payments">
+<span>Online Payments</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="QR System">
+<span>QR System</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="E-Commerce Store">
+<span>E-Commerce Store</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Client Intake System">
+<span>Client Intake System</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Custom Dashboard">
+<span>Custom Dashboard</span>
+</label>
+
+</div>
+</div>
+
+<div class="service-category">
+
+<h4>AI & Automation</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="AI Chatbot">
+<span>AI Chatbot</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Email Automation">
+<span>Email Automation</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="SMS Automation">
+<span>SMS Automation</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Lead Automation">
+<span>Lead Automation</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Workflow Automation">
+<span>Workflow Automation</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Custom AI System">
+<span>Custom AI System</span>
+</label>
+
+</div>
+</div>
+
+<div class="service-category">
+
+<h4>Branding & Marketing</h4>
+
+<div class="service-grid">
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Logo Design">
+<span>Logo Design</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Business Branding">
+<span>Business Branding</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Marketing System">
+<span>Marketing System</span>
+</label>
+
+<label class="service-card">
+<input type="checkbox" name="Selected Services" value="Social Media Integration">
+<span>Social Media Integration</span>
+</label>
+
+</div>
+</div>
+
+<div class="selected-preview">
+
+<h4>Selected Services</h4>
+
+<div id="selectedServicesPreview">
+Nothing selected yet.
+</div>
+
+</div>
+
+</section>
+
+<section class="confirmation-box">
+
+<h3>CUSTOM PROJECT CONFIRMATION</h3>
+
+<p>
+Payment is only requested after RAPCER reviews and approves your project.
+</p>
+
+
+
+</section>
+
+<div class="form-actions">
+<button type="submit">
+SUBMIT PROJECT REQUEST
+</button>
+</div>
+
+</form>
+
+</main>
+
+<script src="../module.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+emailjs.init({
+publicKey: "C7Navz7uxe7mFVifP"
+});
+
+const form = document.getElementById("rapcerForm");
+
+const preview = document.getElementById("selectedServicesPreview");
+
+function getValue(name) {
+const field = form.querySelector(`[name="${name}"]`);
+return field ? field.value : "";
+}
+
+function getSelectedServices() {
+return Array.from(
+document.querySelectorAll('input[name="Selected Services"]:checked')
+).map(item => item.value);
+}
+
+function updatePreview() {
+
+const selected = getSelectedServices();
+
+if(selected.length === 0){
+preview.innerHTML = "Nothing selected yet.";
+return;
+}
+
+preview.innerHTML = selected.map(
+item => "✓ " + item
+).join("<br>");
+
+}
+
+document.querySelectorAll('input[name="Selected Services"]').forEach(box => {
+box.addEventListener("change", updatePreview);
+});
+
+form.addEventListener("submit", function(e) {
+
+e.preventDefault();
+
+const selected = getSelectedServices();
+
+if(selected.length === 0){
+alert("Please select at least one RAPCER service.");
+return;
+}
+
+const formData = {
+
+name: getValue("Full Name"),
+
+email: getValue("Email"),
+
+title: "CUSTOM PROJECT REQUEST",
+
+message: `
+
+Client Name:
+${getValue("Full Name")}
+
+Business Name:
+${getValue("Business Name")}
+
+Phone / WhatsApp:
+${getValue("Phone / WhatsApp")}
+
+Client Email:
+${getValue("Email")}
+
+Location:
+${getValue("City / State / Country")}
+
+Business Type:
+${getValue("Business Type")}
+
+Instagram:
+${getValue("Instagram")}
+
+Facebook:
+${getValue("Facebook")}
+
+TikTok:
+${getValue("TikTok")}
+
+Website / Current Link:
+${getValue("Website / Current Link")}
+
+Project Description:
+${getValue("Project Description")}
+
+Custom Features:
+${getValue("Custom Features")}
+
+Selected RAPCER Services:
+${selected.map(item => "- " + item).join("\n")}
+
+`
+
+};
+
+emailjs.send(
+"service_0gwo1eh",
+"template_0lpcu2b",
+formData
+)
+
+.then(function () {
+
+alert("RAPCER project request sent successfully.");
+
+window.location.href =
+"../success/onboarding-received.html";
+
+})
+
+.catch(function(error) {
+
+console.error(error);
+
+alert(
+"Email failed: " +
+JSON.stringify(error)
+);
+
+});
+
+});
+
+});
+
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const fromPackage = params.get("package");
+  const plan = params.get("plan");
+
+  if (fromPackage !== "premium") return;
+
+  const headerTitle = document.querySelector(".onboarding-header h1, h1");
+  if (headerTitle) headerTitle.textContent = "PREMIUM PRIVATE QUOTE REQUEST";
+
+  const lead = document.querySelector(".onboarding-header .lead, .lead");
+  if (lead) {
+    lead.textContent = "Request private Premium infrastructure add-ons. RAPCER will review your selections and send a final approved quote.";
+  }
+
+  const confirmationTitle = Array.from(document.querySelectorAll("h3,h2"))
+    .find(el => el.textContent.trim().toLowerCase().includes("custom project confirmation"));
+
+  if (confirmationTitle && confirmationTitle.parentElement) {
+    confirmationTitle.parentElement.innerHTML = `
+      <h3>PREMIUM PRIVATE QUOTE CONFIRMATION</h3>
+      <p>
+        Your Premium base package starts with a $4,000 startup deposit and $699/mo managed service.
+        Any selected custom add-ons will be reviewed by RAPCER and added to your final quote after approval.
+      </p>
+      <p>
+        Payment is only requested after RAPCER reviews and approves your Premium custom quote.
+      </p>
+    `;
+  }
+
+  const selectedPreview = document.getElementById("selectedServicesPreview");
+  if (selectedPreview) {
+    selectedPreview.innerHTML = "No Premium add-ons selected yet.";
+  }
+
+  const form = document.getElementById("rapcerForm");
+
+  if (form) {
+    const hiddenPackage = document.createElement("input");
+    hiddenPackage.type = "hidden";
+    hiddenPackage.name = "Selected Package";
+    hiddenPackage.value = "PREMIUM CUSTOM QUOTE";
+
+    const hiddenBase = document.createElement("input");
+    hiddenBase.type = "hidden";
+    hiddenBase.name = "Premium Base";
+    hiddenBase.value = "$4,000 startup deposit + $699/mo managed service";
+
+    form.appendChild(hiddenPackage);
+    form.appendChild(hiddenBase);
+  }
+});
+</script>

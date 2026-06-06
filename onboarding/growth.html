@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GROWTH ONBOARDING | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+<main class="module theme-packages">
+
+<nav class="nav">
+  <div class="nav-left">
+  </div>
+</nav>
+
+<section class="onboarding-header">
+  <span class="package-badge">GROWTH PACKAGE</span>
+  <h1>GROWTH BUSINESS SETUP</h1>
+  <p class="lead">
+    Growth onboarding for businesses ready for stronger visibility, booking systems and basic automation.
+    Payment is requested only after RAPCER reviews and approves your project.
+  </p>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h2>What Growth Includes</h2>
+    <ul>
+      <li>Multi-page website</li>
+      <li>Lead/contact system</li>
+      <li>Booking integration</li>
+      <li>Google Maps integration</li>
+      <li>QR integration</li>
+      <li>Social media integration</li>
+      <li>Basic automation setup</li>
+      <li>Monthly content updates</li>
+      <li>Hosting and maintenance</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Growth Does Not Include</h2>
+    <ul>
+      <li>Advanced CRM systems</li>
+      <li>Custom dashboards</li>
+      <li>Enterprise workflows</li>
+      <li>Complex AI automation</li>
+      <li>Large ecommerce infrastructure</li>
+      <li>Private applications</li>
+    </ul>
+  </div>
+</section>
+
+<section class="formbox">
+<h2>Growth Onboarding Form</h2>
+
+<form id="rapcerForm">
+
+<h3 class="form-section-title">Business Information</h3>
+<div class="formgrid">
+  <input name="Full Name" placeholder="Full Name" required>
+  <input name="Business Name" placeholder="Business Name" required>
+  <input name="Phone / WhatsApp" placeholder="Phone / WhatsApp" required>
+  <input name="Email" placeholder="Business Email" required>
+  <input name="Business Location" placeholder="City / State / Country">
+  <input name="Business Type" placeholder="Business Type">
+</div>
+
+<h3 class="form-section-title">Online Presence</h3>
+<div class="formgrid">
+  <input name="Instagram" placeholder="Instagram">
+  <input name="Facebook" placeholder="Facebook">
+  <input name="TikTok" placeholder="TikTok">
+  <input name="Google Business Link" placeholder="Google Business Profile link if available">
+  <input name="Current Website" placeholder="Current website if any">
+  <input name="Customer WhatsApp" placeholder="Customer WhatsApp number">
+</div>
+
+<h3 class="form-section-title">Growth Project Details</h3>
+<textarea name="Business Services" placeholder="Describe your business and services." required></textarea>
+<textarea name="Booking / Leads / Automation" placeholder="What booking, lead or automation systems do you need?" required></textarea>
+<textarea name="Branding Direction" placeholder="Preferred style, colors or branding direction."></textarea>
+<textarea name="Social Media Links" placeholder="List social media accounts or links."></textarea>
+<textarea name="Extra Notes" placeholder="Anything else RAPCER should know about this Growth project?"></textarea>
+
+<h3 class="form-section-title">Package Confirmation</h3>
+<div class="formgrid">
+  <input name="Selected Package" value="GROWTH PACKAGE" readonly>
+  <input name="Monthly Plan" value="$299/mo" readonly>
+  <input name="Startup Payment" value="$1,799" readonly>
+  <input name="Project Value" value="$3,000" readonly>
+</div>
+
+<div class="onboarding-note">
+  By submitting this form, you understand that this request is subject to RAPCER review.
+  Advanced features outside the Growth Package may require Premium or Custom pricing.
+</div>
+
+<div class="form-actions">
+  <button type="submit">SUBMIT GROWTH REQUEST</button>
+</div>
+
+</form>
+</section>
+
+</main>
+
+<script src="../module.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  emailjs.init({
+    publicKey: "C7Navz7uxe7mFVifP"
+  });
+
+  const form = document.getElementById("rapcerForm");
+
+  function getValue(name) {
+    const field = form.querySelector(`[name="${name}"]`);
+    return field ? field.value : "";
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = {
+      name: getValue("Full Name"),
+      email: getValue("Email"),
+      title: "GROWTH PACKAGE REQUEST",
+
+      message: `
+GROWTH PACKAGE REQUEST
+
+Client Name:
+${getValue("Full Name")}
+
+Business Name:
+${getValue("Business Name")}
+
+Phone / WhatsApp:
+${getValue("Phone / WhatsApp")}
+
+Client Email:
+${getValue("Email")}
+
+Business Location:
+${getValue("Business Location")}
+
+Business Type:
+${getValue("Business Type")}
+
+Instagram:
+${getValue("Instagram")}
+
+Facebook:
+${getValue("Facebook")}
+
+TikTok:
+${getValue("TikTok")}
+
+Google Business Link:
+${getValue("Google Business Link")}
+
+Current Website:
+${getValue("Current Website")}
+
+Customer WhatsApp:
+${getValue("Customer WhatsApp")}
+
+Business Services:
+${getValue("Business Services")}
+
+Booking / Leads / Automation:
+${getValue("Booking / Leads / Automation")}
+
+Branding Direction:
+${getValue("Branding Direction")}
+
+Social Media Links:
+${getValue("Social Media Links")}
+
+Extra Notes:
+${getValue("Extra Notes")}
+
+Selected Package:
+${getValue("Selected Package")}
+
+Monthly Plan:
+${getValue("Monthly Plan")}
+
+Startup Payment:
+${getValue("Startup Payment")}
+
+Project Value:
+${getValue("Project Value")}
+
+Submitted:
+${new Date().toLocaleString()}
+`
+    };
+
+    emailjs.send("service_0gwo1eh", "template_0lpcu2b", formData)
+    .then(function() {
+      alert("Growth request sent successfully. RAPCER will review your project before requesting payment.");
+      window.location.href = "../success/onboarding-received.html";
+    })
+    .catch(function(error) {
+      console.error(error);
+      alert("Email failed: " + JSON.stringify(error));
+    });
+  });
+
+});
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");

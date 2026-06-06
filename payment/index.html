@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pago Aprobado | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+<main class="module approved-payment-page">
+
+<nav class="nav">
+  <div class="nav-left">
+  <p>This secure payment page is only for projects reviewed and approved by RAPCER.</p>
+</section>
+
+<section class="approved-payment-card">
+  <span class="payment-badge">OFFICIAL APPROVED PAYMENT LINK</span>
+
+  <h2 id="packageTitle">STARTER PACKAGE</h2>
+
+  <div class="payment-grid">
+    <div><small>SELECTED PLAN</small><strong id="selectedPlan"></strong></div>
+    <div><small>PROJECT VALUE</small><strong id="projectValue"></strong></div>
+    <div><small>STARTUP PAYMENT</small><strong id="startupAmount"></strong></div>
+    <div><small>MONTHLY SERVICE</small><strong id="monthlyAmount"></strong></div>
+  </div>
+
+  <div class="invoice-box">
+    <h3>Invoice Summary</h3>
+    <p id="invoiceText"></p>
+  </div>
+
+  <div class="terms-box">
+    <h3>Project Terms</h3>
+    <ul>
+      <li>This payment link is sent only after RAPCER approval.</li>
+      <li>Project work begins after payment confirmation.</li>
+      <li>Timeline begins after payment and required materials are received.</li>
+      <li>Extra work outside the selected package may require additional pricing.</li>
+      <li>RAPCER will send receipt and project activation confirmation after payment.</li>
+    </ul>
+  </div>
+
+  <div class="payment-actions">
+    <a class="main-pay" id="depositPay" href="#" target="_blank">PAY DEPOSIT / START PROJECT</a>
+    <a id="quotePay" href="#" target="_blank">REQUEST FINAL PROJECT QUOTE</a>
+    <a href="mailto:rapcerj@gmail.com?subject=RAPCER Contact">CONTACT RAPCER</a>
+  </div>
+
+  <p class="payment-note">
+    After payment is confirmed, RAPCER will send your official receipt and activate your project build process.
+  </p>
+</section>
+
+<section class="rapcer-social">
+  <span>@RAPCER</span>
+  <a href="https://instagram.com/rapcerj" target="_blank" rel="noopener">IG</a>
+  <a href="https://facebook.com/rapcer" target="_blank" rel="noopener">FB</a>
+  <a href="https://tiktok.com/" target="_blank" rel="noopener">TT</a>
+  <a href="mailto:rapcerj@gmail.com?subject=RAPCER Contact">EMAIL</a>
+</section>
+
+</main>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const packageType = params.get("package") || "starter";
+const planType = params.get("plan") || "monthly";
+
+const packages = {
+  starter:{
+    title:"STARTER PACKAGE",
+    value:"$1,200",
+    startupMonthly:"$749",
+    startupFull:"$1,200",
+    monthly:"$149/mo",
+    invoiceMonthly:"El pago inicial incluye $600 de depósito del proyecto más el primer mes del plan de servicio.",
+    invoiceFull:"Pago completo del Paquete Inicial."
+  },
+  growth:{
+    title:"GROWTH PACKAGE",
+    value:"$3,000",
+    startupMonthly:"$1,799",
+    startupFull:"$3,000",
+    monthly:"$299/mo",
+    invoiceMonthly:"El pago inicial incluye $1,500 de depósito del proyecto más el primer mes del plan de servicio.",
+    invoiceFull:"Pago completo del Paquete Crecimiento."
+  },
+  premium:{
+    title:"PREMIUM PACKAGE",
+    value:"$8,000+",
+    startupMonthly:"$4,000",
+    startupFull:"$8,000+",
+    monthly:"$699/mo",
+    invoiceMonthly:"La activación inicial Premium comienza con descubrimiento, planificación y configuración de arquitectura.",
+    invoiceFull:"Pago completo del Paquete Premium."
+  },
+  custom:{
+    title:"CUSTOM PROJECT",
+    value:"CUSTOM",
+    startupMonthly:"MONTO APROBADO",
+    startupFull:"MONTO APROBADO",
+    monthly:"CUSTOM",
+    invoiceMonthly:"Los proyectos personalizados requieren aprobación de RAPCER. Ingresa solamente el monto de depósito aprobado en el portal de Pago de Proyecto Personalizado RAPCER.",
+    invoiceFull:"Los proyectos personalizados requieren aprobación de RAPCER. Ingresa solamente el monto aprobado en el portal de Pago de Proyecto Personalizado RAPCER."
+  }
+};
+
+const paymentLinks = {
+  starter:{
+    monthly:"https://www.paypal.com/ncp/payment/QJW4W6K3FVXPA",
+    full:"https://www.paypal.com/ncp/payment/PDZGTG7VVSXWA",
+    quote:"mailto:rapcerj@gmail.com"
+  },
+  growth:{
+    monthly:"https://www.paypal.com/ncp/payment/TWZ2WVYCF2YWU",
+    full:"https://www.paypal.com/ncp/payment/K2PTLJKWPJ794",
+    quote:"mailto:rapcerj@gmail.com"
+  },
+  premium:{
+    monthly:"https://www.paypal.com/ncp/payment/DCSCDPURL9AFA",
+    full:"https://www.paypal.com/ncp/payment/CQL7SLYDC823G",
+    quote:"mailto:rapcerj@gmail.com"
+  },
+  custom:{
+    monthly:"custom.html",
+    full:"custom.html",
+    quote:"mailto:rapcerj@gmail.com"
+  }
+};
+
+const current = packages[packageType] || packages.starter;
+const links = paymentLinks[packageType] || paymentLinks.starter;
+const isFull = planType === "full";
+
+document.getElementById("packageTitle").innerText = packageType === "premium" && isFull ? "PAQUETE PREMIUM — PAGO COMPLETO" : packageType === "premium" ? "PAQUETE PREMIUM — INICIO MENSUAL" : current.title;
+document.getElementById("projectValue").innerText = current.value;
+
+if(isFull){
+  document.getElementById("selectedPlan").innerText = packageType === "custom" ? "CUSTOM APPROVED PAYMENT" : "PAY IN FULL";
+  document.getElementById("startupAmount").innerText = current.startupFull;
+  document.getElementById("monthlyAmount").innerText = packageType === "custom" ? "N/A" : "N/A";
+  document.getElementById("invoiceText").innerText = current.invoiceFull;
+  document.getElementById("depositPay").innerText = packageType === "custom" ? "OPEN CUSTOM PAYMENT PORTAL" : "PAY FULL PROJECT / START PROJECT";
+  document.getElementById("depositPay").href = links.full;
+}else{
+  document.getElementById("selectedPlan").innerText = packageType === "custom" ? "CUSTOM APPROVED DEPOSIT" : "MONTHLY PLAN";
+  document.getElementById("startupAmount").innerText = current.startupMonthly;
+  document.getElementById("monthlyAmount").innerText = current.monthly;
+  document.getElementById("invoiceText").innerText = current.invoiceMonthly;
+  document.getElementById("depositPay").innerText = packageType === "custom" ? "OPEN CUSTOM PAYMENT PORTAL" : "PAY DEPOSIT / START PROJECT";
+  document.getElementById("depositPay").href = links.monthly;
+}
+
+document.getElementById("quotePay").href = links.quote;
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PREMIUM ONBOARDING | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+<main class="module theme-packages">
+
+<nav class="nav">
+  <div class="nav-left">
+  </div>
+</nav>
+
+<section class="onboarding-header">
+  <span class="package-badge">PREMIUM PACKAGE</span>
+  <h1>PREMIUM PRIVATE INFRASTRUCTURE SETUP</h1>
+  <p class="lead">
+    Premium private onboarding for businesses ready for advanced systems, automation, integrations and scalable digital infrastructure. Approval is required before activation.
+    Payment is requested only after RAPCER reviews and approves your project.
+  </p>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h2>Premium Infrastructure Includes</h2>
+    <ul>
+      <li>Advanced website systems</li>
+      <li>Premium UI/UX structure</li>
+      <li>CRM and workflow planning</li>
+      <li>Advanced automation setup</li>
+      <li>Premium integrations</li>
+      <li>Priority support</li>
+      <li>Dedicated system structure</li>
+      <li>Infrastructure planning</li>
+      <li>System architecture review</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Approval Required</h2>
+    <ul>
+      <li>Final pricing depends on scope</li>
+      <li>Custom integrations reviewed separately</li>
+      <li>Infrastructure requirements may vary</li>
+      <li>Complex AI systems require approval</li>
+      <li>Large ecommerce systems reviewed independently</li>
+      <li>Custom dashboards may require additional pricing</li>
+    </ul>
+  </div>
+</section>
+
+<section class="formbox">
+<h2>Premium Project Form</h2>
+
+<form id="rapcerForm">
+
+<h3 class="form-section-title">Business Information</h3>
+<div class="formgrid">
+  <input name="Full Name" placeholder="Full Name" required>
+  <input name="Business Name" placeholder="Business Name" required>
+  <input name="Phone / WhatsApp" placeholder="Phone / WhatsApp" required>
+  <input name="Email" placeholder="Business Email" required>
+  <input name="Business Location" placeholder="City / State / Country">
+  <input name="Business Type" placeholder="Business Type">
+</div>
+
+<h3 class="form-section-title">Current Digital Presence</h3>
+<div class="formgrid">
+  <input name="Current Website" placeholder="Current website if any">
+  <input name="Instagram" placeholder="Instagram">
+  <input name="Facebook" placeholder="Facebook">
+  <input name="TikTok" placeholder="TikTok">
+  <input name="Google Business Link" placeholder="Google Business Profile link if available">
+  <input name="Current Systems" placeholder="Current systems/tools you use">
+</div>
+
+<h3 class="form-section-title">Premium Project Details</h3>
+<textarea name="Business Infrastructure Goals" placeholder="Describe your business infrastructure goals." required></textarea>
+<textarea name="Systems Needed" placeholder="What systems, automations or integrations do you need?" required></textarea>
+<textarea name="CRM / Workflows / Portals" placeholder="Do you need CRM, workflows, dashboards, portals or client systems?"></textarea>
+<textarea name="Automation Needs" placeholder="Describe any automation, email, SMS, booking, payment or lead flow needs."></textarea>
+<textarea name="Existing Systems To Connect" placeholder="Any existing systems RAPCER must connect to?"></textarea>
+<textarea name="Branding / UI Direction" placeholder="Describe your preferred branding, UI/UX and design direction."></textarea>
+<textarea name="Extra Notes" placeholder="Additional premium project details."></textarea>
+
+<h3 class="form-section-title">Package Confirmation</h3>
+<div class="formgrid">
+  <input name="Selected Package" value="PREMIUM PACKAGE" readonly>
+  <input name="Monthly Plan" value="$699/mo" readonly>
+  <input name="Startup Deposit" value="$4,000" readonly>
+  <input name="Final Quote" value="$8,000+" readonly>
+</div>
+
+<div class="onboarding-note">
+  By submitting this form, you understand that Premium projects require RAPCER review.
+  Final pricing may depend on scope, integrations, infrastructure, automation and custom system requirements.
+</div>
+
+<div class="form-actions">
+  <button type="submit">SUBMIT PREMIUM REQUEST</button>
+</div>
+
+</form>
+</section>
+
+</main>
+
+<script src="../module.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  emailjs.init({
+    publicKey: "C7Navz7uxe7mFVifP"
+  });
+
+  const form = document.getElementById("rapcerForm");
+
+  function getValue(name) {
+    const field = form.querySelector(`[name="${name}"]`);
+    return field ? field.value : "";
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = {
+      name: getValue("Full Name"),
+      email: getValue("Email"),
+      title: "PREMIUM PACKAGE REQUEST",
+
+      message: `
+PREMIUM PACKAGE REQUEST
+
+Client Name:
+${getValue("Full Name")}
+
+Business Name:
+${getValue("Business Name")}
+
+Phone / WhatsApp:
+${getValue("Phone / WhatsApp")}
+
+Client Email:
+${getValue("Email")}
+
+Business Location:
+${getValue("Business Location")}
+
+Business Type:
+${getValue("Business Type")}
+
+Current Website:
+${getValue("Current Website")}
+
+Instagram:
+${getValue("Instagram")}
+
+Facebook:
+${getValue("Facebook")}
+
+TikTok:
+${getValue("TikTok")}
+
+Google Business Link:
+${getValue("Google Business Link")}
+
+Current Systems:
+${getValue("Current Systems")}
+
+Business Infrastructure Goals:
+${getValue("Business Infrastructure Goals")}
+
+Systems Needed:
+${getValue("Systems Needed")}
+
+CRM / Workflows / Portals:
+${getValue("CRM / Workflows / Portals")}
+
+Automation Needs:
+${getValue("Automation Needs")}
+
+Existing Systems To Connect:
+${getValue("Existing Systems To Connect")}
+
+Branding / UI Direction:
+${getValue("Branding / UI Direction")}
+
+Extra Notes:
+${getValue("Extra Notes")}
+
+Selected Package:
+${getValue("Selected Package")}
+
+Monthly Plan:
+${getValue("Monthly Plan")}
+
+Startup Deposit:
+${getValue("Startup Deposit")}
+
+Final Quote:
+${getValue("Final Quote")}
+
+Submitted:
+${new Date().toLocaleString()}
+`
+    };
+
+    emailjs.send("service_0gwo1eh", "template_0lpcu2b", formData)
+    .then(function() {
+      alert("Premium request sent successfully. RAPCER will review your project before requesting payment.");
+      window.location.href = "../success/onboarding-received.html";
+    })
+    .catch(function(error) {
+      console.error(error);
+      alert("Email failed: " + JSON.stringify(error));
+    });
+  });
+
+});
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Gaming & Live Content | RAPCER</title>
+<link rel="stylesheet" href="../../../module.css">
+
+<style>
+.live-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+  gap:16px;
+  margin-top:30px;
+}
+
+.live-card{
+  position:relative;
+  overflow:hidden;
+  min-height:210px;
+  padding:16px;
+  border-radius:22px;
+  border:1px solid rgba(0,255,120,.28);
+  background:
+    radial-gradient(circle at top left,rgba(0,255,120,.18),transparent 42%),
+    rgba(0,0,0,.42);
+  color:white;
+  box-shadow:0 0 24px rgba(0,255,120,.08);
+}
+
+.live-card img{
+  width:72px;
+  height:72px;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.18);
+  margin-bottom:12px;
+}
+
+.live-card h3{
+  margin:6px 0 4px;
+  font-size:18px;
+}
+
+.live-card p{
+  margin:0 0 12px;
+  color:rgba(255,255,255,.72);
+  font-size:13px;
+}
+
+.live-badge{
+  display:inline-flex;
+  margin-bottom:10px;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,0,70,.18);
+  color:#ff4d7d;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+
+.live-info a{
+  
+  text-align:center;
+  padding:10px;
+  border-radius:14px;
+  border:1px solid rgba(102,255,241,.5);
+  color:#66fff1;
+  text-decoration:none;
+  font-weight:900;
+  background:linear-gradient(90deg,rgba(0,255,210,.18),rgba(0,255,120,.28));box-shadow:0 0 18px rgba(0,255,120,.35);
+}
+
+.live-empty{
+  color:white;
+  padding:22px;
+  border-radius:20px;
+  border:1px dashed rgba(255,255,255,.2);
+}
+
+
+.live-info{
+  text-align:center;
+  margin-top:10px;
+}
+
+.live-info h3{
+  margin:0 0 10px;
+  color:white;
+  font-size:15px;
+  word-break:break-word;
+}
+
+.delete-live{margin-top:10px;width:100%;padding:8px;border-radius:12px;border:1px solid rgba(255,80,120,.55);background:rgba(255,0,60,.12);color:#ff6b91;font-weight:900;cursor:pointer}
+</style>
+</head>
+
+<body>
+<main class="module">
+
+<nav class="nav">
+  <a href="../index.html" class="btn">← Community</a>
+  <a href="../../../../app-mobile.html" class="btn">RAPCER Home</a>
+</nav>
+
+<section class="agreement-hero">
+  <span class="package-badge">LIVE HUB</span>
+  <h1>Gaming & Live Content</h1>
+  <p>Twitch, Kick, YouTube Live and active streamers.</p>
+</section>
+
+<div id="list" class="live-grid"></div>
+
+</main>
+
+<script>
+const items = JSON.parse(localStorage.getItem("rapcerCommunityItems") || "[]").filter(i => i.type === "live");
+
+document.getElementById("list").innerHTML = items.length ? items.map(i => {
+  const image = i.image ? '<img src="' + i.image + '">' : '';
+  return '<div class="live-card">' +
+    '<span class="live-badge">STREAM</span>' +
+    image +
+    '<h3>' + i.name + '</h3>' +
+    '<p>Live Streaming</p>' +
+    '<a href="' + i.url + '" target="_blank">OPEN LIVE ▶</a>' +
+  '</div>';
+}).join("") : '<div class="live-empty">No live links added yet.</div>';
+
+function deleteLive(name){
+  const items = JSON.parse(localStorage.getItem("rapcerCommunityItems") || "[]");
+  const next = items.filter(i => !(i.type === "live" && i.name === name));
+  localStorage.setItem("rapcerCommunityItems", JSON.stringify(next));
+  location.reload();
+}
+</script>
+
+<script src="../../../../rapcer-language.js?v=16" defer></script>
+</body>
+</html>
+
+<script>
+window.addEventListener("load",function(){
+setTimeout(function(){
+if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
+
+document.querySelectorAll("h1,h2,h3,h4,p,span,a,button,div").forEach(function(e){
+let t=e.textContent.trim();
+let m={
+"PROJECT HUB":"CENTRO DE PROYECTOS",
+"SMALL BUSINESS":"NEGOCIO PEQUEÑO",
+"GROWING BUSINESS":"NEGOCIO EN CRECIMIENTO",
+"ENTERPRISE":"EMPRESA",
+"RAPCER CORE":"NÚCLEO RAPCER",
+"COMMUNITY":"COMUNIDAD",
+
+"Creators, Streamers & Community Projects":"Creadores, Streamers y Proyectos Comunitarios",
+"Creator profiles, live links, Discord groups, events and community growth tools.":"Perfiles de creadores, enlaces en vivo, grupos de Discord, eventos y herramientas de crecimiento comunitario.",
+"Creator Social Links":"Redes Sociales de Creadores",
+"Gaming & Live Content":"Gaming y Contenido en Vivo",
+"Events & Groups":"Eventos y Grupos",
+"Twitch, Kick, YouTube Live and active streamers.":"Twitch, Kick, YouTube Live y streamers activos.",
+"Discord servers, GTA groups, tournaments and community events.":"Servidores de Discord, grupos de GTA, torneos y eventos comunitarios.",
+"RAPCER Community Access":"Acceso a la Comunidad RAPCER",
+"Creator access is managed by RAPCER. Approved creators, streamers and community groups will appear inside the official community sections.":"El acceso de creadores es administrado por RAPCER. Los creadores, streamers y grupos aprobados aparecerán dentro de las secciones oficiales de la comunidad.",
+
+"Join RAPCER Creators":"Unirse a Creadores RAPCER",
+"SAVE":"GUARDAR",
+"Add name and URL":"Agrega nombre y URL",
+"Social Media":"Redes Sociales",
+"Live Streaming":"Transmisión en Vivo",
+"Discord / Events":"Discord / Eventos",
+
+"Behind RAPCER":"Detrás de RAPCER",
+"Back to Project Hub":"Volver al Centro de Proyectos",
+"Back to Mobile Home":"Volver al Inicio Mobile",
+
+"Coming Soon":"Próximamente",
+"We are building the next generation creator ecosystem inside RAPCER: creators, streamers, live content, Discord communities, events and digital growth tools.":"Estamos construyendo la próxima generación del ecosistema de creadores dentro de RAPCER: creadores, streamers, contenido en vivo, comunidades de Discord, eventos y herramientas de crecimiento digital.",
+"← Back to Community":"← Volver a Comunidad",
+"RAPCER Home":"Inicio RAPCER",
+
+"Creator Landing Slots":"Espacios de Landing para Creadores",
+"Creator Resources — Coming Soon":"Recursos para Creadores — Próximamente",
+"Each streamer can have a personal RAPCER landing page connected to their channels.":"Cada streamer puede tener una landing personal de RAPCER conectada a sus canales.",
+"No Discord or event links added yet.":"Aún no hay enlaces de Discord o eventos agregados."
+};
+if(m[t])e.textContent=m[t];
+});
+
+},500);
+});
+</script>

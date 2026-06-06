@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Agreement | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+
+<main class="module agreement-page">
+
+<nav class="nav">
+<div class="nav-left">
+</div>
+</nav>
+
+<section class="agreement-hero">
+
+<h1 id="packageTitle">PACKAGE AGREEMENT</h1>
+
+<p class="lead">
+Review your selected package, project structure and payment terms before continuing to onboarding.
+</p>
+
+</section>
+
+<section class="agreement-box">
+
+<div class="agreement-summary">
+
+<div class="agreement-card">
+<small>PACKAGE</small>
+<strong id="packageName">STARTER</strong>
+</div>
+
+<div class="agreement-card">
+<small>PLAN</small>
+<strong id="planType">MONTHLY — $149/mo</strong>
+</div>
+
+<div class="agreement-card">
+<small>PROJECT VALUE</small>
+<strong id="projectValue">$1,200</strong>
+</div>
+
+<div class="agreement-card">
+<small>STARTUP DEPOSIT</small>
+<strong id="startupValue">$749</strong>
+</div>
+
+</div>
+
+<div class="agreement-services">
+
+<h2>Starter Service Structure</h2>
+
+<ul id="serviceList">
+<li>Starter package structure review</li>
+      <li>Managed monthly service plan</li>
+      <li>RAPCER hosting and infrastructure terms</li>
+      <li>Startup deposit and monthly payment terms</li>
+      <li>Project ownership and transfer terms</li>
+      <li>Service limitations and upgrade requirements</li>
+</ul>
+
+</div>
+
+<div class="agreement-warning">
+
+<h3>Important Information</h3>
+
+<p>
+No payment is required until RAPCER reviews and approves your request.</p>
+
+<p>Starter requires a  startup deposit and a /mo monthly plan.</p>
+
+<p>The full project value is $1,200.</p>
+
+<p>Website ownership transfers after the full project balance is completed.</p>
+
+<p>After the first month, the active monthly service is $149/mo. Hosting and services may be suspended if the monthly plan is canceled or unpaid.</p>
+
+<p>Advanced systems like booking, payments, automation, CRM, ecommerce or dashboards are not included in Starter.
+</p>
+
+</div>
+
+<div class="agreement-terms">
+
+<label>
+<input type="checkbox" id="agreeCheck">
+I agree to RAPCER's project structure, payment terms and onboarding process.
+</label>
+
+</div>
+
+<div class="agreement-actions">
+
+<a id="continueBtn" class="disabled-btn">
+CONTINUE TO ONBOARDING
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const packageType = params.get("package");
+const planType = params.get("plan");
+
+const packageTitle = document.getElementById("packageTitle");
+const packageName = document.getElementById("packageName");
+const projectValue = document.getElementById("projectValue");
+const startupValue = document.getElementById("startupValue");
+const serviceList = document.getElementById("serviceList");
+const planText = document.getElementById("planType");
+
+const packages = {
+
+starter:{
+title:"STARTER PACKAGE",
+value:"$1,200",
+monthly:"$749",
+full:"$1,200",
+services:[
+"Modern landing page",
+"Mobile responsive design",
+"Contact form setup",
+"Social media integration",
+"QR code setup",
+"Google Maps integration",
+"Launch-ready deployment"
+]
+},
+
+growth:{
+title:"GROWTH PACKAGE",
+value:"$3,000",
+monthly:"$1,799",
+full:"$3,000",
+services:[
+"Multi-page website",
+"Advanced social integration",
+"QR integration",
+"Lead/contact system",
+"Booking system",
+"Business automation",
+"Google Maps optimization"
+]
+},
+
+premium:{
+title:"PREMIUM PACKAGE",
+value:"$8,000+",
+monthly:"$4,699",
+full:"$8,000+",
+services:[
+"Advanced website systems",
+"Premium UI/UX",
+"CRM & workflows",
+"Advanced automation",
+"Premium integrations",
+"Priority support",
+"Dedicated infrastructure"
+]
+}
+
+};
+
+const current = packages[packageType] || packages.starter;
+
+packageTitle.innerText = current.title + " AGREEMENT";
+
+packageName.innerText = current.title;
+
+projectValue.innerText = current.value;
+
+planText.innerText = planType === "full"
+? "PAY IN FULL"
+: "MONTHLY PLAN";
+
+startupValue.innerText = planType === "full"
+? current.full
+: current.monthly;
+
+serviceList.innerHTML = "";
+
+current.services.forEach(service=>{
+serviceList.innerHTML += `<li>${service}</li>`;
+});
+
+const checkbox = document.getElementById("agreeCheck");
+const continueBtn = document.getElementById("continueBtn");
+
+checkbox.addEventListener("change",()=>{
+
+if(checkbox.checked){
+
+continueBtn.classList.remove("disabled-btn");
+
+continueBtn.href =
+../onboarding/${packageType}.html?plan=${planType}
+
+}else{
+
+continueBtn.classList.add("disabled-btn");
+continueBtn.removeAttribute("href");
+
+}
+
+});
+
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const plan = params.get("plan");
+
+  if (plan !== "full") return;
+
+  function setCard(labelText, newLabel, newValue) {
+    document.querySelectorAll(".info-label, small").forEach(label => {
+      if (label.textContent.trim().toUpperCase() === labelText.toUpperCase()) {
+        label.textContent = newLabel;
+        const value = label.parentElement.querySelector(".info-value, strong");
+        if (value) value.textContent = newValue;
+      }
+    });
+  }
+
+  setCard("PLAN", "PLAN", "PAY IN FULL");
+  setCard("STARTUP DEPOSIT", "PAYMENT REQUIRED", "$1,200");
+
+  const infoBox = Array.from(document.querySelectorAll("h2,h3"))
+    .find(h => h.textContent.trim().toLowerCase().includes("important information"));
+
+  if (infoBox && infoBox.parentElement) {
+    infoBox.parentElement.innerHTML = `
+      <h3>Important Information</h3>
+      <p>No payment is required until RAPCER reviews and approves your request.</p>
+      <p>Pay In Full requires the full approved project payment before project activation.</p>
+      <p>Website ownership transfer becomes available after project completion and full payment confirmation.</p>
+      <p>Hosting may continue with RAPCER or may be transferred after final project delivery.</p>
+      <p>Advanced systems like booking, payments, automation, CRM, ecommerce or dashboards are not included in Starter.</p>
+    `;
+  }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const packageType = params.get("package") || "starter";
+  const planType = params.get("plan") || "monthly";
+  const isFull = planType === "full";
+
+  const data = {
+    starter: {
+      name: "STARTER",
+      projectValue: "$1,200",
+      monthly: "$149/mo",
+      startup: "$749",
+      full: "$1,200",
+      structure: [
+        "Starter package structure review",
+        "Managed monthly service plan",
+        "RAPCER hosting and infrastructure terms",
+        "Startup deposit and monthly payment terms",
+        "Project ownership and transfer terms",
+        "Service limitations and upgrade requirements"
+      ],
+      monthlyInfo: [
+        "No payment is required until RAPCER reviews and approves your request.",
+        "The $749 startup deposit includes the first month of service.",
+        "After the first month, the active monthly service continues at $149/mo.",
+        "The full Starter project value is $1,200.",
+        "Website ownership transfers after the full project balance is completed.",
+        "Hosting and services may be suspended if the monthly plan is canceled or unpaid.",
+        "Advanced systems like booking, payments, automation, CRM, ecommerce or dashboards are not included in Starter."
+      ],
+      fullInfo: [
+        "No payment is required until RAPCER reviews and approves your request.",
+        "Pay In Full requires the full approved project payment before project activation.",
+        "Website ownership transfer becomes available after project completion and full payment confirmation.",
+        "Hosting may continue with RAPCER or may be transferred after final project delivery.",
+        "Advanced systems like booking, payments, automation, CRM, ecommerce or dashboards are not included in Starter."
+      ]
+    },
+
+    growth: {
+      name: "GROWTH",
+      projectValue: "$3,000",
+      monthly: "$299/mo",
+      startup: "$1,799",
+      full: "$3,000",
+      structure: [
+        "Growth package structure review",
+        "Multi-page website structure",
+        "Lead/contact system planning",
+        "Booking system terms",
+        "Basic automation and integration terms",
+        "Project ownership and transfer terms",
+        "Service limitations and upgrade requirements"
+      ],
+      monthlyInfo: [
+        "No payment is required until RAPCER reviews and approves your request.",
+        "The $1,799 startup payment includes project startup activation and the first month of service.",
+        "After the first month, the active monthly service continues at $299/mo.",
+        "The full Growth project value is $3,000.",
+        "Website ownership transfers after the full project balance is completed.",
+        "Hosting, systems and services may be suspended if the monthly plan is canceled or unpaid.",
+        "Advanced custom applications, dashboards, CRM systems and complex automations may require Premium or Custom pricing."
+      ],
+      fullInfo: [
+        "No payment is required until RAPCER reviews and approves your request.",
+        "Pay In Full requires the full Growth project payment of $3,000 before project activation.",
+        "Website ownership transfer becomes available after project completion and full payment confirmation.",
+        "Hosting may continue with RAPCER or may be transferred after final project delivery.",
+        "Advanced custom applications, dashboards, CRM systems and complex automations may require Premium or Custom pricing."
+      ]
+    },
+
+    premium: {
+      name: "PREMIUM",
+      projectValue: "$8,000+",
+      monthly: "$699/mo",
+      startup: "$4,000",
+      full: "$8,000+",
+      structure: [
+        "Premium private infrastructure review",
+        "Advanced website and system architecture",
+        "CRM and workflow planning",
+        "Advanced automation and integration terms",
+        "Premium infrastructure and support terms",
+        "Custom scope and final quote requirements",
+        "Project ownership and transfer terms"
+      ],
+      monthlyInfo: [
+        "No payment is required until RAPCER reviews and approves your request.",
+        "Premium projects require approval before activation. Approved Premium projects start with a $4,000 startup deposit.",
+        "After activation, the active monthly service starts at $699/mo.",
+        "Premium final pricing starts at $8,000+ and depends on approved scope, integrations and infrastructure requirements.",
+        "Ownership and transfer terms are confirmed after final project scope and balance completion.",
+        "Advanced custom systems may require additional approved pricing."
+      ],
+      fullInfo: [
+        "No payment is required until RAPCER reviews and approves your request.",
+        "Premium Pay In Full requires a final approved quote before activation.",
+        "Premium final pricing starts at $8,000+ and depends on approved scope, integrations and infrastructure requirements.",
+        "Ownership and transfer terms are confirmed after final project scope and balance completion.",
+        "Advanced custom systems may require additional approved pricing."
+      ]
+    },
+
+    custom: {
+      name: "CUSTOM",
+      projectValue: "QUOTE",
+      monthly: "CUSTOM",
+      startup: "REVIEW",
+      full: "QUOTE",
+      structure: [
+        "Custom infrastructure project review",
+        "Business system requirements",
+        "Booking, payment or portal requirements",
+        "Automation and workflow requirements",
+        "Custom quote and timeline requirements",
+        "RAPCER review required before payment"
+      ],
+      monthlyInfo: [
+        "Custom projects require RAPCER review before pricing or payment.",
+        "No payment is required until RAPCER sends an approved quote.",
+        "Final pricing depends on scope, systems, integrations and infrastructure requirements.",
+        "RAPCER will confirm payment structure, timeline and delivery terms after review."
+      ],
+      fullInfo: [
+        "Custom projects require RAPCER review before pricing or payment.",
+        "No payment is required until RAPCER sends an approved quote.",
+        "Final pricing depends on scope, systems, integrations and infrastructure requirements.",
+        "RAPCER will confirm payment structure, timeline and delivery terms after review."
+      ]
+    }
+  };
+
+  const current = data[packageType] || data.starter;
+
+  function updateCard(labelName, newLabel, newValue) {
+    document.querySelectorAll("small, .info-label").forEach(label => {
+      if (label.textContent.trim().toUpperCase() === labelName.toUpperCase()) {
+        label.textContent = newLabel;
+        const value = label.parentElement.querySelector("strong, .info-value");
+        if (value) value.textContent = newValue;
+      }
+    });
+  }
+
+  updateCard("PACKAGE", "PACKAGE", current.name);
+  updateCard("PLAN", "PLAN", isFull ? "PAY IN FULL" : "MONTHLY " + current.monthly);
+  updateCard("PROJECT VALUE", "PROJECT VALUE", current.projectValue);
+  updateCard("STARTUP DEPOSIT", isFull ? "PAYMENT REQUIRED" : "STARTUP DEPOSIT", isFull ? current.full : current.startup);
+  updateCard("STARTUP REQUIRED", isFull ? "PAYMENT REQUIRED" : "STARTUP DEPOSIT", isFull ? current.full : current.startup);
+
+  const structureTitle = Array.from(document.querySelectorAll("h2"))
+    .find(h => h.textContent.toLowerCase().includes("service structure") || h.textContent.toLowerCase().includes("included in this package"));
+
+  if (structureTitle) {
+    structureTitle.textContent = current.name.charAt(0) + current.name.slice(1).toLowerCase() + " Service Structure";
+    const list = structureTitle.parentElement.querySelector("ul");
+    if (list) {
+      list.innerHTML = current.structure.map(item => `<li>${item}</li>`).join("");
+    }
+  }
+
+  const infoTitle = Array.from(document.querySelectorAll("h2,h3"))
+    .find(h => h.textContent.trim().toLowerCase().includes("important information"));
+
+  if (infoTitle && infoTitle.parentElement) {
+    const info = isFull ? current.fullInfo : current.monthlyInfo;
+    infoTitle.parentElement.innerHTML = `
+      <h3>Important Information</h3>
+      ${info.map(item => `<p>${item}</p>`).join("")}
+    `;
+  }
+
+  const continueBtn = Array.from(document.querySelectorAll("a,button"))
+    .find(btn => btn.textContent.trim().toLowerCase().includes("continue to onboarding"));
+
+  if (continueBtn && continueBtn.tagName.toLowerCase() === "a") {
+    continueBtn.href = `../onboarding/${packageType}.html?plan=${planType}`;
+  }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const packageType = params.get("package") || "starter";
+  const planType = params.get("plan") || "monthly";
+
+  const onboardingRoutes = {
+    starter: "../onboarding/starter.html",
+    growth: "../onboarding/growth.html",
+    premium: "../onboarding/premium.html",
+    custom: "../onboarding/custom.html"
+  };
+
+  const finalRoute = (onboardingRoutes[packageType] || onboardingRoutes.starter) + "?plan=" + planType;
+
+  document.querySelectorAll("a, button").forEach(function (btn) {
+    const text = btn.textContent.trim().toLowerCase();
+
+    if (
+      text.includes("continue to onboarding") ||
+      text.includes("agree") ||
+      text.includes("i understand") ||
+      text.includes("start onboarding")
+    ) {
+      if (btn.tagName.toLowerCase() === "a") {
+        btn.href = finalRoute;
+      } else {
+        btn.onclick = function () {
+          window.location.href = finalRoute;
+        };
+      }
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const params = new URLSearchParams(window.location.search);
+
+  const packageType = params.get("package") || "starter";
+  const planType = params.get("plan") || "monthly";
+
+  const onboardingRoutes = {
+    starter: "../onboarding/starter.html",
+    growth: "../onboarding/growth.html",
+    premium: "../onboarding/premium.html",
+    custom: "../onboarding/custom.html"
+  };
+
+  const finalRoute =
+    (onboardingRoutes[packageType] || onboardingRoutes.starter)
+    + "?plan=" + planType;
+
+  const checkbox =
+    document.querySelector('input[type="checkbox"]');
+
+  const continueBtn =
+    Array.from(document.querySelectorAll("a,button"))
+    .find(btn =>
+      btn.textContent.toLowerCase().includes("continue")
+    );
+
+  if (!continueBtn) return;
+
+  function goNext(e){
+
+    e.preventDefault();
+
+    if (!checkbox || !checkbox.checked){
+
+      alert(
+        "Please agree to the RAPCER project terms before continuing."
+      );
+
+      return false;
+    }
+
+    window.location.href = finalRoute;
+  }
+
+  if (continueBtn.tagName.toLowerCase() === "a"){
+
+    continueBtn.href = "#";
+
+    continueBtn.addEventListener("click", goNext);
+
+  } else {
+
+    continueBtn.onclick = goNext;
+
+  }
+
+});
+</script>
+
+<style>
+
+<style>
+.rapcer-ready-btn{
+  opacity:1!important;
+  filter:brightness(1.2)!important;
+  box-shadow:0 0 30px rgba(0,255,210,.55),0 0 35px rgba(255,0,200,.35)!important;
+}
+.rapcer-locked-btn{
+  opacity:.45!important;
+  filter:grayscale(.6)!important;
+  cursor:not-allowed!important;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const params = new URLSearchParams(window.location.search);
+  const packageType = params.get("package") || "starter";
+  const planType = params.get("plan") || "monthly";
+
+  const routes = {
+    starter:"../onboarding/starter.html",
+    growth:"../onboarding/growth.html",
+    premium:"../onboarding/premium.html",
+    custom:"../onboarding/custom.html"
+  };
+
+  const finalRoute = (routes[packageType] || routes.starter) + "?plan=" + planType;
+  const checkbox = document.querySelector('input[type="checkbox"]');
+  const btn = Array.from(document.querySelectorAll("a,button"))
+    .find(el => el.textContent.trim().toLowerCase().includes("continue to onboarding"));
+
+  if(!btn || !checkbox) return;
+
+  function state(){
+    if(checkbox.checked){
+      btn.classList.add("rapcer-ready-btn");
+      btn.classList.remove("rapcer-locked-btn");
+    }else{
+      btn.classList.add("rapcer-locked-btn");
+      btn.classList.remove("rapcer-ready-btn");
+    }
+  }
+
+  state();
+  checkbox.addEventListener("change", state);
+
+  btn.onclick = function(e){
+    e.preventDefault();
+
+    if(!checkbox.checked){
+      alert("Please agree to RAPCER's project structure, payment terms and onboarding process before continuing.");
+      state();
+      return false;
+    }
+
+    window.location.href = finalRoute;
+    return false;
+  };
+});
+</script>
+
+<style>
+.rapcer-continue-locked{
+  opacity:.38!important;
+  filter:grayscale(.7)!important;
+  cursor:not-allowed!important;
+}
+.rapcer-continue-ready{
+  opacity:1!important;
+  filter:brightness(1.45)!important;
+  box-shadow:
+    0 0 18px rgba(0,255,210,.9),
+    0 0 45px rgba(0,255,210,.65),
+    0 0 65px rgba(255,0,200,.55)!important;
+  border:1px solid rgba(0,255,210,.8)!important;
+  transform:translateY(-2px) scale(1.03)!important;
+}
+</style>
+
+<script>
+window.addEventListener("load", function(){
+
+  const params = new URLSearchParams(window.location.search);
+  const packageType = params.get("package") || "starter";
+  const planType = params.get("plan") || "monthly";
+
+  const routes = {
+    starter: "../onboarding/starter.html",
+    growth: "../onboarding/growth.html",
+    premium: "../onboarding/premium.html",
+    custom: "../onboarding/custom.html"
+  };
+
+  const finalRoute = (routes[packageType] || routes.starter) + "?plan=" + planType;
+
+  const checkbox = document.querySelector('input[type="checkbox"]');
+
+  let oldBtn = Array.from(document.querySelectorAll("a,button"))
+    .find(el => el.textContent.trim().toLowerCase().includes("continue to onboarding"));
+
+  if(!oldBtn || !checkbox) return;
+
+  const newBtn = oldBtn.cloneNode(true);
+  oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+
+  newBtn.removeAttribute("href");
+  newBtn.setAttribute("type","button");
+
+  function updateState(){
+    if(checkbox.checked){
+      newBtn.classList.add("rapcer-continue-ready");
+      newBtn.classList.remove("rapcer-continue-locked");
+    }else{
+      newBtn.classList.add("rapcer-continue-locked");
+      newBtn.classList.remove("rapcer-continue-ready");
+    }
+  }
+
+  updateState();
+
+  checkbox.addEventListener("change", updateState);
+
+  newBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    if(!checkbox.checked){
+      alert("Please agree to RAPCER's project structure, payment terms and onboarding process before continuing.");
+      updateState();
+      return;
+    }
+
+    window.location.assign(finalRoute);
+  });
+
+});
+</script>
+
+<style>
+#rapcerFinalContinueBtn{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:18px 32px!important;
+  border-radius:16px!important;
+  text-decoration:none!important;
+  font-weight:900!important;
+  letter-spacing:.14em!important;
+  text-transform:uppercase!important;
+  background:linear-gradient(90deg,#20ffd2,#55d8ff,#ff00c8)!important;
+  color:#02020a!important;
+  box-shadow:0 0 22px rgba(0,255,210,.85),0 0 55px rgba(255,0,200,.55)!important;
+  border:1px solid rgba(0,255,210,.75)!important;
+}
+
+#rapcerFinalContinueBtn.locked{
+  opacity:.38!important;
+  filter:grayscale(.8)!important;
+  cursor:not-allowed!important;
+  box-shadow:none!important;
+}
+
+#rapcerFinalContinueBtn.ready{
+  opacity:1!important;
+  filter:brightness(1.35)!important;
+  transform:translateY(-2px) scale(1.03)!important;
+}
+</style>
+
+<script>
+window.addEventListener("load", function(){
+
+  const params = new URLSearchParams(window.location.search);
+  const packageType = params.get("package") || "starter";
+  const planType = params.get("plan") || "monthly";
+
+  const routes = {
+    starter: "../onboarding/starter.html",
+    growth: "../onboarding/growth.html",
+    premium: "../onboarding/premium.html",
+    custom: "../onboarding/custom.html"
+  };
+
+  const finalRoute = (routes[packageType] || routes.starter) + "?plan=" + planType;
+
+  const checkbox = document.querySelector('input[type="checkbox"]');
+
+  const oldBtn = Array.from(document.querySelectorAll("a,button"))
+    .find(el => el.textContent.trim().toLowerCase().includes("continue to onboarding"));
+
+  if(!oldBtn || !checkbox) return;
+
+  const newBtn = document.createElement("a");
+  newBtn.id = "rapcerFinalContinueBtn";
+  newBtn.href = "javascript:void(0)";
+  newBtn.textContent = "CONTINUE TO ONBOARDING";
+
+  oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+
+  function updateState(){
+    if(checkbox.checked){
+      newBtn.classList.remove("locked");
+      newBtn.classList.add("ready");
+    }else{
+      newBtn.classList.add("locked");
+      newBtn.classList.remove("ready");
+    }
+  }
+
+  updateState();
+
+  checkbox.addEventListener("change", updateState);
+
+  newBtn.onclick = function(e){
+    e.preventDefault();
+
+    if(!checkbox.checked){
+      alert("Please agree to RAPCER's project structure, payment terms and onboarding process before continuing.");
+      return false;
+    }
+
+    window.location.href = finalRoute;
+    return false;
+  };
+
+});
+</script>

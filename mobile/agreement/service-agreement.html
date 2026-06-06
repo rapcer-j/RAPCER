@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Agreement | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+</head>
+
+<body>
+
+<main class="module agreement-page">
+
+<section class="agreement-hero">
+  <h1 id="packageTitle">ACUERDO DEL PAQUETE</h1>
+  <p class="lead">
+    Revisa el paquete seleccionado, la estructura del proyecto y los términos de pago antes de continuar al onboarding.
+  </p>
+</section>
+
+<section class="agreement-box">
+
+<div class="agreement-summary">
+  <div class="agreement-card">
+    <small>PAQUETE</small>
+    <strong id="packageName">INICIAL</strong>
+  </div>
+
+  <div class="agreement-card">
+    <small>PLAN</small>
+    <strong id="planType">PLAN MENSUAL</strong>
+  </div>
+
+  <div class="agreement-card">
+    <small>VALOR DEL PROYECTO</small>
+    <strong id="projectValue">$1,200</strong>
+  </div>
+
+  <div class="agreement-card">
+    <small id="startupLabel">DEPÓSITO INICIAL</small>
+    <strong id="startupValue">$749</strong>
+  </div>
+</div>
+
+<div class="agreement-services">
+  <h2 id="serviceTitle">Estructura del Servicio Inicial</h2>
+  <ul id="serviceList"></ul>
+</div>
+
+<div class="agreement-warning">
+  <h3>Información Importante</h3>
+  <div id="infoList"></div>
+</div>
+
+<div class="agreement-terms">
+  <label>
+    <input type="checkbox" id="agreeCheck">
+    <span>Acepto la estructura del proyecto, los términos de pago y el proceso de onboarding de RAPCER.</span>
+  </label>
+</div>
+
+<div class="agreement-actions">
+  <a id="continueBtn" class="disabled-btn">CONTINUAR AL ONBOARDING</a>
+</div>
+
+</section>
+
+</main>
+
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  let packageType = params.get("package") || "starter";
+  let planType = params.get("plan") || "monthly";
+
+  const packages = {
+    starter: {
+      name: "INICIAL",
+      title: "ACUERDO DEL PAQUETE INICIAL",
+      serviceTitle: "Estructura del Servicio Inicial",
+      projectValue: "$1,200",
+      monthlyPlan: "PLAN MENSUAL — $149/mo",
+      monthlyStartup: "$749",
+      fullPlan: "PAGO COMPLETO",
+      fullStartup: "$1,200",
+      services: [
+        "Landing page moderna",
+        "Diseño adaptable a móvil",
+        "Formulario de contacto",
+        "Integración de redes sociales",
+        "Configuración de código QR",
+        "Integración con Google Maps",
+        "Publicación lista para lanzamiento"
+      ],
+      monthlyInfo: [
+        "No se requiere ningún pago hasta que RAPCER revise y apruebe tu solicitud.",
+        "El depósito inicial incluye activación del proyecto y el primer mes del servicio.",
+        "Después del primer mes, el servicio mensual activo continúa en $149/mo.",
+        "El valor total del proyecto Inicial es $1,200.",
+        "La propiedad del sitio web se transfiere después de completar el balance total del proyecto.",
+        "Sistemas avanzados como reservas, pagos, automatización, CRM, ecommerce o dashboards no están incluidos en Inicial."
+      ],
+      fullInfo: [
+        "No se requiere ningún pago hasta que RAPCER revise y apruebe tu solicitud.",
+        "El pago completo requiere el pago total aprobado antes de activar el proyecto.",
+        "La propiedad del sitio web se transfiere después de completar el proyecto y confirmar el pago completo.",
+        "El hosting puede continuar con RAPCER o transferirse después de la entrega final.",
+        "Sistemas avanzados como reservas, pagos, automatización, CRM, ecommerce o dashboards no están incluidos en Inicial."
+      ]
+    },
+
+    growth: {
+      name: "CRECIMIENTO",
+      title: "ACUERDO DEL PAQUETE CRECIMIENTO",
+      serviceTitle: "Estructura del Servicio Crecimiento",
+      projectValue: "$3,000",
+      monthlyPlan: "PLAN MENSUAL — $299/mo",
+      monthlyStartup: "$1,799",
+      fullPlan: "PAGO COMPLETO",
+      fullStartup: "$3,000",
+      services: [
+        "Sitio web de varias páginas",
+        "Integración avanzada de redes sociales",
+        "Integración de QR",
+        "Sistema de contactos y prospectos",
+        "Sistema de reservas",
+        "Automatización de negocio",
+        "Optimización de Google Maps"
+      ],
+      monthlyInfo: [
+        "No se requiere ningún pago hasta que RAPCER revise y apruebe tu solicitud.",
+        "El pago inicial incluye activación del proyecto y el primer mes del servicio.",
+        "Después del primer mes, el servicio mensual activo continúa en $299/mo.",
+        "El valor total del proyecto Crecimiento es $3,000.",
+        "La propiedad del sitio web se transfiere después de completar el balance total del proyecto.",
+        "Aplicaciones personalizadas, dashboards, CRM avanzado o automatizaciones complejas pueden requerir Premium o Personalizado."
+      ],
+      fullInfo: [
+        "No se requiere ningún pago hasta que RAPCER revise y apruebe tu solicitud.",
+        "El pago completo requiere el pago total de $3,000 antes de activar el proyecto.",
+        "La propiedad del sitio web se transfiere después de completar el proyecto y confirmar el pago completo.",
+        "El hosting puede continuar con RAPCER o transferirse después de la entrega final.",
+        "Aplicaciones personalizadas, dashboards, CRM avanzado o automatizaciones complejas pueden requerir Premium o Personalizado."
+      ]
+    },
+
+    premium: {
+      name: "PREMIUM",
+      title: "ACUERDO DEL PAQUETE PREMIUM",
+      serviceTitle: "Estructura del Servicio Premium",
+      projectValue: "$8,000+",
+      monthlyPlan: "PLAN MENSUAL — $699/mo",
+      monthlyStartup: "$4,000",
+      fullPlan: "PAGO COMPLETO",
+      fullStartup: "$8,000+",
+      services: [
+        "Sistemas web avanzados",
+        "Diseño UI/UX premium",
+        "CRM y flujos de trabajo",
+        "Automatización avanzada",
+        "Integraciones premium",
+        "Soporte prioritario",
+        "Infraestructura dedicada"
+      ],
+      monthlyInfo: [
+        "No se requiere ningún pago hasta que RAPCER revise y apruebe tu solicitud.",
+        "Los proyectos Premium requieren aprobación antes de activarse.",
+        "El depósito inicial Premium aprobado comienza en $4,000.",
+        "Después de la activación, el servicio mensual comienza en $699/mo.",
+        "El precio final Premium comienza en $8,000+ y depende del alcance aprobado.",
+        "Los términos de propiedad y transferencia se confirman después del alcance final y el balance completado."
+      ],
+      fullInfo: [
+        "No se requiere ningún pago hasta que RAPCER revise y apruebe tu solicitud.",
+        "Premium pago completo requiere una cotización final aprobada antes de activación.",
+        "El precio final Premium comienza en $8,000+ y depende del alcance aprobado.",
+        "Los términos de propiedad y transferencia se confirman después del alcance final y el balance completado."
+      ]
+    }
+  };
+
+  if(!packages[packageType]) packageType = "starter";
+  if(!["monthly","full"].includes(planType)) planType = "monthly";
+
+  const current = packages[packageType];
+  const isFull = planType === "full";
+
+  document.getElementById("packageTitle").textContent = current.title;
+  document.getElementById("packageName").textContent = current.name;
+  document.getElementById("planType").textContent = isFull ? current.fullPlan : current.monthlyPlan;
+  document.getElementById("projectValue").textContent = current.projectValue;
+  document.getElementById("startupLabel").textContent = isFull ? "PAGO REQUERIDO" : "DEPÓSITO INICIAL";
+  document.getElementById("startupValue").textContent = isFull ? current.fullStartup : current.monthlyStartup;
+  document.getElementById("serviceTitle").textContent = current.serviceTitle;
+
+  document.getElementById("serviceList").innerHTML =
+    current.services.map(item => `<li>${item}</li>`).join("");
+
+  const info = isFull ? current.fullInfo : current.monthlyInfo;
+  document.getElementById("infoList").innerHTML =
+    info.map(item => `<p>${item}</p>`).join("");
+
+  const checkbox = document.getElementById("agreeCheck");
+  const btn = document.getElementById("continueBtn");
+  const target = "../onboarding/" + packageType + ".html?plan=" + planType;
+
+  function updateButton(){
+    if(checkbox.checked){
+      btn.classList.remove("disabled-btn");
+      btn.setAttribute("href", target);
+    }else{
+      btn.classList.add("disabled-btn");
+      btn.removeAttribute("href");
+    }
+  }
+
+  checkbox.addEventListener("change", updateButton);
+
+  btn.addEventListener("click", function(e){
+    if(!checkbox.checked){
+      e.preventDefault();
+      alert("Debes aceptar los términos antes de continuar.");
+    }
+  });
+
+  updateButton();
+})();
+</script>
+
+<script src="../../rapcer-language.js?v=20" defer></script>
+<script src="/rapcer-analytics.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/app", "destination": "/app.html" },
+
+    { "source": "/job-assist", "destination": "/digital-services/job-assist" },
+    { "source": "/document-center", "destination": "/digital-services/document-center" },
+    { "source": "/tech-help", "destination": "/digital-services/tech-help" },
+    { "source": "/business-start", "destination": "/digital-services/business-start" },
+    { "source": "/online-forms", "destination": "/digital-services/online-forms" },
+
+    { "source": "/payment", "destination": "/payment" },
+    { "source": "/payment/", "destination": "/payment" }
+  ]
+}

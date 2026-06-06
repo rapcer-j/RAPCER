@@ -1,0 +1,2215 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#02040b;color:white;font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 10%,rgba(0,255,170,.18),transparent 30%),radial-gradient(circle at 85% 80%,rgba(255,0,220,.16),transparent 35%),linear-gradient(135deg,#02040b,#050817,#02040b);z-index:-1}
+.module{min-height:100vh;padding:38px 48px}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:42px;flex-wrap:wrap}
+.nav-left{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.brand{font-size:26px;letter-spacing:6px;font-weight:900;color:white;text-decoration:none}
+.brand span{color:#00ffd5;text-shadow:0 0 20px #00ffd5}
+.btn{color:white;text-decoration:none;border:1px solid rgba(0,255,230,.65);padding:12px 18px;border-radius:6px 18px;background:rgba(3,10,22,.85);box-shadow:0 0 18px rgba(0,255,230,.12)}
+.translate{background:rgba(3,10,22,.88);border:1px solid rgba(0,255,230,.35);border-radius:12px;padding:8px}
+.hero{margin-bottom:34px}
+h1{font-size:62px;line-height:1.02;margin-bottom:18px;background:linear-gradient(90deg,#00ff99,#00c8ff,#ff4fc3);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.lead{font-size:22px;color:#dbeafe;line-height:1.7;max-width:950px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));gap:22px}
+.card,.price,.formbox,.socialbox{background:rgba(3,10,22,.84);border:1px solid rgba(0,255,230,.35);border-radius:8px 26px;padding:26px;box-shadow:0 0 28px rgba(0,255,230,.08)}
+.card h2,.price h2,.formbox h2,.socialbox h2{color:#00ffd5;margin-bottom:12px;font-size:24px}
+.card p,.price p,.formbox p,li{color:#dbeafe;line-height:1.7}
+ul{padding-left:22px;margin-top:12px}
+.cta,.price a,button{display:inline-block;margin-top:24px;background:linear-gradient(90deg,#00ff99,#00c8ff);color:white;text-decoration:none;padding:15px 25px;border-radius:5px 18px;font-weight:900;letter-spacing:2px;border:0;cursor:pointer}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.price h3{font-size:40px;margin:14px 0;color:#00ff99}.featured{border-color:#ff4fc3;box-shadow:0 0 35px rgba(255,79,195,.2)}
+.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+input,textarea,select{width:100%;padding:14px;border-radius:10px;border:1px solid rgba(0,255,230,.35);background:#050b18;color:white}textarea{min-height:125px}
+.socialbox{margin-top:24px;padding:20px}
+.socialbox h2{font-size:20px;margin-bottom:6px}
+.socialbox p{font-size:14px;color:#dbeafe;margin-bottom:12px}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.socials a{color:white;text-decoration:none;border:1px solid rgba(255,255,255,.16);padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.04);font-size:14px}
+.statusgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:25px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#00ff99;box-shadow:0 0 18px #00ff99;margin-right:9px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}h1{font-size:44px}.module{padding:25px}.statusgrid{grid-template-columns:1fr}}
+
+.social-list{
+  margin-top:24px;
+  max-width:420px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.social-link{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  color:white;
+  padding:14px 18px;
+  border:1px solid rgba(0,255,230,.35);
+  border-radius:14px;
+  background:rgba(255,255,255,.04);
+  font-weight:bold;
+}
+
+.social-link span{
+  width:34px;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  background:rgba(0,255,230,.10);
+}
+
+.socialbox{
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:0!important;
+  margin-top:24px!important;
+}
+
+.socialbox h2,
+.socialbox p{
+  display:none!important;
+}
+
+.social-list{
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:wrap!important;
+  gap:10px!important;
+  margin-top:0!important;
+}
+
+.social-link{
+  width:auto!important;
+  height:36px!important;
+  padding:8px 12px!important;
+  border-radius:50px!important;
+  font-size:13px!important;
+  background:rgba(255,255,255,.05)!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+}
+
+.social-link span{
+  width:auto!important;
+  height:auto!important;
+  background:transparent!important;
+  font-size:16px!important;
+}
+
+.translate{
+  border:0!important;
+  padding:0!important;
+  background:transparent!important;
+  min-width:auto!important;
+}
+
+.translate-wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:white;
+  border:1px solid rgba(0,255,230,.45);
+  background:rgba(3,10,22,.85);
+  padding:10px 16px;
+  border-radius:6px 18px;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.translate-wrap select{
+  background:#050b18;
+  color:white;
+  border:1px solid rgba(0,255,230,.35);
+  border-radius:8px;
+  padding:6px;
+}
+
+/* RAPCER COMPACT SOCIAL BAR */
+.rapcer-social{
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.rapcer-social span{
+  color:#00ffd5;
+  font-weight:900;
+  letter-spacing:3px;
+  margin-right:8px;
+}
+
+.rapcer-social a{
+  text-decoration:none;
+  color:white;
+  font-size:12px;
+  letter-spacing:2px;
+  padding:9px 13px;
+  border-radius:999px;
+  border:1px solid rgba(0,255,230,.28);
+  background:rgba(255,255,255,.04);
+  box-shadow:0 0 14px rgba(0,255,230,.08);
+}
+
+.rapcer-social a:hover{
+  border-color:#00ffd5;
+  box-shadow:0 0 22px rgba(0,255,230,.28);
+}
+
+/* DIFFERENT PAGE THEMES */
+.theme-ai{background:radial-gradient(circle at top left,rgba(0,255,120,.22),transparent 35%),#02040b}
+.theme-cloud{background:radial-gradient(circle at top left,rgba(0,200,255,.24),transparent 35%),#02040b}
+.theme-cyber{background:radial-gradient(circle at top left,rgba(190,80,255,.24),transparent 35%),#02040b}
+.theme-digital{background:radial-gradient(circle at top left,rgba(255,60,200,.22),transparent 35%),#02040b}
+.theme-auto{background:radial-gradient(circle at top left,rgba(0,255,170,.22),transparent 35%),#02040b}
+.theme-innovation{background:radial-gradient(circle at top left,rgba(0,140,255,.24),transparent 35%),#02040b}
+.theme-tools{background:radial-gradient(circle at top left,rgba(150,90,255,.24),transparent 35%),#02040b}
+.theme-growth{background:radial-gradient(circle at top left,rgba(255,80,160,.22),transparent 35%),#02040b}
+.theme-global{background:radial-gradient(circle at top left,rgba(0,255,230,.24),transparent 35%),#02040b}
+.theme-status{background:radial-gradient(circle at top left,rgba(0,255,120,.18),transparent 35%),radial-gradient(circle at bottom right,rgba(0,120,255,.16),transparent 35%),#02040b}
+.theme-packages{background:radial-gradient(circle at top left,rgba(255,0,220,.20),transparent 35%),radial-gradient(circle at bottom right,rgba(0,255,230,.18),transparent 35%),#02040b}
+
+/* RAPCER CORE RESTORE */
+
+body{
+margin:0;
+background:
+radial-gradient(circle at top left,#220022 0%,#040611 40%,#02040a 100%);
+color:#fff;
+font-family:Arial,sans-serif;
+min-height:100vh;
+}
+
+.module{
+padding:24px;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.brand{
+color:#fff;
+text-decoration:none;
+font-weight:700;
+letter-spacing:4px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand span{
+color:#00ffd5;
+font-size:1.3rem;
+}
+
+.btn{
+border:1px solid #00ffd5;
+padding:10px 18px;
+border-radius:12px;
+color:#fff;
+text-decoration:none;
+background:rgba(0,255,213,.08);
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+color:#00ffd5;
+text-shadow:0 0 25px rgba(0,255,213,.5);
+}
+
+.lead{
+max-width:800px;
+font-size:1.1rem;
+line-height:1.8;
+color:#d9d9d9;
+margin-bottom:30px;
+}
+
+.cta{
+display:inline-block;
+padding:14px 28px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+background:linear-gradient(90deg,#00ffd5,#ff00c8);
+color:#000;
+box-shadow:0 0 20px rgba(0,255,213,.35);
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+margin-top:10px;
+}
+
+.card{
+background:rgba(0,0,0,.45);
+border:1px solid rgba(0,255,213,.35);
+border-radius:22px;
+padding:28px;
+backdrop-filter:blur(12px);
+box-shadow:0 0 25px rgba(0,255,213,.08);
+}
+
+.card h2{
+color:#00ffd5;
+margin-bottom:16px;
+}
+
+.card p{
+color:#d9d9d9;
+line-height:1.7;
+}
+
+.rapcer-social{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:60px;
+align-items:center;
+}
+
+.rapcer-social span{
+color:#00ffd5;
+font-weight:700;
+letter-spacing:3px;
+}
+
+.rapcer-social a{
+padding:8px 14px;
+border-radius:999px;
+border:1px solid rgba(0,255,213,.35);
+color:#fff;
+text-decoration:none;
+background:rgba(0,255,213,.08);
+}
+
+
+/* RAPCER PACKAGE SYSTEM */
+
+.rapcer-packages-v2{
+padding-bottom:80px;
+}
+
+.package-video-wrap{
+display:flex;
+justify-content:center;
+margin:40px 0;
+}
+
+.package-video{
+width:50%;
+max-width:650px;
+border-radius:24px;
+border:1px solid rgba(0,255,213,.35);
+box-shadow:0 0 40px rgba(0,255,213,.08);
+}
+
+.package-intro-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+margin-bottom:40px;
+}
+
+.package-mini{
+background:rgba(0,0,0,.45);
+border:1px solid rgba(0,255,213,.2);
+border-radius:20px;
+padding:24px;
+}
+
+.package-mini h3{
+color:#00ffd5;
+margin-bottom:10px;
+}
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+margin-top:40px;
+}
+
+.price{
+background:rgba(0,0,0,.45);
+border:1px solid rgba(0,255,213,.25);
+border-radius:24px;
+padding:28px;
+position:relative;
+overflow:hidden;
+backdrop-filter:blur(10px);
+}
+
+.price.featured{
+border:1px solid rgba(255,0,200,.5);
+box-shadow:0 0 35px rgba(255,0,200,.15);
+}
+
+.package-tag{
+display:inline-block;
+padding:8px 16px;
+border-radius:999px;
+font-size:.7rem;
+letter-spacing:2px;
+font-weight:700;
+margin-bottom:18px;
+border:1px solid rgba(0,255,213,.35);
+color:#00ffd5;
+}
+
+.price h2{
+font-size:2.3rem;
+margin-bottom:14px;
+color:#00ffd5;
+}
+
+.price p{
+line-height:1.7;
+color:#d7d7d7;
+margin-bottom:22px;
+}
+
+.pay-options{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin-bottom:24px;
+}
+
+.pay-options.single{
+grid-template-columns:1fr;
+}
+
+.pay-options div{
+padding:16px;
+border-radius:18px;
+border:1px solid rgba(0,255,213,.25);
+background:rgba(0,255,213,.05);
+}
+
+.pay-options small{
+display:block;
+margin-bottom:8px;
+font-size:.7rem;
+letter-spacing:2px;
+color:#9efdf1;
+}
+
+.pay-options strong{
+font-size:1.8rem;
+color:#fff;
+}
+
+.price ul{
+padding-left:18px;
+margin-bottom:28px;
+}
+
+.price li{
+margin-bottom:12px;
+line-height:1.6;
+color:#d8d8d8;
+}
+
+.price a{
+display:inline-block;
+padding:14px 26px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+background:linear-gradient(90deg,#00ffd5,#ff00c8);
+color:#000;
+}
+
+.client-results{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+margin-top:60px;
+}
+
+.result-card{
+background:rgba(0,0,0,.45);
+border:1px solid rgba(255,0,200,.2);
+border-radius:20px;
+padding:24px;
+}
+
+.result-card h3{
+color:#00ffd5;
+margin-bottom:12px;
+}
+
+.result-card p{
+color:#d7d7d7;
+line-height:1.7;
+}
+
+@media(max-width:900px){
+
+.package-video{
+width:100%;
+}
+
+.package-intro-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+
+/* ================================
+   RAPCER PACKAGES V3
+================================ */
+
+.rapcer-packages-v3{
+  padding-bottom:90px;
+}
+
+.process-flow{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+  margin:38px 0 50px;
+}
+
+.process-flow div{
+  padding:20px;
+  border:1px solid rgba(0,255,213,.25);
+  border-radius:20px;
+  background:rgba(0,0,0,.45);
+}
+
+.process-flow strong{
+  display:block;
+  color:#00ffd5;
+  font-size:1.7rem;
+  margin-bottom:8px;
+}
+
+.process-flow span{
+  color:#fff;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+  margin-top:40px;
+}
+
+.price{
+  background:linear-gradient(180deg,rgba(0,255,213,.06),rgba(0,0,0,.55));
+  border:1px solid rgba(0,255,213,.25);
+  border-radius:26px;
+  padding:28px;
+  position:relative;
+  overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+
+.price.featured{
+  border:1px solid rgba(255,0,200,.55);
+  box-shadow:0 0 38px rgba(255,0,200,.16);
+}
+
+.package-tag{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:.7rem;
+  letter-spacing:2px;
+  font-weight:800;
+  margin-bottom:18px;
+  border:1px solid rgba(0,255,213,.35);
+  color:#00ffd5;
+}
+
+.price h2{
+  font-size:2.6rem;
+  margin-bottom:14px;
+  color:#00ffd5;
+  line-height:1;
+}
+
+.price p{
+  line-height:1.7;
+  color:#d7d7d7;
+  margin-bottom:22px;
+}
+
+.pay-options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:24px;
+}
+
+.pay-options.single{
+  grid-template-columns:1fr;
+}
+
+.pay-options div{
+  padding:16px;
+  border-radius:18px;
+  border:1px solid rgba(0,255,213,.28);
+  background:rgba(0,255,213,.06);
+}
+
+.pay-options small{
+  display:block;
+  margin-bottom:8px;
+  font-size:.68rem;
+  letter-spacing:2px;
+  color:#9efdf1;
+  font-weight:800;
+}
+
+.pay-options strong{
+  display:block;
+  font-size:1.65rem;
+  color:#fff;
+  margin-bottom:6px;
+}
+
+.pay-options em{
+  display:block;
+  font-size:.78rem;
+  color:#b9b9b9;
+  font-style:normal;
+}
+
+.price ul{
+  padding-left:18px;
+  margin-bottom:28px;
+}
+
+.price li{
+  margin-bottom:12px;
+  line-height:1.6;
+  color:#d8d8d8;
+}
+
+.package-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.package-actions a{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,#00ffd5,#ff00c8);
+  color:#000;
+  font-size:.8rem;
+}
+
+.client-results{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  margin-top:60px;
+}
+
+.result-card{
+  background:rgba(0,0,0,.45);
+  border:1px solid rgba(255,0,200,.22);
+  border-radius:20px;
+  padding:24px;
+}
+
+.result-card h3{
+  color:#00ffd5;
+  margin-bottom:12px;
+}
+
+.result-card p{
+  color:#d7d7d7;
+  line-height:1.7;
+}
+
+.review-cta{
+  margin-top:55px;
+  padding:34px;
+  border-radius:26px;
+  border:1px solid rgba(0,255,213,.25);
+  background:linear-gradient(135deg,rgba(0,255,213,.08),rgba(255,0,200,.08));
+  text-align:center;
+}
+
+.review-cta h2{
+  color:#00ffd5;
+  font-size:2.3rem;
+  margin-bottom:12px;
+}
+
+.review-cta p{
+  color:#ddd;
+  margin-bottom:22px;
+}
+
+.review-cta a{
+  display:inline-block;
+  padding:15px 28px;
+  border-radius:14px;
+  background:linear-gradient(90deg,#00ffd5,#ff00c8);
+  color:#000;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+@media(max-width:900px){
+  .pay-options{
+    grid-template-columns:1fr;
+  }
+
+  .price h2{
+    font-size:2.2rem;
+  }
+}
+
+
+/* ===========================
+   AGREEMENT PAGE
+=========================== */
+
+.agreement-page{
+padding-bottom:80px;
+}
+
+.agreement-box{
+margin-top:40px;
+background:rgba(0,0,0,.45);
+border:1px solid rgba(0,255,213,.22);
+border-radius:30px;
+padding:40px;
+backdrop-filter:blur(10px);
+}
+
+.agreement-summary{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+.agreement-card{
+padding:24px;
+border-radius:20px;
+background:rgba(0,255,213,.06);
+border:1px solid rgba(0,255,213,.22);
+}
+
+.agreement-card small{
+display:block;
+margin-bottom:10px;
+letter-spacing:2px;
+font-size:.7rem;
+color:#9efdf1;
+font-weight:800;
+}
+
+.agreement-card strong{
+font-size:1.7rem;
+color:#fff;
+}
+
+.agreement-services h2{
+color:#00ffd5;
+margin-bottom:18px;
+font-size:2rem;
+}
+
+.agreement-services ul{
+padding-left:20px;
+margin-bottom:35px;
+}
+
+.agreement-services li{
+margin-bottom:14px;
+line-height:1.7;
+color:#ddd;
+}
+
+.agreement-warning{
+padding:30px;
+border-radius:24px;
+border:1px solid rgba(255,0,200,.25);
+background:rgba(255,0,200,.06);
+margin-bottom:30px;
+}
+
+.agreement-warning h3{
+color:#ff4ad8;
+margin-bottom:16px;
+font-size:1.5rem;
+}
+
+.agreement-warning p{
+line-height:1.7;
+color:#ddd;
+margin-bottom:14px;
+}
+
+.agreement-terms{
+margin-bottom:30px;
+}
+
+.agreement-terms label{
+display:flex;
+align-items:center;
+gap:14px;
+font-size:1rem;
+color:#fff;
+}
+
+.agreement-terms input{
+width:20px;
+height:20px;
+}
+
+.agreement-actions{
+display:flex;
+justify-content:flex-end;
+}
+
+.agreement-actions a{
+display:inline-block;
+padding:16px 30px;
+border-radius:16px;
+text-decoration:none;
+font-weight:900;
+letter-spacing:2px;
+background:linear-gradient(90deg,#00ffd5,#ff00c8);
+color:#000;
+}
+
+.disabled-btn{
+opacity:.4;
+pointer-events:none;
+}
+
+
+/* ================================
+   RAPCER ONBOARDING V2
+================================ */
+
+.onboarding-page{
+  padding-bottom:90px;
+}
+
+.onboarding-nav{
+  margin-bottom:42px;
+}
+
+.onboarding-hero{
+  margin-bottom:36px;
+}
+
+.onboarding-hero h1{
+  font-size:clamp(2.6rem,6vw,5.2rem);
+  line-height:.95;
+  color:#00ffd5;
+  text-shadow:0 0 28px rgba(0,255,213,.35);
+  margin-bottom:18px;
+}
+
+.onboarding-hero p{
+  color:#ddd;
+  max-width:900px;
+  line-height:1.7;
+  font-size:1.05rem;
+}
+
+.onboarding-form{
+  display:block;
+}
+
+.form-section{
+  margin-bottom:34px;
+  padding:28px;
+  border-radius:26px;
+  border:1px solid rgba(0,255,213,.22);
+  background:rgba(0,0,0,.38);
+  backdrop-filter:blur(10px);
+}
+
+.form-section h2{
+  color:#00ffd5;
+  margin-bottom:18px;
+  font-size:1.6rem;
+}
+
+.form-grid{
+  display:grid;
+  gap:16px;
+}
+
+.form-grid.two{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.form-grid.three{
+  grid-template-columns:repeat(3,1fr);
+  margin-bottom:16px;
+}
+
+.onboarding-form input,
+.onboarding-form textarea{
+  width:100%;
+  padding:17px 18px;
+  border-radius:14px;
+  border:1px solid rgba(0,255,213,.28);
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  outline:none;
+}
+
+.onboarding-form input::placeholder,
+.onboarding-form textarea::placeholder{
+  color:#8d8d8d;
+}
+
+.full-input{
+  margin-top:0;
+}
+
+.onboarding-form textarea{
+  min-height:140px;
+  resize:vertical;
+  margin-bottom:14px;
+}
+
+.confirmation-card{
+  margin-top:10px;
+  padding:30px;
+  border-radius:26px;
+  border:1px solid rgba(255,0,200,.28);
+  background:linear-gradient(135deg,rgba(0,255,213,.06),rgba(255,0,200,.08));
+}
+
+.confirmation-card h2{
+  color:#00ffd5;
+  margin-bottom:22px;
+  font-size:1.8rem;
+}
+
+.confirm-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:18px;
+}
+
+.confirm-grid div{
+  padding:20px;
+  border-radius:18px;
+  border:1px solid rgba(0,255,213,.25);
+  background:rgba(0,0,0,.42);
+}
+
+.confirm-grid small{
+  display:block;
+  color:#9efdf1;
+  font-size:.72rem;
+  letter-spacing:2px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.confirm-grid strong{
+  display:block;
+  color:#fff;
+  font-size:1.4rem;
+}
+
+.payment-note{
+  color:#ddd;
+  margin-top:22px;
+  line-height:1.7;
+}
+
+.onboarding-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:28px;
+  align-items:center;
+}
+
+.onboarding-actions button,
+.onboarding-actions a{
+  border:none;
+  display:inline-block;
+  padding:16px 28px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,#00ffd5,#ff00c8);
+  color:#000;
+  cursor:pointer;
+}
+
+.form-status{
+  margin-top:10px;
+  color:#00ffd5;
+  font-weight:800;
+  line-height:1.6;
+}
+
+.disabled-btn{
+  opacity:.38;
+  pointer-events:none;
+}
+
+@media(max-width:900px){
+  .form-grid.two,
+  .form-grid.three{
+    grid-template-columns:1fr;
+  }
+
+  .form-section{
+    padding:22px;
+  }
+}
+
+
+/* ================================
+   RAPCER SUCCESS PAGE
+================================ */
+
+.success-page{
+  min-height:100vh;
+  padding-bottom:90px;
+}
+
+.success-wrap{
+  max-width:980px;
+  margin:70px auto 0;
+  padding:60px 48px;
+  border-radius:34px;
+  border:1px solid rgba(0,255,213,.28);
+  background:rgba(0,0,0,.42);
+  box-shadow:0 0 50px rgba(0,255,213,.08);
+  text-align:center;
+  backdrop-filter:blur(12px);
+}
+
+.success-icon{
+  font-size:5rem;
+  color:#00ff9d;
+  text-shadow:0 0 30px rgba(0,255,157,.8);
+  margin-bottom:22px;
+}
+
+.success-wrap h1{
+  font-size:clamp(2.8rem,6vw,5.4rem);
+  line-height:.95;
+  margin-bottom:28px;
+  background:linear-gradient(90deg,#00ffd5,#18bfff,#ff4ad8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:2px;
+}
+
+.success-lead{
+  max-width:780px;
+  margin:0 auto 38px;
+  color:#fff;
+  font-size:1.25rem;
+  line-height:1.7;
+}
+
+.success-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin:38px 0 34px;
+  text-align:left;
+}
+
+.success-grid div{
+  padding:28px;
+  border-radius:22px;
+  border:1px solid rgba(0,255,213,.25);
+  background:rgba(0,0,0,.38);
+}
+
+.success-grid h3{
+  color:#00ffd5;
+  font-size:1.5rem;
+  margin-bottom:14px;
+}
+
+.success-grid p{
+  color:#e5e5e5;
+  line-height:1.7;
+}
+
+.success-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  margin-top:30px;
+}
+
+.success-actions a{
+  display:inline-block;
+  padding:15px 26px;
+  border-radius:14px;
+  border:1px solid rgba(0,255,213,.35);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.success-actions .main-action{
+  background:linear-gradient(90deg,#00ffd5,#ff00c8);
+  color:#000;
+  border:none;
+}
+
+@media(max-width:800px){
+  .success-wrap{
+    padding:38px 24px;
+    margin-top:40px;
+  }
+
+  .success-grid{
+    grid-template-columns:1fr;
+  }
+
+  .success-actions{
+    flex-direction:column;
+  }
+
+  .success-actions a{
+    width:100%;
+  }
+}
+
+
+/* ================================
+   RAPCER PAYMENT PAGE
+================================ */
+
+.payment-page{
+  padding-bottom:90px;
+}
+
+.payment-hero{
+  margin-top:40px;
+  margin-bottom:38px;
+}
+
+.payment-hero h1{
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:.95;
+  color:#00ffd5;
+  text-shadow:0 0 32px rgba(0,255,213,.35);
+  margin-bottom:18px;
+}
+
+.payment-hero p{
+  color:#ddd;
+  max-width:850px;
+  line-height:1.7;
+  font-size:1.1rem;
+}
+
+.payment-system{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.payment-summary{
+  padding:42px;
+  border-radius:34px;
+  border:1px solid rgba(0,255,213,.28);
+  background:linear-gradient(135deg,rgba(0,255,213,.07),rgba(255,0,200,.08),rgba(0,0,0,.55));
+  box-shadow:0 0 55px rgba(0,255,213,.08);
+  backdrop-filter:blur(12px);
+}
+
+.payment-badge{
+  display:inline-block;
+  padding:9px 18px;
+  border-radius:999px;
+  border:1px solid rgba(0,255,213,.4);
+  color:#00ffd5;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:22px;
+}
+
+.payment-summary h2{
+  color:#00ffd5;
+  font-size:clamp(2.2rem,5vw,4.2rem);
+  margin-bottom:28px;
+}
+
+.payment-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+  margin-bottom:32px;
+}
+
+.payment-grid div{
+  padding:22px;
+  border-radius:20px;
+  border:1px solid rgba(0,255,213,.25);
+  background:rgba(0,0,0,.45);
+}
+
+.payment-grid small{
+  display:block;
+  color:#9efdf1;
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+.payment-grid strong{
+  color:#fff;
+  font-size:1.55rem;
+}
+
+.invoice-box,
+.terms-box{
+  padding:28px;
+  border-radius:24px;
+  border:1px solid rgba(255,0,200,.24);
+  background:rgba(0,0,0,.38);
+  margin-bottom:24px;
+}
+
+.invoice-box h3,
+.terms-box h3{
+  color:#00ffd5;
+  margin-bottom:14px;
+  font-size:1.5rem;
+}
+
+.invoice-box p,
+.terms-box li{
+  color:#ddd;
+  line-height:1.7;
+}
+
+.terms-box ul{
+  padding-left:20px;
+}
+
+.terms-box li{
+  margin-bottom:10px;
+}
+
+.payment-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+}
+
+.payment-actions a{
+  display:inline-block;
+  padding:16px 24px;
+  border-radius:16px;
+  border:1px solid rgba(0,255,213,.35);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:.82rem;
+}
+
+.payment-actions .main-pay{
+  background:linear-gradient(90deg,#00ffd5,#ff00c8);
+  color:#000;
+  border:none;
+}
+
+.payment-note{
+  color:#00ffd5;
+  margin-top:24px;
+  font-weight:800;
+  line-height:1.7;
+}
+
+@media(max-width:800px){
+  .payment-summary{
+    padding:28px 22px;
+  }
+
+  .payment-actions{
+    flex-direction:column;
+  }
+
+  .payment-actions a{
+    width:100%;
+    text-align:center;
+  }
+}
+
+
+/* ================================
+   RAPCER PAYMENT PAGE V2
+================================ */
+
+.payment-page{
+  padding-bottom:90px;
+}
+
+.payment-hero{
+  margin-top:40px;
+  margin-bottom:38px;
+}
+
+.payment-hero h1{
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:.95;
+  color:#00ffd5;
+  text-shadow:0 0 32px rgba(0,255,213,.35);
+  margin-bottom:18px;
+}
+
+.payment-hero p{
+  color:#ddd;
+  max-width:850px;
+  line-height:1.7;
+  font-size:1.1rem;
+}
+
+.payment-system{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.payment-summary{
+  padding:42px;
+  border-radius:34px;
+  border:1px solid rgba(0,255,213,.28);
+  background:linear-gradient(135deg,rgba(0,255,213,.07),rgba(255,0,200,.08),rgba(0,0,0,.55));
+  box-shadow:0 0 55px rgba(0,255,213,.08);
+  backdrop-filter:blur(12px);
+}
+
+.payment-badge{
+  display:inline-block;
+  padding:9px 18px;
+  border-radius:999px;
+  border:1px solid rgba(0,255,213,.4);
+  color:#00ffd5;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:22px;
+}
+
+.payment-summary h2{
+  color:#00ffd5;
+  font-size:clamp(2.2rem,5vw,4.2rem);
+  margin-bottom:28px;
+}
+
+.payment-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+  margin-bottom:32px;
+}
+
+.payment-grid div{
+  padding:22px;
+  border-radius:20px;
+  border:1px solid rgba(0,255,213,.25);
+  background:rgba(0,0,0,.45);
+}
+
+.payment-grid small{
+  display:block;
+  color:#9efdf1;
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+.payment-grid strong{
+  color:#fff;
+  font-size:1.55rem;
+}
+
+.invoice-box,
+.terms-box{
+  padding:28px;
+  border-radius:24px;
+  border:1px solid rgba(255,0,200,.24);
+  background:rgba(0,0,0,.38);
+  margin-bottom:24px;
+}
+
+.invoice-box h3,
+.terms-box h3{
+  color:#00ffd5;
+  margin-bottom:14px;
+  font-size:1.5rem;
+}
+
+.invoice-box p,
+.terms-box li{
+  color:#ddd;
+  line-height:1.7;
+}
+
+.terms-box ul{
+  padding-left:20px;
+}
+
+.terms-box li{
+  margin-bottom:10px;
+}
+
+.payment-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+}
+
+.payment-actions a{
+  display:inline-block;
+  padding:16px 24px;
+  border-radius:16px;
+  border:1px solid rgba(0,255,213,.35);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:.82rem;
+}
+
+.payment-actions .main-pay{
+  background:linear-gradient(90deg,#00ffd5,#ff00c8);
+  color:#000;
+  border:none;
+}
+
+.payment-note{
+  color:#00ffd5;
+  margin-top:24px;
+  font-weight:800;
+  line-height:1.7;
+}
+
+@media(max-width:800px){
+  .payment-summary{
+    padding:28px 22px;
+  }
+
+  .payment-actions{
+    flex-direction:column;
+  }
+
+  .payment-actions a{
+    width:100%;
+    text-align:center;
+  }
+}
+
+
+/* ================================
+   RAPCER APPROVED PAYMENT PAGE
+================================ */
+
+.approved-payment-page{
+  padding-bottom:90px;
+}
+
+.approved-payment-hero{
+  margin-top:40px;
+  margin-bottom:34px;
+}
+
+.approved-payment-hero h1{
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:.95;
+  color:#00ffd5;
+  text-shadow:0 0 32px rgba(0,255,213,.35);
+  margin-bottom:18px;
+}
+
+.approved-payment-hero p{
+  color:#ddd;
+  max-width:860px;
+  line-height:1.7;
+  font-size:1.1rem;
+}
+
+.donation-strip{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:30px;
+  border-radius:26px;
+  border:1px solid rgba(255,0,200,.28);
+  background:linear-gradient(135deg,rgba(255,0,200,.08),rgba(0,255,213,.05));
+  margin-bottom:34px;
+}
+
+.donation-strip h3{
+  color:#fff;
+  font-size:1.6rem;
+  margin-bottom:6px;
+}
+
+.donation-strip p{
+  color:#ddd;
+}
+
+.donation-strip a{
+  padding:15px 28px;
+  border-radius:15px;
+  background:linear-gradient(90deg,#00ffd5,#18bfff);
+  color:#000;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.approved-payment-card{
+  max-width:1100px;
+  margin:0 auto;
+  padding:42px;
+  border-radius:34px;
+  border:1px solid rgba(0,255,213,.28);
+  background:linear-gradient(135deg,rgba(0,255,213,.07),rgba(255,0,200,.08),rgba(0,0,0,.55));
+  box-shadow:0 0 55px rgba(0,255,213,.08);
+  backdrop-filter:blur(12px);
+}
+
+@media(max-width:800px){
+  .donation-strip{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .donation-strip a{
+    width:100%;
+    text-align:center;
+  }
+
+  .approved-payment-card{
+    padding:28px 22px;
+  }
+}
+
+
+/* ================================
+   RAPCER EMAIL TEMPLATE SYSTEM
+================================ */
+
+.email-template-page{
+  padding-bottom:90px;
+}
+
+.template-hero{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.template-hero h1{
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:.95;
+  color:#00ffd5;
+  text-shadow:0 0 32px rgba(0,255,213,.35);
+  margin-bottom:18px;
+}
+
+.template-hero p{
+  color:#ddd;
+  max-width:850px;
+  line-height:1.7;
+  font-size:1.1rem;
+}
+
+.template-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:26px;
+}
+
+.template-card{
+  padding:28px;
+  border-radius:26px;
+  border:1px solid rgba(0,255,213,.25);
+  background:linear-gradient(135deg,rgba(0,255,213,.06),rgba(255,0,200,.07),rgba(0,0,0,.5));
+  backdrop-filter:blur(12px);
+}
+
+.template-card h2{
+  color:#00ffd5;
+  font-size:1.6rem;
+  margin-bottom:8px;
+}
+
+.template-card p{
+  color:#ddd;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+
+.template-card textarea{
+  width:100%;
+  min-height:360px;
+  padding:18px;
+  border-radius:18px;
+  border:1px solid rgba(0,255,213,.25);
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  line-height:1.6;
+  resize:vertical;
+  outline:none;
+  margin-bottom:18px;
+}
+
+.template-card button{
+  border:none;
+  padding:15px 24px;
+  border-radius:15px;
+  background:linear-gradient(90deg,#00ffd5,#ff00c8);
+  color:#000;
+  font-weight:900;
+  letter-spacing:2px;
+  cursor:pointer;
+}
+
+
+/* ================================
+   RAPCER MOBILE RESPONSIVE MODE
+   ================================ */
+
+@media (max-width: 768px){
+
+  html, body{
+    width:100%!important;
+    overflow-x:hidden!important;
+  }
+
+  .module{
+    padding:18px!important;
+    width:100%!important;
+    box-sizing:border-box!important;
+  }
+
+  .nav,
+  .nav-left{
+    flex-wrap:wrap!important;
+    gap:10px!important;
+  }
+
+  .brand{
+    font-size:18px!important;
+  }
+
+  .btn,
+  button,
+  .cta,
+  .main-pay,
+  .secondary-btn,
+  .result-btn,
+  .request-btn{
+    width:100%!important;
+    max-width:100%!important;
+    text-align:center!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+    padding:16px 18px!important;
+  }
+
+  h1{
+    font-size:42px!important;
+    line-height:1!important;
+    word-break:break-word!important;
+  }
+
+  h2{
+    font-size:24px!important;
+  }
+
+  p,
+  li{
+    font-size:15px!important;
+    line-height:1.6!important;
+  }
+
+  .grid,
+  .formgrid,
+  .payment-grid,
+  .template-grid,
+  .results-grid,
+  .private-grid,
+  .result-footer{
+    grid-template-columns:1fr!important;
+    width:100%!important;
+  }
+
+  .card,
+  .formbox,
+  .approved-payment-card,
+  .template-card,
+  .result-card,
+  .support-card,
+  .access-card,
+  .private-card,
+  .password-card,
+  .invoice-box,
+  .terms-box,
+  .onboarding-note{
+    width:100%!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+    padding:22px!important;
+    border-radius:22px!important;
+  }
+
+  input,
+  textarea,
+  select{
+    width:100%!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+    font-size:16px!important;
+  }
+
+  textarea{
+    min-height:110px!important;
+  }
+
+  .form-actions,
+  .payment-actions,
+  .action-row{
+    flex-direction:column!important;
+    width:100%!important;
+    gap:12px!important;
+  }
+
+  .package-card,
+  .pricing-card,
+  .approved-payment-card{
+    margin:0!important;
+  }
+
+  .onboarding-header,
+  .template-hero,
+  .approved-payment-hero,
+  .results-hero,
+  .private-hero{
+    margin-top:28px!important;
+  }
+
+  .onboarding-header h1,
+  .template-hero h1,
+  .approved-payment-hero h1,
+  .results-hero h1,
+  .private-hero h1{
+    font-size:44px!important;
+  }
+
+  .private-top{
+    flex-direction:column!important;
+    align-items:flex-start!important;
+  }
+
+  .private-tools{
+    width:100%!important;
+    flex-direction:column!important;
+  }
+
+  .private-tools button{
+    width:100%!important;
+  }
+
+  .rapcer-social,
+  .results-social{
+    position:relative!important;
+    left:auto!important;
+    bottom:auto!important;
+    margin-top:40px!important;
+    justify-content:center!important;
+  }
+
+  .rapcer-social a,
+  .results-social a{
+    flex:1 1 40%!important;
+    text-align:center!important;
+  }
+
+  .payment-actions a{
+    display:flex!important;
+  }
+
+}
+
+/* Extra small phones */
+@media (max-width: 420px){
+
+  h1{
+    font-size:34px!important;
+  }
+
+  .onboarding-header h1,
+  .template-hero h1,
+  .approved-payment-hero h1,
+  .results-hero h1,
+  .private-hero h1{
+    font-size:36px!important;
+  }
+
+  .module{
+    padding:14px!important;
+  }
+
+}
+
+/* RAPCER MAIN LANDING MOBILE CLEANUP */
+@media (max-width: 768px){
+
+  .hero,
+  .main-hero,
+  .landing-hero,
+  .rapcer-hero,
+  .core-hero{
+    min-height:auto!important;
+    padding:28px 16px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    text-align:center!important;
+  }
+
+  .hero-panel,
+  .side-panel,
+  .left-panel,
+  .right-panel,
+  .system-panel,
+  .status-panel{
+    display:none!important;
+  }
+
+  .hero-logo,
+  .main-logo,
+  .rapcer-logo,
+  .core-logo{
+    max-width:180px!important;
+    width:60%!important;
+    margin:20px auto!important;
+  }
+
+  .hero h1,
+  .main-hero h1,
+  .landing-hero h1{
+    font-size:38px!important;
+    line-height:1.05!important;
+    margin:16px 0!important;
+  }
+
+  .hero p,
+  .main-hero p,
+  .landing-hero p{
+    font-size:15px!important;
+    line-height:1.6!important;
+    max-width:92%!important;
+  }
+
+  .bottom-nav,
+  .hero-actions,
+  .landing-actions{
+    position:relative!important;
+    bottom:auto!important;
+    left:auto!important;
+    right:auto!important;
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+    width:100%!important;
+    margin-top:24px!important;
+  }
+
+  .bottom-nav a,
+  .hero-actions a,
+  .landing-actions a{
+    width:100%!important;
+    padding:16px!important;
+    box-sizing:border-box!important;
+  }
+}
+
+/* ================================
+   RAPCER HOMEPAGE MOBILE FINAL
+   ================================ */
+
+@media (max-width: 768px){
+
+  .hero,
+  .main-hero,
+  .landing-hero,
+  .core-hero{
+    min-height:100vh!important;
+    height:auto!important;
+    padding:22px 14px 120px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    overflow:hidden!important;
+  }
+
+  .hero-panel,
+  .side-panel,
+  .left-panel,
+  .right-panel,
+  .system-panel,
+  .status-panel{
+    display:none!important;
+  }
+
+  .hero-logo,
+  .main-logo,
+  .rapcer-logo,
+  .core-logo{
+    width:160px!important;
+    max-width:55vw!important;
+    height:auto!important;
+    margin:18px auto!important;
+  }
+
+  .hero h1,
+  .main-hero h1,
+  .landing-hero h1,
+  .core-hero h1{
+    font-size:42px!important;
+    line-height:1!important;
+    margin:14px 0!important;
+    letter-spacing:.06em!important;
+  }
+
+  .hero p,
+  .main-hero p,
+  .landing-hero p,
+  .core-hero p{
+    font-size:15px!important;
+    line-height:1.6!important;
+    max-width:90%!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  .bottom-nav,
+  .hero-actions,
+  .landing-actions{
+    position:fixed!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    width:100%!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:8px!important;
+    padding:10px!important;
+    box-sizing:border-box!important;
+    background:rgba(0,0,0,.72)!important;
+    backdrop-filter:blur(12px)!important;
+    z-index:9999!important;
+  }
+
+  .bottom-nav a,
+  .hero-actions a,
+  .landing-actions a{
+    width:100%!important;
+    min-width:0!important;
+    padding:13px 8px!important;
+    font-size:11px!important;
+    text-align:center!important;
+    justify-content:center!important;
+    box-sizing:border-box!important;
+    border-radius:14px!important;
+  }
+
+  .bottom-nav a:nth-child(n+5),
+  .hero-actions a:nth-child(n+5),
+  .landing-actions a:nth-child(n+5){
+    display:none!important;
+  }
+
+}
+
+@media (max-width:420px){
+
+  .hero h1,
+  .main-hero h1,
+  .landing-hero h1,
+  .core-hero h1{
+    font-size:34px!important;
+  }
+
+  .hero-logo,
+  .main-logo,
+  .rapcer-logo,
+  .core-logo{
+    width:140px!important;
+  }
+
+}
+
+/* RAPCER APP MOBILE LANDING CLEAN FINAL */
+@media (max-width:768px){
+
+  body:has(.mobile-app),
+  .mobile-app{
+    overflow-x:hidden!important;
+  }
+
+  .mobile-app .panel,
+  .mobile-app .side-card,
+  .mobile-app .status-card,
+  .mobile-app .system-card{
+    display:none!important;
+  }
+
+  .mobile-app{
+    min-height:100vh!important;
+    padding:24px 16px 120px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:center!important;
+    text-align:center!important;
+  }
+
+  .mobile-app h1,
+  .mobile-app .logo-text,
+  .mobile-app .main-title{
+    font-size:38px!important;
+    line-height:1!important;
+    margin:12px 0!important;
+  }
+
+  .mobile-app img{
+    max-width:180px!important;
+    height:auto!important;
+  }
+
+  .mobile-app p{
+    font-size:15px!important;
+    line-height:1.55!important;
+    max-width:92%!important;
+  }
+
+  .mobile-app .bottom-nav,
+  .mobile-app .actions{
+    position:fixed!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:8px!important;
+    padding:10px!important;
+    background:rgba(0,0,0,.78)!important;
+    backdrop-filter:blur(14px)!important;
+    z-index:99999!important;
+  }
+
+  .mobile-app .bottom-nav a,
+  .mobile-app .actions a{
+    width:100%!important;
+    padding:14px 8px!important;
+    font-size:11px!important;
+    border-radius:14px!important;
+    text-align:center!important;
+  }
+
+  .mobile-app .bottom-nav a:nth-child(n+5),
+  .mobile-app .actions a:nth-child(n+5){
+    display:none!important;
+  }
+}
+
+/* RAPCER MOBILE CLEAN FINAL */
+@media (max-width:768px){
+
+  .side-panel,
+  .right-panel,
+  .hero-panel,
+  .system-panel,
+  .status-panel,
+  .left-panel,
+  .panel,
+  .global-panel{
+    display:none!important;
+  }
+
+  .bottom-nav{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:10px!important;
+  }
+
+  .bottom-nav a:nth-child(n+5){
+    display:none!important;
+  }
+
+  .bottom-nav a{
+    width:100%!important;
+    text-align:center!important;
+    font-size:12px!important;
+    padding:14px 10px!important;
+  }
+}
+
+
+
+/* ========================= */
+/* RAPCER FINAL MOBILE FIX   */
+/* ========================= */
+
+@media (max-width:768px){
+
+.hero-panel,
+.side-panel,
+.left-panel,
+.right-panel,
+.system-panel,
+.status-panel{
+width:100%;
+max-width:100%;
+margin:0 auto 20px auto;
+}
+
+.hero{
+padding:20px;
+min-height:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.hero h1{
+font-size:42px;
+line-height:1;
+text-align:center;
+}
+
+.hero p{
+font-size:15px;
+text-align:center;
+}
+
+.bottom-nav{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+width:100%;
+margin-top:10px;
+}
+
+.bottom-nav a{
+width:100%;
+font-size:14px;
+padding:14px 10px;
+text-align:center;
+}
+
+.bottom-nav a:nth-child(n+5){
+grid-column:span 2;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+.grid{
+grid-template-columns:1fr !important;
+}
+
+.card{
+width:100%;
+}
+
+section{
+padding-left:15px;
+padding-right:15px;
+}
+
+}
+
+
+/* RAPCER OFFICIAL SOCIAL */
+
+.results-social{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:10px;
+  align-items:center;
+}
+
+.results-social span{
+  color:#20ffd2;
+  font-weight:900;
+  letter-spacing:.18em;
+  margin-right:8px;
+}
+
+.results-social a{
+  color:white;
+  text-decoration:none;
+  border:1px solid rgba(0,255,210,.35);
+  border-radius:999px;
+  padding:10px 18px;
+  font-weight:800;
+  letter-spacing:.08em;
+  background:rgba(0,0,0,.28);
+  transition:.25s ease;
+}
+
+.results-social a:hover{
+  color:#02020a;
+  background:linear-gradient(90deg,#20ffd2,#55d8ff,#ff00c8);
+  box-shadow:0 0 24px rgba(0,255,210,.25);
+}
+

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GROWTH ONBOARDING | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+<main class="module theme-packages">
+
+<nav class="nav">
+  <div class="nav-left">
+  </div>
+</nav>
+
+<section class="onboarding-header">
+  <span class="package-badge">GROWTH PACKAGE</span>
+  <h1>GROWTH BUSINESS SETUP</h1>
+  <p class="lead">
+    Growth onboarding for businesses ready for stronger visibility, booking systems and basic automation.
+    Payment is requested only after RAPCER reviews and approves your project.
+  </p>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h2>What Growth Includes</h2>
+    <ul>
+      <li>Multi-page website</li>
+      <li>Lead/contact system</li>
+      <li>Booking integration</li>
+      <li>Google Maps integration</li>
+      <li>QR integration</li>
+      <li>Social media integration</li>
+      <li>Basic automation setup</li>
+      <li>Monthly content updates</li>
+      <li>Hosting and maintenance</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Growth Does Not Include</h2>
+    <ul>
+      <li>Advanced CRM systems</li>
+      <li>Custom dashboards</li>
+      <li>Enterprise workflows</li>
+      <li>Complex AI automation</li>
+      <li>Large ecommerce infrastructure</li>
+      <li>Private applications</li>
+    </ul>
+  </div>
+</section>
+
+<section class="formbox">
+<h2>Growth Onboarding Form</h2>
+
+<form id="rapcerForm">
+
+<h3 class="form-section-title">Business Information</h3>
+<div class="formgrid">
+  <input name="Full Name" placeholder="Full Name" required>
+  <input name="Business Name" placeholder="Business Name" required>
+  <input name="Phone / WhatsApp" placeholder="Phone / WhatsApp" required>
+  <input name="Email" placeholder="Business Email" required>
+  <input name="Business Location" placeholder="City / State / Country">
+  <input name="Business Type" placeholder="Business Type">
+</div>
+
+<h3 class="form-section-title">Online Presence</h3>
+<div class="formgrid">
+  <input name="Instagram" placeholder="Instagram">
+  <input name="Facebook" placeholder="Facebook">
+  <input name="TikTok" placeholder="TikTok">
+  <input name="Google Business Link" placeholder="Google Business Profile link if available">
+  <input name="Current Website" placeholder="Current website if any">
+  <input name="Customer WhatsApp" placeholder="Customer WhatsApp number">
+</div>
+
+<h3 class="form-section-title">Growth Project Details</h3>
+<textarea name="Business Services" placeholder="Describe your business and services." required></textarea>
+<textarea name="Booking / Leads / Automation" placeholder="What booking, lead or automation systems do you need?" required></textarea>
+<textarea name="Branding Direction" placeholder="Preferred style, colors or branding direction."></textarea>
+<textarea name="Social Media Links" placeholder="List social media accounts or links."></textarea>
+<textarea name="Extra Notes" placeholder="Anything else RAPCER should know about this Growth project?"></textarea>
+
+<h3 class="form-section-title">Package Confirmation</h3>
+<div class="formgrid">
+  <input name="Selected Package" value="GROWTH PACKAGE" readonly>
+  <input name="Monthly Plan" value="$299/mo" readonly>
+  <input name="Startup Payment" value="$1,799" readonly>
+  <input name="Project Value" value="$3,000" readonly>
+</div>
+
+<div class="onboarding-note">
+  By submitting this form, you understand that this request is subject to RAPCER review.
+  Advanced features outside the Growth Package may require Premium or Custom pricing.
+</div>
+
+<div class="form-actions">
+  <button type="submit">SUBMIT GROWTH REQUEST</button>
+</div>
+
+</form>
+</section>
+
+</main>
+
+<script src="../../rapcer-language.js?v=13" defer></script>
+<script src="../module.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  emailjs.init({
+    publicKey: "C7Navz7uxe7mFVifP"
+  });
+
+  const form = document.getElementById("rapcerForm");
+
+  function getValue(name) {
+    const field = form.querySelector(`[name="${name}"]`);
+    return field ? field.value : "";
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = {
+      name: getValue("Full Name"),
+      email: getValue("Email"),
+      title: "GROWTH PACKAGE REQUEST",
+
+      message: `
+GROWTH PACKAGE REQUEST
+
+Client Name:
+${getValue("Full Name")}
+
+Business Name:
+${getValue("Business Name")}
+
+Phone / WhatsApp:
+${getValue("Phone / WhatsApp")}
+
+Client Email:
+${getValue("Email")}
+
+Business Location:
+${getValue("Business Location")}
+
+Business Type:
+${getValue("Business Type")}
+
+Instagram:
+${getValue("Instagram")}
+
+Facebook:
+${getValue("Facebook")}
+
+TikTok:
+${getValue("TikTok")}
+
+Google Business Link:
+${getValue("Google Business Link")}
+
+Current Website:
+${getValue("Current Website")}
+
+Customer WhatsApp:
+${getValue("Customer WhatsApp")}
+
+Business Services:
+${getValue("Business Services")}
+
+Booking / Leads / Automation:
+${getValue("Booking / Leads / Automation")}
+
+Branding Direction:
+${getValue("Branding Direction")}
+
+Social Media Links:
+${getValue("Social Media Links")}
+
+Extra Notes:
+${getValue("Extra Notes")}
+
+Selected Package:
+${getValue("Selected Package")}
+
+Monthly Plan:
+${getValue("Monthly Plan")}
+
+Startup Payment:
+${getValue("Startup Payment")}
+
+Project Value:
+${getValue("Project Value")}
+
+Submitted:
+${new Date().toLocaleString()}
+`
+    };
+
+    emailjs.send("service_0gwo1eh", "template_0lpcu2b", formData)
+    .then(function() {
+      alert("Solicitud Crecimiento enviada correctamente. RAPCER revisará tu proyecto antes de solicitar pago.");
+      window.location.href = "../success/onboarding-received.html";
+    })
+    .catch(function(error) {
+      console.error(error);
+      alert("Error al enviar: " + JSON.stringify(error));
+    });
+  });
+
+});
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");
+
+<script>
+(function(){
+  function translateOnboardingFull(){
+    var lang = localStorage.getItem("rapcerLang") || "en";
+    if(lang !== "es") return;
+
+    var map = {
+      "STARTER PACKAGE":"PAQUETE INICIAL",
+      "GROWTH PACKAGE":"PAQUETE CRECIMIENTO",
+      "PREMIUM PACKAGE":"PAQUETE PREMIUM",
+      "CUSTOM PACKAGE":"PAQUETE PERSONALIZADO",
+      "CUSTOM PROJECT":"PROYECTO PERSONALIZADO",
+
+      "STARTER BUSINESS SETUP":"CONFIGURACIÓN DE NEGOCIO INICIAL",
+      "GROWTH BUSINESS SETUP":"CONFIGURACIÓN DE NEGOCIO EN CRECIMIENTO",
+      "PREMIUM BUSINESS SETUP":"CONFIGURACIÓN DE NEGOCIO PREMIUM",
+      "CUSTOM PROJECT ONBOARDING":"ONBOARDING DE PROYECTO PERSONALIZADO",
+
+      "What Starter Includes":"Qué Incluye el Paquete Inicial",
+      "What Growth Includes":"Qué Incluye el Paquete Crecimiento",
+      "What Premium Includes":"Qué Incluye el Paquete Premium",
+      "What Custom Includes":"Qué Incluye el Proyecto Personalizado",
+
+      "Starter Does Not Include":"Qué No Incluye el Paquete Inicial",
+      "Growth Does Not Include":"Qué No Incluye el Paquete Crecimiento",
+      "Premium Does Not Include":"Qué No Incluye el Paquete Premium",
+      "Custom Does Not Include":"Qué No Incluye el Proyecto Personalizado",
+
+      "Starter Onboarding Form":"Formulario de Onboarding Inicial",
+      "Growth Onboarding Form":"Formulario de Onboarding Crecimiento",
+      "Premium Onboarding Form":"Formulario de Onboarding Premium",
+      "Custom Onboarding Form":"Formulario de Onboarding Personalizado",
+
+      "Business Information":"Información del Negocio",
+      "Online Presence":"Presencia en Línea",
+      "Starter Project Details":"Detalles del Proyecto Inicial",
+      "Growth Project Details":"Detalles del Proyecto Crecimiento",
+      "Premium Project Details":"Detalles del Proyecto Premium",
+      "Custom Project Details":"Detalles del Proyecto Personalizado",
+      "Photo & Video Session":"Sesión de Fotos y Video",
+      "Package Confirmation":"Confirmación del Paquete",
+      "Project Confirmation":"Confirmación del Proyecto",
+
+      "Professional landing page":"Landing page profesional",
+      "Mobile responsive design":"Diseño adaptable a móvil",
+      "10 business photos":"10 fotos del negocio",
+      "1 promotional video up to 60 seconds":"1 video promocional de hasta 60 segundos",
+      "Instagram, Facebook and TikTok connection":"Conexión con Instagram, Facebook y TikTok",
+      "WhatsApp business contact button":"Botón de contacto por WhatsApp Business",
+      "Google Business profile connection":"Conexión con perfil de Google Business",
+      "Monthly visual content update":"Actualización mensual de contenido visual",
+      "Hosting and maintenance":"Hosting y mantenimiento",
+
+      "Multi-page website":"Sitio web de varias páginas",
+      "Advanced social integration":"Integración avanzada de redes sociales",
+      "QR integration":"Integración de QR",
+      "Google Maps optimization":"Optimización de Google Maps",
+      "Lead/contact system":"Sistema de contactos y prospectos",
+      "Booking system":"Sistema de reservas",
+      "Business automation":"Automatización de negocio",
+
+      "Advanced website systems":"Sistemas web avanzados",
+      "Premium UI/UX":"Diseño UI/UX premium",
+      "Advanced automation":"Automatización avanzada",
+      "CRM & workflows":"CRM y flujos de trabajo",
+      "Premium integrations":"Integraciones premium",
+      "Priority support":"Soporte prioritario",
+      "Dedicated system structure":"Estructura de sistema dedicada",
+
+      "Booking systems":"Sistemas de reservas",
+      "Online payment systems":"Sistemas de pago en línea",
+      "Payment integration":"Integración de pagos",
+      "Automation systems":"Sistemas de automatización",
+      "Automation setup":"Configuración de automatización",
+      "CRM or dashboards":"CRM o dashboards",
+      "E-commerce stores":"Tiendas e-commerce",
+      "Custom applications":"Aplicaciones personalizadas",
+      "Custom portals":"Portales personalizados",
+      "Business applications":"Aplicaciones de negocio",
+      "Advanced AI systems":"Sistemas avanzados de IA",
+      "Custom digital buildout":"Construcción digital personalizada",
+
+      "SUBMIT STARTER REQUEST":"ENVIAR SOLICITUD INICIAL",
+      "SUBMIT GROWTH REQUEST":"ENVIAR SOLICITUD CRECIMIENTO",
+      "SUBMIT PREMIUM REQUEST":"ENVIAR SOLICITUD PREMIUM",
+      "SUBMIT CUSTOM REQUEST":"ENVIAR SOLICITUD PERSONALIZADA"
+    };
+
+    document.querySelectorAll("h1,h2,h3,span,li,button,.package-badge,.onboarding-note").forEach(function(el){
+      var t = el.textContent.trim();
+      if(map[t]) el.textContent = map[t];
+    });
+
+    var placeholders = {
+      "Full Name":"Nombre completo",
+      "Business Name":"Nombre del negocio",
+      "Phone / WhatsApp":"Teléfono / WhatsApp",
+      "Email":"Correo electrónico",
+      "City / State / Country":"Ciudad / Estado / País",
+      "Business Type":"Tipo de negocio",
+      "Instagram":"Instagram",
+      "Facebook":"Facebook",
+      "TikTok":"TikTok",
+      "Google Business Profile link if available":"Link de Google Business si está disponible",
+      "Current website if any":"Página web actual si tiene",
+      "Customer WhatsApp number":"WhatsApp para clientes",
+      "What services or products does your business offer?":"¿Qué servicios o productos ofrece tu negocio?",
+      "Business hours / working days":"Horario del negocio / días de trabajo",
+      "List team members, barbers, stylists or workers you want shown on the page.":"Lista los miembros del equipo, barberos, estilistas o trabajadores que quieres mostrar en la página.",
+      "Preferred colors, style, logo ideas or example websites you like.":"Colores preferidos, estilo, ideas del logo o páginas de ejemplo que te gusten.",
+      "Tell us if you already have logo, photos, videos, menu, flyers or other materials ready.":"Dinos si ya tienes logo, fotos, videos, menú, flyers u otros materiales listos.",
+      "Best day for photo/video session":"Mejor día para la sesión de fotos/video",
+      "Best time for photo/video session":"Mejor hora para la sesión de fotos/video",
+      "Business location for shoot":"Ubicación del negocio para la sesión",
+      "What should RAPCER capture?":"¿Qué debe capturar RAPCER?",
+      "Describe your custom project needs":"Describe las necesidades de tu proyecto personalizado",
+      "What systems, pages, automation or tools do you need?":"¿Qué sistemas, páginas, automatizaciones o herramientas necesitas?",
+      "Project goals":"Objetivos del proyecto",
+      "Estimated budget":"Presupuesto estimado",
+      "Expected launch date":"Fecha esperada de lanzamiento"
+    };
+
+    document.querySelectorAll("input, textarea").forEach(function(el){
+      var p = el.getAttribute("placeholder");
+      if(p && placeholders[p]) el.setAttribute("placeholder", placeholders[p]);
+
+      if(el.value === "STARTER PACKAGE") el.value = "PAQUETE INICIAL";
+      if(el.value === "GROWTH PACKAGE") el.value = "PAQUETE CRECIMIENTO";
+      if(el.value === "PREMIUM PACKAGE") el.value = "PAQUETE PREMIUM";
+      if(el.value === "CUSTOM PACKAGE") el.value = "PAQUETE PERSONALIZADO";
+      if(el.value === "CUSTOM PROJECT") el.value = "PROYECTO PERSONALIZADO";
+    });
+  }
+
+  window.addEventListener("load", function(){
+    setTimeout(translateOnboardingFull, 250);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  function forceGrowthES(){
+    if((localStorage.getItem("rapcerLang") || "en") !== "es") return;
+
+    function text(sel,v){var e=document.querySelector(sel); if(e)e.textContent=v;}
+    function ph(n,v){var e=document.querySelector('[name="'+n+'"]'); if(e)e.setAttribute("placeholder",v);}
+    function val(n,v){var e=document.querySelector('[name="'+n+'"]'); if(e)e.value=v;}
+
+    text(".package-badge","PAQUETE CRECIMIENTO");
+    text(".onboarding-header h1","CONFIGURACIÓN DE NEGOCIO EN CRECIMIENTO");
+    text(".formbox h2","Formulario de Onboarding Crecimiento");
+
+    document.querySelectorAll(".card h2").forEach(function(e,i){
+      var t=["Qué Incluye el Paquete Crecimiento","Qué No Incluye el Paquete Crecimiento"];
+      if(t[i]) e.textContent=t[i];
+    });
+
+    document.querySelectorAll(".form-section-title").forEach(function(e,i){
+      var t=[
+        "Información del Negocio",
+        "Presencia en Línea",
+        "Detalles del Proyecto Crecimiento",
+        "Confirmación del Paquete"
+      ];
+      if(t[i]) e.textContent=t[i];
+    });
+
+    ph("Full Name","Nombre completo");
+    ph("Business Name","Nombre del negocio");
+    ph("Phone / WhatsApp","Teléfono / WhatsApp");
+    ph("Email","Correo electrónico del negocio");
+    ph("Business Location","Ciudad / Estado / País");
+    ph("Business Type","Tipo de negocio");
+    ph("Google Business Link","Link de Google Business si está disponible");
+    ph("Current Website","Página web actual si tiene");
+    ph("Business Services","Describe tu negocio y servicios");
+    ph("Booking / Leads / Automation","¿Qué sistema de reservas, prospectos o automatización necesitas?");
+
+    val("Selected Package","PAQUETE CRECIMIENTO");
+
+    var notes=document.querySelectorAll(".onboarding-note");
+    if(notes[0]) notes[0].textContent="El Paquete Crecimiento está diseñado para negocios que necesitan más visibilidad, mejores sistemas de contacto, reservas, prospectos y automatización básica.";
+    if(notes[1]) notes[1].textContent="Funciones avanzadas fuera del Paquete Crecimiento pueden requerir precios Premium o Personalizado.";
+
+    var btn=document.querySelector(".form-actions button");
+    if(btn) btn.textContent="ENVIAR SOLICITUD CRECIMIENTO";
+  }
+
+  window.addEventListener("load",function(){setTimeout(forceGrowthES,400);});
+})();
+</script>
+<script>
+window.addEventListener("load",function(){
+setTimeout(function(){
+if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
+
+document.querySelector(".onboarding-header .lead").textContent="Onboarding para negocios listos para mayor visibilidad, sistemas de reservas y automatización básica. El pago solo se solicita después de que RAPCER revise y apruebe tu proyecto.";
+
+document.querySelectorAll(".card ul")[0].innerHTML="<li>Sitio web de varias páginas</li><li>Sistema de contacto y prospectos</li><li>Integración de reservas</li><li>Integración con Google Maps</li><li>Integración QR</li><li>Integración con redes sociales</li><li>Automatización básica</li><li>Actualizaciones mensuales</li><li>Hosting y mantenimiento</li>";
+
+document.querySelectorAll(".card ul")[1].innerHTML="<li>Sistemas CRM avanzados</li><li>Dashboards personalizados</li><li>Flujos empresariales avanzados</li><li>Automatización compleja con IA</li><li>Infraestructura e-commerce grande</li><li>Aplicaciones privadas</li>";
+
+document.querySelectorAll("textarea").forEach(e=>{
+let ph=e.placeholder;
+if(ph==="Describe your business and services.")e.placeholder="Describe tu negocio y tus servicios";
+if(ph==="What booking, lead or automation systems do you need?")e.placeholder="¿Qué sistema de reservas, prospectos o automatización necesitas?";
+if(ph==="Preferred style, colors or branding direction.")e.placeholder="Estilo, colores o dirección de marca preferida";
+if(ph==="List social media accounts or links.")e.placeholder="Lista tus redes sociales o links";
+if(ph==="Anything else RAPCER should know about this Growth project?")e.placeholder="¿Algo más que RAPCER deba saber sobre este proyecto?";
+});
+
+document.querySelectorAll("input").forEach(e=>{
+if(e.placeholder==="Customer WhatsApp number")e.placeholder="WhatsApp para clientes";
+if(e.value==="GROWTH PACKAGE")e.value="PAQUETE CRECIMIENTO";
+});
+
+let b=document.querySelector(".form-actions button");
+if(b)b.textContent="ENVIAR SOLICITUD CRECIMIENTO";
+},800);
+});
+</script>

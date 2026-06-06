@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>STARTER ONBOARDING | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+</style>
+<style>
+</style>
+<style>
+</style>
+</head>
+
+<body>
+<main class="module theme-packages">
+
+<nav class="nav">
+  <div class="nav-left">
+  </div>
+</nav>
+
+<section class="onboarding-header">
+  <span class="package-badge">STARTER PACKAGE</span>
+  <h1>STARTER BUSINESS SETUP</h1>
+  <p class="lead">
+    This form collects the basic information RAPCER needs to build your Starter online presence.
+    Payment is requested only after RAPCER reviews and approves your project.
+  </p>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h2>What Starter Includes</h2>
+    <ul>
+      <li>Professional landing page</li>
+      <li>Mobile responsive design</li>
+      <li>10 business photos</li>
+      <li>1 promotional video up to 60 seconds</li>
+      <li>Instagram, Facebook and TikTok connection</li>
+      <li>WhatsApp business contact button</li>
+      <li>Google Business profile connection</li>
+      <li>Monthly visual content update</li>
+      <li>Hosting and maintenance</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Starter Does Not Include</h2>
+    <ul>
+      <li>Booking systems</li>
+      <li>Online payment systems</li>
+      <li>Automation systems</li>
+      <li>CRM or dashboards</li>
+      <li>E-commerce stores</li>
+      <li>Custom applications</li>
+      <li>Advanced AI systems</li>
+    </ul>
+  </div>
+</section>
+
+<div class="onboarding-note">
+  Starter is designed to help small businesses get seen online with a clean landing page,
+  basic business visibility, social media connection, Google Business connection, photos and one short video.
+</div>
+
+<section class="formbox">
+<h2>Starter Onboarding Form</h2>
+
+<form id="rapcerForm">
+
+<h3 class="form-section-title">Business Information</h3>
+<div class="formgrid">
+  <input name="Full Name" placeholder="Full Name" required>
+  <input name="Business Name" placeholder="Business Name" required>
+  <input name="Phone / WhatsApp" placeholder="Phone / WhatsApp" required>
+  <input name="Email" placeholder="Email" required>
+  <input name="Business Location" placeholder="City / State / Country" required>
+  <input name="Business Type" placeholder="Business Type">
+</div>
+
+<h3 class="form-section-title">Online Presence</h3>
+<div class="formgrid">
+  <input name="Instagram" placeholder="Instagram">
+  <input name="Facebook" placeholder="Facebook">
+  <input name="TikTok" placeholder="TikTok">
+  <input name="Google Business Link" placeholder="Google Business Profile link if available">
+  <input name="Current Website" placeholder="Current website if any">
+  <input name="Customer WhatsApp" placeholder="Customer WhatsApp number">
+</div>
+
+<h3 class="form-section-title">Starter Project Details</h3>
+<textarea name="Services / Products" placeholder="What services or products does your business offer?" required></textarea>
+<textarea name="Business Hours" placeholder="Business hours / working days"></textarea>
+<textarea name="Team Members" placeholder="List team members, barbers, stylists or workers you want shown on the page."></textarea>
+<textarea name="Colors / Style" placeholder="Preferred colors, style, logo ideas or example websites you like."></textarea>
+<textarea name="Photos / Logo Notes" placeholder="Tell us if you already have logo, photos, videos, menu, flyers or other materials ready."></textarea>
+
+<h3 class="form-section-title">Photo & Video Session</h3>
+<div class="formgrid">
+  <input name="Best Day For Shoot" placeholder="Best day for photo/video session">
+  <input name="Best Time For Shoot" placeholder="Best time for photo/video session">
+  <input name="Shoot Location" placeholder="Business location for shoot">
+  <input name="Main Content To Capture" placeholder="What should RAPCER capture?">
+</div>
+
+<h3 class="form-section-title">Package Confirmation</h3>
+<div class="formgrid">
+  <input name="Selected Package" value="STARTER PACKAGE" readonly>
+  <input name="Monthly Plan" value="$149/mo" readonly>
+  <input name="Startup Deposit" value="$749" readonly>
+  <input name="Project Value" value="$1,200" readonly>
+</div>
+
+<div class="onboarding-note">
+  By submitting this form, you understand that this request is subject to RAPCER review.
+  Advanced features outside the Starter Package may require Growth, Premium or Custom pricing.
+</div>
+
+<div class="form-actions">
+  <button type="submit">SUBMIT STARTER REQUEST</button>
+</div>
+
+</form>
+</section>
+
+</main>
+
+<script src="../module.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    emailjs.init({
+        publicKey: "C7Navz7uxe7mFVifP"
+    });
+
+    const form = document.getElementById("rapcerForm");
+
+    function getValue(name) {
+        const field = form.querySelector(`[name="${name}"]`);
+        return field ? field.value : "";
+    }
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const formData = {
+            name: getValue("Full Name"),
+            email: getValue("Email"),
+            title: "STARTER PACKAGE REQUEST",
+
+            message: `
+STARTER PACKAGE REQUEST
+
+Client Name:
+${getValue("Full Name")}
+
+Business Name:
+${getValue("Business Name")}
+
+Phone / WhatsApp:
+${getValue("Phone / WhatsApp")}
+
+Client Email:
+${getValue("Email")}
+
+Business Location:
+${getValue("Business Location")}
+
+Business Type:
+${getValue("Business Type")}
+
+Instagram:
+${getValue("Instagram")}
+
+Facebook:
+${getValue("Facebook")}
+
+TikTok:
+${getValue("TikTok")}
+
+Google Business Link:
+${getValue("Google Business Link")}
+
+Current Website:
+${getValue("Current Website")}
+
+Customer WhatsApp:
+${getValue("Customer WhatsApp")}
+
+Services / Products:
+${getValue("Services / Products")}
+
+Business Hours:
+${getValue("Business Hours")}
+
+Team Members:
+${getValue("Team Members")}
+
+Colors / Style:
+${getValue("Colors / Style")}
+
+Photos / Logo Notes:
+${getValue("Photos / Logo Notes")}
+
+Best Day For Shoot:
+${getValue("Best Day For Shoot")}
+
+Best Time For Shoot:
+${getValue("Best Time For Shoot")}
+
+Shoot Location:
+${getValue("Shoot Location")}
+
+Main Content To Capture:
+${getValue("Main Content To Capture")}
+
+Selected Package:
+${getValue("Selected Package")}
+
+Monthly Plan:
+${getValue("Monthly Plan")}
+
+Startup Deposit:
+${getValue("Startup Deposit")}
+
+Project Value:
+${getValue("Project Value")}
+
+Submitted:
+${new Date().toLocaleString()}
+`
+        };
+
+        emailjs.send("service_0gwo1eh", "template_0lpcu2b", formData)
+        .then(function() {
+            alert("Starter request sent successfully. RAPCER will review your project before requesting payment.");
+            window.location.href = "../success/onboarding-received.html";
+        })
+        .catch(function(error) {
+            console.error(error);
+            alert("Email failed: " + JSON.stringify(error));
+        });
+    });
+
+});
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+<script>
+(function(){
+ var from=new URLSearchParams(window.location.search).get("from");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const plan = params.get("plan");
+
+  if (plan !== "full") return;
+
+  const packageSection = Array.from(document.querySelectorAll(".form-section-title"))
+    .find(h => h.textContent.trim().toLowerCase().includes("package confirmation"));
+
+  if (packageSection) {
+    const grid = packageSection.nextElementSibling;
+    if (grid && grid.classList.contains("formgrid")) {
+      grid.innerHTML = `
+        <input name="Selected Package" value="STARTER PACKAGE" readonly>
+        <input name="Selected Plan" value="PAY IN FULL" readonly>
+        <input name="Total Payment" value="$1,200" readonly>
+        <input name="Monthly Plan" value="N/A" readonly>
+        <input name="Startup Deposit" value="N/A" readonly>
+        <input name="Project Value" value="$1,200" readonly>
+      `;
+    }
+  }
+
+  const submitBtn = document.querySelector('button[type="submit"]');
+  if (submitBtn) submitBtn.textContent = "SUBMIT STARTER FULL REQUEST";
+});
+</script>

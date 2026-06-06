@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayuda Digital RAPCER</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f8fc;color:#0b1220}
+a{text-decoration:none;color:inherit}
+header{background:#07111f;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:20px;font-weight:900}.logo span{color:#17a8ff}
+.back{border:1px solid #17a8ff;border-radius:9px;padding:10px 14px;font-size:13px;font-weight:800}
+.hero{padding:42px 20px;background:linear-gradient(135deg,#07111f,#123a63);color:white}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+.hero h1{font-size:42px;line-height:1.05;margin-bottom:14px}
+.hero h1 span{color:#31b7ff}
+.hero p{font-size:17px;line-height:1.5;opacity:.95}
+.hero-image-wrap{text-align:center}
+.hero-image{width:100%;max-width:520px;height:auto;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.hero-logo{width:82px;height:auto;display:block;margin:0 auto 14px auto;filter:drop-shadow(0 0 12px rgba(22,139,255,.45))}
+.hero-card h3{color:#168bff;margin-bottom:10px;text-align:center}
+.hero-card ul{list-style:none;display:grid;gap:10px;font-size:15px}
+.hero-card li:before{content:"✓ ";color:#0aa86b;font-weight:900}
+.actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 18px;border-radius:10px;font-weight:900}
+.primary{background:#168bff;color:white}
+.dark{background:#07111f;color:white}
+section{max-width:1100px;margin:auto;padding:34px 20px}
+.title{text-align:center;margin-bottom:26px}
+.title small{color:#168bff;font-weight:900}
+.title h2{font-size:30px;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.07);transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.card h3{color:#07111f;margin-bottom:12px}
+.card ul{list-style:none;display:grid;gap:8px;font-size:14px;line-height:1.35}
+.card li:before{content:"✓ ";color:#0aa86b;font-weight:900}
+.price{margin-top:14px;font-size:18px;font-weight:900;color:#168bff}
+.contact{background:#07111f;color:white;border-radius:22px;padding:28px;text-align:center;margin-top:10px}
+.contact h2{font-size:30px;margin-bottom:10px}
+.contact p{opacity:.9;line-height:1.5}
+.contact-buttons{margin-top:20px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.note{background:#fff8e7;border:1px solid #ffd36a;color:#2b2200;border-radius:14px;padding:18px;margin-top:22px;line-height:1.5;font-size:14px}
+footer{background:#07111f;color:white;text-align:center;padding:24px;font-size:13px}
+@media(max-width:900px){
+.hero-inner{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr 1fr}
+.hero{text-align:center}
+.actions,.contact-buttons{justify-content:center}
+}
+@media(max-width:600px){
+header{flex-direction:column;gap:12px}
+.grid{grid-template-columns:1fr}
+.hero h1{font-size:34px}
+}
+
+</style>
+<link rel="stylesheet" href="digital-help-v11.css">
+<style>
+</style>
+<style>
+</style>
+</head>
+<body>
+
+<header>
+  <div style="position:absolute; top:20px; right:20px;"> 
+      
+  </div>
+  
+  
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>¿Necesitas ayuda con<br><span>documentos, correo o formularios en línea?</span></h1>
+      <p>Ayuda Digital RAPCER ayuda con tareas digitales diarias: solicitudes de empleo, PDFs, Gmail, carga de documentos, formularios en línea y configuración básica de negocios.</p>
+      <div class="actions">
+        <a class="btn primary" href="#services">Ver Servicios</a>
+        <a class="btn dark" href="#contact">Solicitar Ayuda</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+<img src="../assets/digital-help-hero.png" alt="Ayuda Digital RAPCER" class="hero-image">
+</div>
+</div>
+</section>
+
+<section id="services">
+  <div class="title">
+    <small>RAPCER DIGITAL HELP</small>
+    <h2>Elige lo que necesitas</h2>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="job-assist/index.html">
+      <h3>Asistencia de Empleo</h3>
+      <ul><li>Ayuda con currículum</li><li>Solicitudes de empleo</li><li>Configuración de Indeed</li><li>Configuración de LinkedIn</li></ul>
+      <div class="price">Desde $25</div>
+    </a>
+
+    <a class="card" href="document-center/index.html">
+      <h3>Centro de Documentos</h3>
+      <ul><li>Escanear documentos</li><li>Conversión a PDF</li><li>Envío por correo electrónico</li><li>Carga de archivos</li></ul>
+      <div class="price">Desde $15</div>
+    </a>
+
+    <a class="card" href="tech-help/index.html">
+      <h3>Ayuda Técnica</h3>
+      <ul><li>Configuración de Gmail</li><li>Recuperación de cuentas</li><li>Aplicaciones móviles</li><li>Ayuda con impresoras</li></ul>
+      <div class="price">Desde $20</div>
+    </a>
+
+    <a class="card" href="business-start/index.html">
+      <h3>Inicio de Negocio</h3>
+      <ul><li>Correo empresarial</li><li>Google Business</li><li>Código QR</li><li>Presencia web básica</li></ul>
+      <div class="price">Desde $99</div>
+    </a>
+
+    <a class="card" href="online-forms/index.html">
+      <h3>Formularios en Línea</h3>
+      <ul><li>Formularios escolares</li><li>Formularios de vivienda</li><li>Registro de cuentas</li><li>Envíos en línea</li></ul>
+      <div class="price">Desde $15</div>
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>¿Necesitas Ayuda Digital?</h2><p style="margin-top:10px;">Contacta a RAPCER directamente por correo y dinos en qué necesitas ayuda.</p>
+    <p>Dile a RAPCER en qué necesitas ayuda. Podemos ayudarte a organizar la tarea y guiarte durante el proceso digital.</p>
+    <div class="contact-buttons">
+      <a class="btn primary" href="mailto:rapcerj@gmail.com?subject=Ayuda Digital RAPCER Request">Enviar Correo a RAPCER</a>
+      
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Importante:</strong> Ayuda Digital RAPCER provides technology and administrative assistance only. Final pricing may vary depending on the complexity of the request. Services are reviewed before processing begins. RAPCER does not provide legal, tax, immigration, medical, insurance, or financial advice.
+  </div>
+</section>
+
+<footer>
+  Powered by RAPCER Systems · rapcerj@gmail.com
+</body>
+</html>

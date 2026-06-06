@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>RAPCER Systems</title>
+
+<script>
+(function(){
+
+  var isMobile =
+    window.innerWidth <= 768 ||
+    /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  if(isMobile){
+    window.location.replace("app-mobile.html");
+  }else{
+    window.location.replace("desktop/index.html");
+  }
+
+})();
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

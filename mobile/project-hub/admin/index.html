@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>RAPCER Community</title>
+<link rel="stylesheet" href="../../module.css">
+<style>
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
+.hub-card,.preview-card{display:block;text-decoration:none;color:white;padding:28px;border-radius:24px;border:1px solid rgba(0,255,210,.25);background:rgba(0,0,0,.32)}
+.hub-card small,label{color:#66fff1;letter-spacing:.14em;font-size:12px;font-weight:900}
+.hub-card h2{margin:14px 0;font-size:28px}
+.hub-card p,.preview-card p{color:rgba(255,255,255,.75);line-height:1.6}
+.form-box{margin-top:35px;padding:28px;border-radius:28px;border:1px solid rgba(0,255,210,.25);background:rgba(0,0,0,.35)}
+input,select{width:100%;padding:14px;margin:10px 0 18px;border-radius:14px;border:1px solid rgba(255,255,255,.18);background:#05070d;color:white}
+.preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:25px}
+.preview-card img{width:76px;height:76px;object-fit:cover;border-radius:18px;margin-bottom:12px}
+.preview-card a{color:#66fff1;font-weight:900}
+.category-block{display:none;margin-top:45px}
+.category-block.active{display:block}
+</style>
+</head>
+<body>
+<main class="module">
+
+<nav class="nav">
+  <a href="../../../app-mobile.html" class="btn">← RAPCER</a>
+  <a href="../index.html" class="btn">PROJECT HUB</a>
+</nav>
+
+<section class="agreement-hero">
+  <span class="package-badge">RAPCER COMMUNITY</span>
+  <h1>Creators, Streamers & Community Projects</h1>
+  <p>Creator profiles, live links, Discord groups, events and community growth tools.</p>
+</section>
+
+<section class="hub-grid">
+  <a class="hub-card" href="../community/social/index.html">
+    <small>SOCIAL MEDIA</small>
+    <h2>Creator Social Links</h2>
+    <p>TikTok, YouTube, Instagram, Facebook, logos and creator profile links.</p>
+  </a>
+
+  <a class="hub-card" href="../community/live/index.html">
+    <small>LIVE STREAMING</small>
+    <h2>Gaming & Live Content</h2>
+    <p>Twitch, Kick, YouTube Live and active streamers.</p>
+  </a>
+
+  <a class="hub-card" href="../community/groups/index.html">
+    <small>DISCORD / EVENTS</small>
+    <h2>Events & Groups</h2>
+    <p>Discord servers, GTA groups, tournaments and community events.</p>
+  </a>
+</section>
+
+<section id="creatorForm" class="form-box">
+  <h2 style="color:white;">Join RAPCER Creators</h2>
+
+  <label>Name / Brand</label>
+  <input id="cName" placeholder="BlackFrog809 Pro">
+
+  <label>Type</label>
+  <select id="cType">
+    <option value="social">Social Media / TikTok / YouTube / Instagram / Facebook</option>
+    <option value="live">Live Streaming / Twitch / Kick / YouTube Live</option>
+    <option value="groups">Discord / Events / Community Groups</option>
+  </select>
+
+  <label>URL</label>
+  <input id="cUrl" placeholder="https://www.tiktok.com/@blackfrog809pro">
+
+  <label>Logo / Photo</label>
+  <input id="cImage" type="file" accept="image/*">
+
+  <button class="btn" type="button" onclick="saveCreator()">SAVE</button>
+</section>
+
+
+
+</main>
+
+<script>
+function getItems(){
+  return JSON.parse(localStorage.getItem("rapcerCommunityItems") || "[]");
+}
+function setItems(items){
+  localStorage.setItem("rapcerCommunityItems", JSON.stringify(items));
+}
+function showCategory(type){
+  document.querySelectorAll(".category-block").forEach(s => s.classList.remove("active"));
+  document.getElementById(type).classList.add("active");
+}
+function saveCreator(){
+  const name = document.getElementById("cName").value.trim();
+  const type = document.getElementById("cType").value;
+  const url = document.getElementById("cUrl").value.trim();
+  const file = document.getElementById("cImage").files[0];
+
+  if(!name || !url){ alert("Add name and URL"); return; }
+
+  const save = (image) => {
+    const items = getItems();
+    items.push({name,type,url,image});
+    setItems(items);
+    renderItems();
+    window.location.href = "/mobile/project-hub/community/" + type + "/index.html";
+    document.getElementById("cName").value="";
+    document.getElementById("cUrl").value="";
+    document.getElementById("cImage").value="";
+  };
+
+  if(file){
+    const reader = new FileReader();
+    reader.onload = () => save(reader.result);
+    reader.readAsDataURL(file);
+  }else{
+    save("");
+  }
+}
+function card(item){
+  return `
+    <div class="preview-card">
+      ${item.image ? `<img src="${item.image}">` : ""}
+      <h3>${item.name}</h3>
+      <p>${item.type === "social" ? "Social Media" : item.type === "live" ? "Live Streaming" : "Discord / Events"}</p>
+      <a href="${item.url}" target="_blank">Open Link</a>
+    </div>
+  `;
+}
+function renderItems(){
+  const items = getItems();
+  document.getElementById("socialList").innerHTML = items.filter(i=>i.type==="social").map(card).join("");
+  document.getElementById("liveList").innerHTML = items.filter(i=>i.type==="live").map(card).join("");
+  document.getElementById("groupsList").innerHTML = items.filter(i=>i.type==="groups").map(card).join("");
+}
+renderItems();
+</script>
+<script src="../../../rapcer-language.js?v=16" defer></script>
+</body>
+</html>
+
+<script>
+window.addEventListener("load",function(){
+setTimeout(function(){
+if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
+
+document.querySelectorAll("h1,h2,h3,h4,p,span,a,button,div").forEach(function(e){
+let t=e.textContent.trim();
+let m={
+"PROJECT HUB":"CENTRO DE PROYECTOS",
+"SMALL BUSINESS":"NEGOCIO PEQUEÑO",
+"GROWING BUSINESS":"NEGOCIO EN CRECIMIENTO",
+"ENTERPRISE":"EMPRESA",
+"RAPCER CORE":"NÚCLEO RAPCER",
+"COMMUNITY":"COMUNIDAD",
+
+"Creators, Streamers & Community Projects":"Creadores, Streamers y Proyectos Comunitarios",
+"Creator profiles, live links, Discord groups, events and community growth tools.":"Perfiles de creadores, enlaces en vivo, grupos de Discord, eventos y herramientas de crecimiento comunitario.",
+"Creator Social Links":"Redes Sociales de Creadores",
+"Gaming & Live Content":"Gaming y Contenido en Vivo",
+"Events & Groups":"Eventos y Grupos",
+"Twitch, Kick, YouTube Live and active streamers.":"Twitch, Kick, YouTube Live y streamers activos.",
+"Discord servers, GTA groups, tournaments and community events.":"Servidores de Discord, grupos de GTA, torneos y eventos comunitarios.",
+"RAPCER Community Access":"Acceso a la Comunidad RAPCER",
+"Creator access is managed by RAPCER. Approved creators, streamers and community groups will appear inside the official community sections.":"El acceso de creadores es administrado por RAPCER. Los creadores, streamers y grupos aprobados aparecerán dentro de las secciones oficiales de la comunidad.",
+
+"Join RAPCER Creators":"Unirse a Creadores RAPCER",
+"SAVE":"GUARDAR",
+"Add name and URL":"Agrega nombre y URL",
+"Social Media":"Redes Sociales",
+"Live Streaming":"Transmisión en Vivo",
+"Discord / Events":"Discord / Eventos",
+
+"Behind RAPCER":"Detrás de RAPCER",
+"Back to Project Hub":"Volver al Centro de Proyectos",
+"Back to Mobile Home":"Volver al Inicio Mobile",
+
+"Coming Soon":"Próximamente",
+"We are building the next generation creator ecosystem inside RAPCER: creators, streamers, live content, Discord communities, events and digital growth tools.":"Estamos construyendo la próxima generación del ecosistema de creadores dentro de RAPCER: creadores, streamers, contenido en vivo, comunidades de Discord, eventos y herramientas de crecimiento digital.",
+"← Back to Community":"← Volver a Comunidad",
+"RAPCER Home":"Inicio RAPCER",
+
+"Creator Landing Slots":"Espacios de Landing para Creadores",
+"Creator Resources — Coming Soon":"Recursos para Creadores — Próximamente",
+"Each streamer can have a personal RAPCER landing page connected to their channels.":"Cada streamer puede tener una landing personal de RAPCER conectada a sus canales.",
+"No Discord or event links added yet.":"Aún no hay enlaces de Discord o eventos agregados."
+};
+if(m[t])e.textContent=m[t];
+});
+
+},500);
+});
+</script>
