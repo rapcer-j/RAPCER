@@ -2,64 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>RAPCER Mobile</title>
-<script>
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Hub | RAPCER</title>
+<link rel="stylesheet" href="../module.css">
+<style>
+body{margin:0;background:#050805;color:#fff;font-family:Arial,sans-serif}
+.wrap{max-width:980px;margin:auto;padding:24px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.brand{color:#fff;text-decoration:none;font-weight:900}
+.brand span{color:#00ff88}
+.btn,.cta{display:inline-block;text-decoration:none;color:#001b0c;background:#00ff88;padding:12px 18px;border-radius:14px;font-weight:900}
+.hero{padding:26px;border:1px solid rgba(0,255,136,.25);border-radius:22px;background:linear-gradient(135deg,#071407,#020402)}
+.hero h1{margin:0 0 10px;font-size:34px}
+.hero p{color:#cfe8d8;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+.card{background:#0b130d;border:1px solid rgba(0,255,136,.22);border-radius:20px;padding:18px;text-decoration:none;color:#fff;min-height:145px}
+.card small{color:#00ff88;font-weight:900}
+.card h2{margin:10px 0}
+.card p{color:#cfe8d8;line-height:1.45}
+.lang{display:flex;gap:8px}
+.lang button{border:1px solid rgba(0,255,136,.35);background:#071407;color:#fff;border-radius:12px;padding:9px 12px;font-weight:800}
+</style>
 </head>
-<script src="../../rapcer-language.js?v=16" defer></script>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="../../app-mobile.html"><span>R</span> RAPCER</a>
+    <div class="lang">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1 data-en="Project Hub" data-es="Centro de Proyectos">Project Hub</h1>
+    <p data-en="Explore RAPCER project categories for small businesses, community organizations, growing brands, enterprise systems and RAPCER Core infrastructure." data-es="Explora categorías de proyectos RAPCER para pequeños negocios, organizaciones comunitarias, marcas en crecimiento, sistemas empresariales e infraestructura RAPCER Core.">
+      Explore RAPCER project categories for small businesses, community organizations, growing brands, enterprise systems and RAPCER Core infrastructure.
+    </p>
+    <a class="cta" href="../../app-mobile.html" data-en="Back Home" data-es="Volver al Inicio">Back Home</a>
+  </section>
+
+  <div class="grid">
+    <a class="card" href="small-business/index.html">
+      <small data-en="LOCAL BRANDS" data-es="MARCAS LOCALES">LOCAL BRANDS</small>
+      <h2 data-en="Small Business" data-es="Negocios Pequeños">Small Business</h2>
+      <p data-en="Websites, booking, QR, menus, reviews and contact systems for local businesses." data-es="Páginas web, reservas, QR, menús, reseñas y sistemas de contacto para negocios locales."></p>
+    </a>
+
+    <a class="card" href="community/index.html">
+      <small data-en="COMMUNITY" data-es="COMUNIDAD">COMMUNITY</small>
+      <h2 data-en="Community" data-es="Comunidad">Community</h2>
+      <p data-en="Digital tools for churches, ministries, events and community groups." data-es="Herramientas digitales para iglesias, ministerios, eventos y grupos comunitarios."></p>
+    </a>
+
+    <a class="card" href="growing-business/index.html">
+      <small data-en="GROWTH" data-es="CRECIMIENTO">GROWTH</small>
+      <h2 data-en="Growing Business" data-es="Negocios en Crecimiento">Growing Business</h2>
+      <p data-en="Better structure, automation and customer flow for expanding businesses." data-es="Mejor estructura, automatización y flujo de clientes para negocios en expansión."></p>
+    </a>
+
+    <a class="card" href="enterprise/index.html">
+      <small data-en="ADVANCED SYSTEMS" data-es="SISTEMAS AVANZADOS">ADVANCED SYSTEMS</small>
+      <h2 data-en="Enterprise" data-es="Empresarial">Enterprise</h2>
+      <p data-en="Larger digital systems, internal structure and scalable infrastructure." data-es="Sistemas digitales grandes, estructura interna e infraestructura escalable."></p>
+    </a>
+
+    <a class="card" href="rapcer-core/index.html">
+      <small data-en="RAPCER SYSTEMS" data-es="SISTEMAS RAPCER">RAPCER SYSTEMS</small>
+      <h2 data-en="RAPCER Core" data-es="RAPCER Core">RAPCER Core</h2>
+      <p data-en="Internal RAPCER infrastructure, digital operations and system foundation." data-es="Infraestructura interna RAPCER, operaciones digitales y base del sistema."></p>
+    </a>
+  </div>
+</div>
+
+<script>
+function setLang(lang){
+  localStorage.setItem("rapcerLang", lang);
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+}
+setLang(localStorage.getItem("rapcerLang") || "en");
+</script>
 </body>
 </html>
-
-<script>
-window.addEventListener("load",function(){
-setTimeout(function(){
-if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
-
-document.querySelectorAll("h1,h2,h3,h4,p,span,a,button,div").forEach(function(e){
-let t=e.textContent.trim();
-let m={
-"PROJECT HUB":"CENTRO DE PROYECTOS",
-"SMALL BUSINESS":"NEGOCIO PEQUEÑO",
-"GROWING BUSINESS":"NEGOCIO EN CRECIMIENTO",
-"ENTERPRISE":"EMPRESA",
-"RAPCER CORE":"NÚCLEO RAPCER",
-"COMMUNITY":"COMUNIDAD",
-
-"Creators, Streamers & Community Projects":"Creadores, Streamers y Proyectos Comunitarios",
-"Creator profiles, live links, Discord groups, events and community growth tools.":"Perfiles de creadores, enlaces en vivo, grupos de Discord, eventos y herramientas de crecimiento comunitario.",
-"Creator Social Links":"Redes Sociales de Creadores",
-"Gaming & Live Content":"Gaming y Contenido en Vivo",
-"Events & Groups":"Eventos y Grupos",
-"Twitch, Kick, YouTube Live and active streamers.":"Twitch, Kick, YouTube Live y streamers activos.",
-"Discord servers, GTA groups, tournaments and community events.":"Servidores de Discord, grupos de GTA, torneos y eventos comunitarios.",
-"RAPCER Community Access":"Acceso a la Comunidad RAPCER",
-"Creator access is managed by RAPCER. Approved creators, streamers and community groups will appear inside the official community sections.":"El acceso de creadores es administrado por RAPCER. Los creadores, streamers y grupos aprobados aparecerán dentro de las secciones oficiales de la comunidad.",
-
-"Join RAPCER Creators":"Unirse a Creadores RAPCER",
-"SAVE":"GUARDAR",
-"Add name and URL":"Agrega nombre y URL",
-"Social Media":"Redes Sociales",
-"Live Streaming":"Transmisión en Vivo",
-"Discord / Events":"Discord / Eventos",
-
-"Behind RAPCER":"Detrás de RAPCER",
-"Back to Project Hub":"Volver al Centro de Proyectos",
-"Back to Mobile Home":"Volver al Inicio Mobile",
-
-"Coming Soon":"Próximamente",
-"We are building the next generation creator ecosystem inside RAPCER: creators, streamers, live content, Discord communities, events and digital growth tools.":"Estamos construyendo la próxima generación del ecosistema de creadores dentro de RAPCER: creadores, streamers, contenido en vivo, comunidades de Discord, eventos y herramientas de crecimiento digital.",
-"← Back to Community":"← Volver a Comunidad",
-"RAPCER Home":"Inicio RAPCER",
-
-"Creator Landing Slots":"Espacios de Landing para Creadores",
-"Creator Resources — Coming Soon":"Recursos para Creadores — Próximamente",
-"Each streamer can have a personal RAPCER landing page connected to their channels.":"Cada streamer puede tener una landing personal de RAPCER conectada a sus canales.",
-"No Discord or event links added yet.":"Aún no hay enlaces de Discord o eventos agregados."
-};
-if(m[t])e.textContent=m[t];
-});
-
-},500);
-});
-</script>

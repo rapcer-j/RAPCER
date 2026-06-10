@@ -11,33 +11,43 @@
 <main class="module">
 
 <section class="hero">
-  <small>PROJECT HUB</small>
-  <h1>NEGOCIO EN CRECIMIENTO</h1>
-  <p class="lead">
-    Sistemas digitales para negocios que ya tienen movimiento y necesitan más visibilidad, reservas, clientes y automatización.
+  <small data-en="PROJECT HUB" data-es="CENTRO DE PROYECTOS">PROJECT HUB</small>
+  <h1 data-en="GROWING BUSINESS" data-es="NEGOCIO EN CRECIMIENTO">GROWING BUSINESS</h1>
+  <p class="lead" data-en="Digital systems for businesses that already have movement and need more visibility, booking, customers and automation." data-es="Sistemas digitales para negocios que ya tienen movimiento y necesitan más visibilidad, reservas, clientes y automatización.">
+    Digital systems for businesses that already have movement and need more visibility, booking, customers and automation.
   </p>
-  <a class="btn" href="../index.html">CENTRO DE PROYECTOS</a>
+  <a class="btn" href="../index.html" data-en="PROJECT HUB" data-es="CENTRO DE PROYECTOS">PROJECT HUB</a>
 </section>
 
 <section class="grid">
   <div class="card">
-    <h2>Reservas y Clientes</h2>
-    <p>Flujos de contacto, formularios, reservas, enlaces de acción y seguimiento de prospectos.</p>
+    <h2 data-en="Bookings and Customers" data-es="Reservas y Clientes">Bookings and Customers</h2>
+    <p data-en="Contact flows, forms, booking links, action buttons and prospect follow-up." data-es="Flujos de contacto, formularios, reservas, enlaces de acción y seguimiento de prospectos.">Contact flows, forms, booking links, action buttons and prospect follow-up.</p>
   </div>
 
   <div class="card">
-    <h2>Automatización Básica</h2>
-    <p>Procesos más organizados para reducir trabajo manual y mejorar la respuesta al cliente.</p>
+    <h2 data-en="Basic Automation" data-es="Automatización Básica">Basic Automation</h2>
+    <p data-en="More organized processes to reduce manual work and improve customer response." data-es="Procesos más organizados para reducir trabajo manual y mejorar la respuesta al cliente.">More organized processes to reduce manual work and improve customer response.</p>
   </div>
 
   <div class="card">
-    <h2>Escalamiento Digital</h2>
-    <p>Preparación para pasar de una página básica a una estructura más completa y profesional.</p>
+    <h2 data-en="Digital Scaling" data-es="Escalamiento Digital">Digital Scaling</h2>
+    <p data-en="Preparation to move from a basic page into a more complete and professional structure." data-es="Preparación para pasar de una página básica a una estructura más completa y profesional.">Preparation to move from a basic page into a more complete and professional structure.</p>
   </div>
 </section>
 
 </main>
 
+<script>
+function setLang(lang){
+  localStorage.setItem("rapcerLang", lang);
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-en]").forEach(function(el){
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+}
+setLang(localStorage.getItem("rapcerLang") || "en");
+</script>
 <script src="../../../rapcer-language.js?v=16" defer></script>
 </body>
 </html>

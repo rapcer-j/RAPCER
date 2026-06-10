@@ -3,63 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>RAPCER Mobile</title>
-<script>
-</script>
+<title>RAPCER Core | RAPCER</title>
+<link rel="stylesheet" href="../../module.css">
 </head>
+<body>
+
+<main class="module">
+
+<section class="hero">
+  <small data-en="PROJECT HUB" data-es="CENTRO DE PROYECTOS">PROJECT HUB</small>
+  <h1 data-en="RAPCER CORE" data-es="NÚCLEO RAPCER">RAPCER CORE</h1>
+  <p class="lead" data-en="The internal foundation of RAPCER: digital systems, automation structure, project organization and business infrastructure." data-es="La base interna de RAPCER: sistemas digitales, estructura de automatización, organización de proyectos e infraestructura de negocio.">
+    The internal foundation of RAPCER: digital systems, automation structure, project organization and business infrastructure.
+  </p>
+  <a class="btn" href="../index.html" data-en="PROJECT HUB" data-es="CENTRO DE PROYECTOS">PROJECT HUB</a>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h2 data-en="System Foundation" data-es="Base del Sistema">System Foundation</h2>
+    <p data-en="Core structure for RAPCER pages, client flows, service layers and project delivery." data-es="Estructura central para páginas RAPCER, flujos de clientes, capas de servicios y entrega de proyectos.">Core structure for RAPCER pages, client flows, service layers and project delivery.</p>
+  </div>
+
+  <div class="card">
+    <h2 data-en="Automation Ready" data-es="Listo para Automatización">Automation Ready</h2>
+    <p data-en="Prepared for analytics, forms, onboarding, payments, emails and future tools." data-es="Preparado para analytics, formularios, onboarding, pagos, correos y futuras herramientas.">Prepared for analytics, forms, onboarding, payments, emails and future tools.</p>
+  </div>
+
+  <div class="card">
+    <h2 data-en="RAPCER Infrastructure" data-es="Infraestructura RAPCER">RAPCER Infrastructure</h2>
+    <p data-en="The layer that supports RAPCER growth, client projects and internal digital operations." data-es="La capa que sostiene el crecimiento de RAPCER, proyectos de clientes y operaciones digitales internas.">The layer that supports RAPCER growth, client projects and internal digital operations.</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+function setLang(lang){
+  localStorage.setItem("rapcerLang", lang);
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-en]").forEach(function(el){
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+}
+setLang(localStorage.getItem("rapcerLang") || "en");
+</script>
 <script src="../../../rapcer-language.js?v=16" defer></script>
 </body>
 </html>
-
-<script>
-window.addEventListener("load",function(){
-setTimeout(function(){
-if((localStorage.getItem("rapcerLang")||"en")!=="es")return;
-
-document.querySelectorAll("h1,h2,h3,h4,p,span,a,button,div").forEach(function(e){
-let t=e.textContent.trim();
-let m={
-"PROJECT HUB":"CENTRO DE PROYECTOS",
-"SMALL BUSINESS":"NEGOCIO PEQUEÑO",
-"GROWING BUSINESS":"NEGOCIO EN CRECIMIENTO",
-"ENTERPRISE":"EMPRESA",
-"RAPCER CORE":"NÚCLEO RAPCER",
-"COMMUNITY":"COMUNIDAD",
-
-"Creators, Streamers & Community Projects":"Creadores, Streamers y Proyectos Comunitarios",
-"Creator profiles, live links, Discord groups, events and community growth tools.":"Perfiles de creadores, enlaces en vivo, grupos de Discord, eventos y herramientas de crecimiento comunitario.",
-"Creator Social Links":"Redes Sociales de Creadores",
-"Gaming & Live Content":"Gaming y Contenido en Vivo",
-"Events & Groups":"Eventos y Grupos",
-"Twitch, Kick, YouTube Live and active streamers.":"Twitch, Kick, YouTube Live y streamers activos.",
-"Discord servers, GTA groups, tournaments and community events.":"Servidores de Discord, grupos de GTA, torneos y eventos comunitarios.",
-"RAPCER Community Access":"Acceso a la Comunidad RAPCER",
-"Creator access is managed by RAPCER. Approved creators, streamers and community groups will appear inside the official community sections.":"El acceso de creadores es administrado por RAPCER. Los creadores, streamers y grupos aprobados aparecerán dentro de las secciones oficiales de la comunidad.",
-
-"Join RAPCER Creators":"Unirse a Creadores RAPCER",
-"SAVE":"GUARDAR",
-"Add name and URL":"Agrega nombre y URL",
-"Social Media":"Redes Sociales",
-"Live Streaming":"Transmisión en Vivo",
-"Discord / Events":"Discord / Eventos",
-
-"Behind RAPCER":"Detrás de RAPCER",
-"Back to Project Hub":"Volver al Centro de Proyectos",
-"Back to Mobile Home":"Volver al Inicio Mobile",
-
-"Coming Soon":"Próximamente",
-"We are building the next generation creator ecosystem inside RAPCER: creators, streamers, live content, Discord communities, events and digital growth tools.":"Estamos construyendo la próxima generación del ecosistema de creadores dentro de RAPCER: creadores, streamers, contenido en vivo, comunidades de Discord, eventos y herramientas de crecimiento digital.",
-"← Back to Community":"← Volver a Comunidad",
-"RAPCER Home":"Inicio RAPCER",
-
-"Creator Landing Slots":"Espacios de Landing para Creadores",
-"Creator Resources — Coming Soon":"Recursos para Creadores — Próximamente",
-"Each streamer can have a personal RAPCER landing page connected to their channels.":"Cada streamer puede tener una landing personal de RAPCER conectada a sus canales.",
-"No Discord or event links added yet.":"Aún no hay enlaces de Discord o eventos agregados."
-};
-if(m[t])e.textContent=m[t];
-});
-
-},500);
-});
-</script>
