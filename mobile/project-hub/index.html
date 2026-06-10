@@ -2,35 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Project Hub | RAPCER</title>
-<link rel="stylesheet" href="../module.css">
 <style>
-body{margin:0;background:#050805;color:#fff;font-family:Arial,sans-serif}
-.wrap{max-width:980px;margin:auto;padding:24px}
-.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
-.brand{color:#fff;text-decoration:none;font-weight:900}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#050805;color:white;font-family:Arial,sans-serif}
+a{text-decoration:none}
+.wrap{width:min(1100px,100%);margin:0 auto;padding:28px 20px 70px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.brand{color:white;font-weight:900;letter-spacing:.08em}
 .brand span{color:#00ff88}
-.btn,.cta{display:inline-block;text-decoration:none;color:#001b0c;background:#00ff88;padding:12px 18px;border-radius:14px;font-weight:900}
-.hero{padding:26px;border:1px solid rgba(0,255,136,.25);border-radius:22px;background:linear-gradient(135deg,#071407,#020402)}
-.hero h1{margin:0 0 10px;font-size:34px}
-.hero p{color:#cfe8d8;line-height:1.6}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
-.card{background:#0b130d;border:1px solid rgba(0,255,136,.22);border-radius:20px;padding:18px;text-decoration:none;color:#fff;min-height:145px}
-.card small{color:#00ff88;font-weight:900}
-.card h2{margin:10px 0}
-.card p{color:#cfe8d8;line-height:1.45}
 .lang{display:flex;gap:8px}
-.lang button{border:1px solid rgba(0,255,136,.35);background:#071407;color:#fff;border-radius:12px;padding:9px 12px;font-weight:800}
+.lang button{cursor:pointer;border:1px solid rgba(0,255,136,.4);background:#071407;color:white;border-radius:12px;padding:10px 14px;font-weight:900}
+.hero{padding:28px;border:1px solid rgba(0,255,136,.28);border-radius:24px;background:linear-gradient(135deg,#071407,#020402);box-shadow:0 0 35px rgba(0,0,0,.35)}
+.hero h1{margin:0 0 12px;font-size:clamp(40px,9vw,82px);line-height:.95}
+.hero p{max-width:760px;color:#cfe8d8;line-height:1.65;font-size:18px}
+.cta{display:inline-block;margin-top:12px;color:#001b0c;background:#00ff88;padding:13px 20px;border-radius:14px;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:26px}
+.card{display:block;background:#0b130d;border:1px solid rgba(0,255,136,.25);border-radius:22px;padding:22px;color:white;min-height:170px}
+.card small{display:block;color:#00ff88;font-weight:900;letter-spacing:.1em;margin-bottom:8px}
+.card h2{margin:8px 0 10px;font-size:25px}
+.card p{color:#cfe8d8;line-height:1.5;margin:0}
 </style>
 </head>
 <body>
+
 <div class="wrap">
+
   <div class="top">
     <a class="brand" href="../../app-mobile.html"><span>R</span> RAPCER</a>
     <div class="lang">
-      <button onclick="setLang('en')">EN</button>
-      <button onclick="setLang('es')">ES</button>
+      <button type="button" onclick="setLang('en')">EN</button>
+      <button type="button" onclick="setLang('es')">ES</button>
     </div>
   </div>
 
@@ -42,48 +45,62 @@ body{margin:0;background:#050805;color:#fff;font-family:Arial,sans-serif}
     <a class="cta" href="../../app-mobile.html" data-en="Back Home" data-es="Volver al Inicio">Back Home</a>
   </section>
 
-  <div class="grid">
+  <section class="grid">
+
     <a class="card" href="small-business/index.html">
       <small data-en="LOCAL BRANDS" data-es="MARCAS LOCALES">LOCAL BRANDS</small>
       <h2 data-en="Small Business" data-es="Negocios Pequeños">Small Business</h2>
-      <p data-en="Websites, booking, QR, menus, reviews and contact systems for local businesses." data-es="Páginas web, reservas, QR, menús, reseñas y sistemas de contacto para negocios locales."></p>
+      <p data-en="Websites, booking, QR, menus, reviews and contact systems for local businesses." data-es="Páginas web, reservas, QR, menús, reseñas y sistemas de contacto para negocios locales.">
+        Websites, booking, QR, menus, reviews and contact systems for local businesses.
+      </p>
     </a>
 
     <a class="card" href="community/index.html">
       <small data-en="COMMUNITY" data-es="COMUNIDAD">COMMUNITY</small>
       <h2 data-en="Community" data-es="Comunidad">Community</h2>
-      <p data-en="Digital tools for churches, ministries, events and community groups." data-es="Herramientas digitales para iglesias, ministerios, eventos y grupos comunitarios."></p>
+      <p data-en="Digital tools for churches, ministries, events and community groups." data-es="Herramientas digitales para iglesias, ministerios, eventos y grupos comunitarios.">
+        Digital tools for churches, ministries, events and community groups.
+      </p>
     </a>
 
     <a class="card" href="growing-business/index.html">
       <small data-en="GROWTH" data-es="CRECIMIENTO">GROWTH</small>
       <h2 data-en="Growing Business" data-es="Negocios en Crecimiento">Growing Business</h2>
-      <p data-en="Better structure, automation and customer flow for expanding businesses." data-es="Mejor estructura, automatización y flujo de clientes para negocios en expansión."></p>
+      <p data-en="Better structure, automation and customer flow for expanding businesses." data-es="Mejor estructura, automatización y flujo de clientes para negocios en expansión.">
+        Better structure, automation and customer flow for expanding businesses.
+      </p>
     </a>
 
     <a class="card" href="enterprise/index.html">
       <small data-en="ADVANCED SYSTEMS" data-es="SISTEMAS AVANZADOS">ADVANCED SYSTEMS</small>
       <h2 data-en="Enterprise" data-es="Empresarial">Enterprise</h2>
-      <p data-en="Larger digital systems, internal structure and scalable infrastructure." data-es="Sistemas digitales grandes, estructura interna e infraestructura escalable."></p>
+      <p data-en="Larger digital systems, internal structure and scalable infrastructure." data-es="Sistemas digitales grandes, estructura interna e infraestructura escalable.">
+        Larger digital systems, internal structure and scalable infrastructure.
+      </p>
     </a>
 
     <a class="card" href="rapcer-core/index.html">
       <small data-en="RAPCER SYSTEMS" data-es="SISTEMAS RAPCER">RAPCER SYSTEMS</small>
       <h2 data-en="RAPCER Core" data-es="RAPCER Core">RAPCER Core</h2>
-      <p data-en="Internal RAPCER infrastructure, digital operations and system foundation." data-es="Infraestructura interna RAPCER, operaciones digitales y base del sistema."></p>
+      <p data-en="Internal RAPCER infrastructure, digital operations and system foundation." data-es="Infraestructura interna RAPCER, operaciones digitales y base del sistema.">
+        Internal RAPCER infrastructure, digital operations and system foundation.
+      </p>
     </a>
-  </div>
+
+  </section>
+
 </div>
 
 <script>
 function setLang(lang){
-  localStorage.setItem("rapcerLang", lang);
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-en]").forEach(el=>{
-    el.textContent = el.getAttribute("data-" + lang);
+  localStorage.setItem("rapcerLang",lang);
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-en]").forEach(function(el){
+    el.textContent=el.getAttribute("data-"+lang);
   });
 }
-setLang(localStorage.getItem("rapcerLang") || "en");
+setLang(localStorage.getItem("rapcerLang")||"en");
 </script>
+
 </body>
 </html>
