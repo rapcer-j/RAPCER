@@ -15,7 +15,7 @@ gtag("config", "G-JBD3JJEJ3W");
 </script>
 
 <style>
- (max-width:700px){
+ @media (max-width:700px){
   .rapcer-packages-v3 .nav{
     margin-bottom:0!important;
     padding-bottom:0!important;
@@ -41,10 +41,76 @@ gtag("config", "G-JBD3JJEJ3W");
     padding-top:0!important;
   }
 }
+.rapcer-team{margin-top:60px;padding:18px 18px}.rapcer-team .section-title{text-align:center;color:#00ffe0;letter-spacing:6px;font-size:16px;margin-bottom:14px}.rapcer-team .team{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:760px;margin:0 auto}.rapcer-team .member{border:1px solid rgba(0,255,220,.25);border-radius:16px;padding:8px;background:linear-gradient(180deg,rgba(0,255,220,.045),rgba(255,0,200,.045))}.rapcer-team .avatar{width:100%;height:72px;min-height:72px;max-height:72px;overflow:hidden;border-radius:12px;margin-bottom:14px;background:#050713}.rapcer-team .avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}.rapcer-team .member h3{color:#00ffe0;font-size:13px;margin-bottom:6px}.rapcer-team .role{color:#ff3bd4;font-size:8px;font-weight:900;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}.rapcer-team .member ul{display:none}.rapcer-team .profile-btn{margin-top:auto;display:flex;align-items:center;justify-content:center;height:28px;border:1px solid rgba(0,255,220,.45);border-radius:999px;color:#00ffe0;font-size:9px;font-weight:900;letter-spacing:1px}@media(max-width:1000px){.rapcer-team .team{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.rapcer-team .team{grid-template-columns:1fr}.rapcer-team .avatar{height:72px}}
+.rapcer-profiles{max-width:900px;margin:34px auto 42px;padding:18px;border:1px solid rgba(0,255,220,.22);border-radius:18px;background:rgba(0,0,0,.22)}
+.rapcer-profiles h2{text-align:center;color:#00ffe0;font-size:16px;letter-spacing:5px;margin-bottom:18px}
+.profile-card{display:flex;gap:18px;align-items:center;border:1px solid rgba(0,255,220,.18);border-radius:14px;padding:14px;margin-bottom:12px;background:linear-gradient(90deg,rgba(0,255,220,.04),rgba(255,0,200,.04))}
+.profile-card img{width:86px;height:86px;border-radius:14px;object-fit:cover;object-position:center 20%;background:#050713}
+.profile-card h3{color:#00ffe0;font-size:18px;margin-bottom:4px}
+.profile-card span{display:block;color:#ff3bd4;font-size:11px;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.profile-card p{color:#dbeafe;font-size:13px;line-height:1.55}
+@media(max-width:650px){.profile-card{flex-direction:column;text-align:center}.profile-card img{width:110px;height:110px}}
+.profile-modal{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px}
+.profile-modal.active{display:flex}
+.profile-modal-box{width:min(460px,92vw);border:1px solid rgba(0,255,220,.45);border-radius:22px;background:linear-gradient(145deg,#07111f,#160018);padding:24px;text-align:center;box-shadow:0 0 40px rgba(0,255,220,.22);position:relative}
+.profile-close{position:absolute;top:12px;right:14px;background:none;border:0;color:#00ffe0;font-size:28px;font-weight:900;cursor:pointer}
+.profile-modal-box img{width:140px;height:140px;border-radius:18px;object-fit:cover;object-position:center 20%;margin-bottom:16px}
+.profile-modal-box h3{color:#00ffe0;font-size:26px;margin-bottom:6px}
+.profile-modal-box span{display:block;color:#ff3bd4;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.profile-modal-box p{color:#dbeafe;font-size:14px;line-height:1.65}
 </style>
+
 <style>
-</style>
-<style>
+.rapcer-dual-services{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  margin:32px 0;
+}
+
+.service-box{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  min-height:72px;
+  padding:34px 42px;
+}
+
+.service-icon{
+  width:110px;
+  height:72px;
+  min-width:110px;
+  border:1px solid rgba(0,255,220,.55);
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:54px;
+}
+
+.service-content h2{
+  color:#00ffe0;
+  font-size:30px;
+  margin-bottom:12px;
+  text-transform:uppercase;
+}
+
+.service-content p{
+  color:white;
+  line-height:1.5;
+  margin-bottom:18px;
+}
+
+@media(max-width:900px){
+  .rapcer-dual-services{
+    grid-template-columns:1fr;
+  }
+
+  .service-box{
+    flex-direction:column;
+    text-align:center;
+  }
+}
 </style>
 </head>
 
@@ -91,6 +157,7 @@ gtag("config", "G-JBD3JJEJ3W");
     <li>Google Maps integration</li>
     <li>Launch-ready deployment</li>
   </ul>
+      <a class="profile-btn" href="#">VIEW PROFILE</a>
 
   <div class="package-actions">
     <a href="../agreement/service-agreement.html?package=starter&plan=monthly">MONTHLY PLAN</a>
@@ -117,6 +184,7 @@ gtag("config", "G-JBD3JJEJ3W");
     <li>Booking system</li>
     <li>Business automation</li>
   </ul>
+      <a class="profile-btn" href="#">VIEW PROFILE</a>
 
   <div class="package-actions">
     <a href="../agreement/service-agreement.html?package=growth&plan=monthly">MONTHLY PLAN</a>
@@ -145,6 +213,7 @@ gtag("config", "G-JBD3JJEJ3W");
     <li>Priority support</li>
     <li>Dedicated system structure</li>
   </ul>
+      <a class="profile-btn" href="#">VIEW PROFILE</a>
 
   <div class="package-actions">
     <a href="../agreement/service-agreement.html?package=premium&plan=monthly">MONTHLY PLAN</a>
@@ -170,6 +239,7 @@ gtag("config", "G-JBD3JJEJ3W");
     <li>Business applications</li>
     <li>Custom digital buildout</li>
   </ul>
+      <a class="profile-btn" href="#">VIEW PROFILE</a>
 
   <div class="package-actions">
     <a href="../agreement/custom.html">REQUEST QUOTE</a>
@@ -178,11 +248,81 @@ gtag("config", "G-JBD3JJEJ3W");
 
 </section>
 
-<section class="review-cta">
-  <h2>DIGITAL HELP</h2>
-  <p>Quick digital support for documents, forms, business setup, tech help and online systems.</p>
-  <a href="../digital-services/index.html">OPEN DIGITAL HELP</a>
+<div class="rapcer-dual-services">
+
+  <section class="review-cta service-box">
+    <div class="service-icon">🎧</div>
+
+    <div class="service-content">
+      <h2>DIGITAL HELP</h2>
+      <p>
+        Quick digital support for documents, forms, business setup,
+        tech help and online systems.
+      </p>
+
+      <a href="../digital-services/index.html">
+        OPEN DIGITAL HELP
+      </a>
+    </div>
+  </section>
+
+  <section class="review-cta service-box">
+    <div class="service-icon">🎥</div>
+
+    <div class="service-content">
+      <h2>CONTENT STUDIO & SOCIAL MEDIA</h2>
+
+      <p>
+        Content creation, video editing, photography,
+        reels, TikTok content, YouTube editing,
+        podcast editing and social media management.
+      </p>
+
+      <a href="../content-studio/index.html">
+        OPEN CONTENT STUDIO
+      </a>
+    </div>
+  </section>
+
+</div>
+<section class="section rapcer-team" id="rapcer-team">
+  <h2 class="section-title">THE PEOPLE BEHIND RAPCER</h2>
+
+  <div class="team">
+    <div class="member">
+      <div class="avatar"><img src="../assets/content-studio/rayder.png" alt="Rayder"></div>
+      <h3>Rayder</h3>
+      <div class="role">Founder & Systems Architect</div>
+      <ul><li>Business Strategy</li><li>Automation Systems</li><li>Infrastructure Design</li><li>Client Solutions</li></ul>
+      <a class="profile-btn" href="#" data-profile="rayder">VIEW PROFILE</a>
+    </div>
+
+    <div class="member">
+      <div class="avatar"><img src="../assets/content-studio/jonathan.png" alt="Jonathan"></div>
+      <h3>Jonathan</h3>
+      <div class="role">Operations & Client Relations Manager</div>
+      <ul><li>Sales</li><li>Client Relations</li><li>Representations</li><li>International Support</li></ul>
+      <a class="profile-btn" href="#" data-profile="jonathan">VIEW PROFILE</a>
+    </div>
+
+    <div class="member">
+      <div class="avatar"><img src="../assets/content-studio/mario.png" alt="Mario"></div>
+      <h3>Mario</h3>
+      <div class="role">Editor & Photographer</div>
+      <ul><li>Video Editing</li><li>Photography</li><li>Videography</li><li>Social Media</li></ul>
+      <a class="profile-btn" href="#" data-profile="mario">VIEW PROFILE</a>
+    </div>
+
+    <div class="member">
+      <div class="avatar"><img src="../assets/content-studio/lena%20Vanessa.png" alt="Lena Vanessa"></div>
+      <h3>Lena Vanessa</h3>
+      <div class="role">Model & Content Creator</div>
+      <ul><li>Modeling</li><li>Brand Content</li><li>Social Media</li><li>Campaigns</li></ul>
+      <a class="profile-btn" href="#" data-profile="lena">VIEW PROFILE</a>
+    </div>
+  </div>
 </section>
+
 
 <section class="review-cta">
   <h2>Client Reviews</h2>
@@ -195,6 +335,19 @@ gtag("config", "G-JBD3JJEJ3W");
 <a href="https://facebook.com/rapcer" target="_blank" rel="noopener">FB</a>
 <a href="https://tiktok.com/" target="_blank" rel="noopener">TT</a>
 <a href="mailto:rapcerj@gmail.com?subject=RAPCER Contact">EMAIL</a>
+</div>
+
+
+
+
+<div class="profile-modal" id="profileModal">
+  <div class="profile-modal-box">
+    <button class="profile-close" id="profileClose">×</button>
+    <img id="profileImg" src="" alt="">
+    <h3 id="profileName"></h3>
+    <span id="profileRole"></span>
+    <p id="profileText"></p>
+  </div>
 </div>
 
 </main>
@@ -211,5 +364,57 @@ gtag("config", "G-JBD3JJEJ3W");
 </script>
 <script src="../module.js"></script>
 <script src="/rapcer-analytics.js" defer></script>
+
+<script>
+const rapcerProfiles = {
+  rayder: {
+    img: "../assets/content-studio/rayder.png",
+    name: "Rayder",
+    role: "Founder & Systems Architect",
+    text: "Founder of RAPCER. Focused on business strategy, digital systems, automation, client solutions and building the infrastructure behind RAPCER projects."
+  },
+  jonathan: {
+    img: "../assets/content-studio/jonathan.png",
+    name: "Jonathan",
+    role: "Operations & Client Relations Manager",
+    text: "Handles client communication, sales support, project representation and international coordination for RAPCER clients."
+  },
+  mario: {
+    img: "../assets/content-studio/mario.png",
+    name: "Mario",
+    role: "Editor & Photographer",
+    text: "Supports video editing, photography, videography, reels, social media content and creative production."
+  },
+  lena: {
+    img: "../assets/content-studio/lena%20Vanessa.png",
+    name: "Lena Vanessa",
+    role: "Model & Content Creator",
+    text: "Supports brand content, modeling, social media campaigns, visual presentation and promotional creative work."
+  }
+};
+
+document.querySelectorAll(".profile-btn").forEach(btn => {
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    const p = rapcerProfiles[this.dataset.profile];
+    document.getElementById("profileImg").src = p.img;
+    document.getElementById("profileName").textContent = p.name;
+    document.getElementById("profileRole").textContent = p.role;
+    document.getElementById("profileText").textContent = p.text;
+    document.getElementById("profileModal").classList.add("active");
+  });
+});
+
+document.getElementById("profileClose").onclick = () => {
+  document.getElementById("profileModal").classList.remove("active");
+};
+
+document.getElementById("profileModal").onclick = e => {
+  if(e.target.id === "profileModal"){
+    e.currentTarget.classList.remove("active");
+  }
+};
+</script>
+
 </body>
 </html>
