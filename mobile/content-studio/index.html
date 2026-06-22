@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>RAPCER Content Studio</title>
+
+<link rel="stylesheet" href="../mobile.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-JBD3JJEJ3W");
+</script>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#02040b;
+  color:white;
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+
+.studio-mobile{
+  min-height:100vh;
+  padding:16px;
+  background:linear-gradient(135deg,#02040b,#061020,#02040b);
+}
+
+.studio-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.home-btn{
+  border:1px solid rgba(0,255,220,.55);
+  border-radius:999px;
+  padding:10px 16px;
+  color:#00ffe0;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.logo{
+  font-size:13px;
+  color:#00ffe0;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.hero{
+  border:1px solid rgba(0,255,220,.35);
+  border-radius:22px;
+  overflow:hidden;
+  background:rgba(0,0,0,.35);
+}
+
+.video-card{
+  width:100%;
+  border-bottom:1px solid rgba(0,255,220,.25);
+  background:#000;
+}
+
+.video-card video{
+  width:100%;
+  display:block;
+  aspect-ratio:9/14;
+  object-fit:cover;
+}
+
+.hero-copy{
+  padding:22px 18px;
+  text-align:center;
+}
+
+.hero-copy h1{
+  color:#00ffe0;
+  font-size:30px;
+  line-height:1.05;
+  margin:0 0 12px;
+}
+
+.hero-copy p{
+  color:#dbeafe;
+  font-size:14px;
+  line-height:1.6;
+  margin:0;
+}
+
+.actions{
+  display:grid;
+  gap:12px;
+  margin-top:18px;
+}
+
+.btn{
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+
+.primary{
+  background:linear-gradient(90deg,#00ffe0,#ff00c8);
+  color:#02040b;
+}
+
+.secondary{
+  border:1px solid rgba(0,255,220,.65);
+  color:#00ffe0;
+}
+
+.section{
+  margin-top:22px;
+  border:1px solid rgba(0,255,220,.25);
+  border-radius:20px;
+  padding:20px 16px;
+  background:rgba(0,0,0,.35);
+}
+
+.section-title{
+  color:#00ffe0;
+  text-align:center;
+  font-size:18px;
+  letter-spacing:4px;
+  margin:0 0 18px;
+}
+
+.packages{
+  display:grid;
+  gap:14px;
+}
+
+.package{
+  border:1px solid rgba(0,255,220,.28);
+  border-radius:16px;
+  padding:18px;
+  background:rgba(0,0,0,.35);
+}
+
+.package.featured{
+  border-color:#ff00c8;
+  box-shadow:0 0 24px rgba(255,0,200,.18);
+}
+
+.package h3{
+  color:#00ffe0;
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.package p{
+  color:#dbeafe;
+  font-size:13px;
+  line-height:1.5;
+  margin:0;
+}
+
+.price{
+  color:#00ffe0;
+  font-size:30px;
+  font-weight:900;
+  margin:14px 0;
+}
+
+.package ul{
+  padding-left:18px;
+  color:#dbeafe;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.package a{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:44px;
+  margin-top:14px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#00ffe0,#ff00c8);
+  color:#02040b;
+  font-size:12px;
+  font-weight:900;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.service{
+  border:1px solid rgba(0,255,220,.30);
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(180deg,rgba(0,255,220,.05),rgba(255,0,200,.04));
+  text-align:center;
+}
+
+.service img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
+  background:#050713;
+}
+
+.service h3{
+  color:#00ffe0;
+  font-size:12px;
+  margin:10px 6px 4px;
+}
+
+.service p{
+  color:#dbeafe;
+  font-size:11px;
+  line-height:1.4;
+  padding:0 8px 12px;
+  margin:0;
+}
+
+.team{
+  display:grid;
+  gap:14px;
+}
+
+.member{
+  border:1px solid rgba(0,255,220,.28);
+  border-radius:16px;
+  padding:14px;
+  text-align:center;
+  background:linear-gradient(180deg,rgba(0,255,220,.05),rgba(255,0,200,.05));
+}
+
+.avatar{
+  width:100%;
+  height:220px;
+  overflow:hidden;
+  border-radius:14px;
+  background:#050713;
+  margin-bottom:12px;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center center;
+}
+
+.member h3{
+  color:#00ffe0;
+  font-size:19px;
+  margin:0 0 6px;
+}
+
+.role{
+  color:#ff3bd4;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.stars{
+  color:#ffd000;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.profile-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:150px;
+  min-height:40px;
+  border:1px solid rgba(0,255,220,.45);
+  border-radius:999px;
+  color:#00ffe0;
+  font-size:11px;
+  font-weight:900;
+}
+
+.final-cta{
+  margin-top:22px;
+  border:1px solid rgba(255,0,200,.45);
+  border-radius:18px;
+  padding:22px 16px;
+  text-align:center;
+  background:linear-gradient(90deg,rgba(255,0,200,.10),rgba(0,255,220,.08));
+}
+
+.final-cta h2{
+  color:#00ffe0;
+  font-size:22px;
+  line-height:1.15;
+  margin:0 0 10px;
+}
+
+.final-cta p{
+  color:#dbeafe;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.footer-links{
+  display:grid;
+  gap:10px;
+  margin-top:16px;
+}
+
+.footer-links a{
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(0,255,220,.55);
+  border-radius:999px;
+  color:#00ffe0;
+  font-size:12px;
+  font-weight:900;
+}
+
+.studio-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.78);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:20px;
+}
+
+.studio-modal.active{
+  display:flex;
+}
+
+.studio-modal-box{
+  width:min(420px,94vw);
+  border:1px solid rgba(0,255,220,.45);
+  border-radius:22px;
+  background:linear-gradient(145deg,#07111f,#160018);
+  padding:24px;
+  text-align:center;
+  position:relative;
+}
+
+.studio-close{
+  position:absolute;
+  top:12px;
+  right:16px;
+  background:none;
+  border:0;
+  color:#00ffe0;
+  font-size:30px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.studio-modal-box img{
+  width:100%;
+  height:240px;
+  object-fit:contain;
+  background:#050713;
+  border-radius:16px;
+  margin-bottom:16px;
+}
+
+.studio-profile-info h3{
+  color:#00ffe0;
+  font-size:26px;
+  margin:0 0 6px;
+}
+
+.studio-profile-info span{
+  display:block;
+  color:#ff3bd4;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.studio-profile-info p{
+  color:#dbeafe;
+  font-size:14px;
+  line-height:1.6;
+}
+
+@media(min-width:700px){
+  .studio-mobile{
+    max-width:760px;
+    margin:0 auto;
+  }
+
+  .video-card video{
+    aspect-ratio:16/9;
+  }
+
+  .packages{
+    grid-template-columns:1fr;
+  }
+
+  .services{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .team{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .avatar{
+    height:180px;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="studio-mobile">
+
+  <nav class="studio-top">
+    <a class="home-btn" href="../packages/index.html">BACK</a>
+    <div class="logo">RAPCER STUDIO</div>
+  </nav>
+
+  <section class="hero">
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="../assets-studio/rapcer-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-copy">
+      <h1>CONTENT STUDIO & SOCIAL MEDIA</h1>
+      <p>
+        Content creation, video editing, photography, reels, TikTok content,
+        YouTube editing, podcast editing and social media management.
+      </p>
+
+      <div class="actions">
+        <a href="#packages" class="btn primary">VIEW CONTENT PACKAGES</a>
+        <a href="mailto:rapcerj@gmail.com?subject=RAPCER Content Studio" class="btn secondary">START CONTENT PROJECT</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="packages">
+    <h2 class="section-title">CONTENT PACKAGES</h2>
+
+    <div class="packages">
+
+      <div class="package">
+        <h3>STARTER PACKAGE</h3>
+        <p>Perfect to get started with consistent content.</p>
+        <div class="price">$799/mo</div>
+        <ul>
+          <li>8 Reels</li>
+          <li>4 Shorts</li>
+          <li>8 Flyers</li>
+          <li>Basic Management</li>
+          <li>1 Platform</li>
+        </ul>
+        <a href="mailto:rapcerj@gmail.com?subject=Starter Content Package">GET STARTER</a>
+      </div>
+
+      <div class="package featured">
+        <h3>GROWTH PACKAGE</h3>
+        <p>For brands that need stronger weekly visibility.</p>
+        <div class="price">$1,599/mo</div>
+        <ul>
+          <li>16 Reels</li>
+          <li>8 Videos</li>
+          <li>16 Flyers</li>
+          <li>2 Platforms</li>
+          <li>Analytics</li>
+        </ul>
+        <a href="mailto:rapcerj@gmail.com?subject=Growth Content Package">GET GROWTH</a>
+      </div>
+
+      <div class="package">
+        <h3>PREMIUM PACKAGE</h3>
+        <p>Complete content and social media management.</p>
+        <div class="price">$2,999/mo</div>
+        <ul>
+          <li>30 Reels</li>
+          <li>12 Videos</li>
+          <li>All Platforms</li>
+          <li>Paid Ads</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="mailto:rapcerj@gmail.com?subject=Premium Content Package">GET PREMIUM</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">OUR SERVICES</h2>
+
+    <div class="services">
+
+      <div class="service">
+        <img src="../assets-studio/video.png" alt="Video Editing">
+        <h3>VIDEO EDITING</h3>
+        <p>Professional editing.</p>
+      </div>
+
+      <div class="service">
+        <img src="../assets-studio/reels.png" alt="Reels and TikTok">
+        <h3>REELS & TIKTOK</h3>
+        <p>Short form content.</p>
+      </div>
+
+      <div class="service">
+        <img src="../assets-studio/youtube.png" alt="YouTube Editing">
+        <h3>YOUTUBE</h3>
+        <p>Videos & thumbnails.</p>
+      </div>
+
+      <div class="service">
+        <img src="../assets-studio/cast.png" alt="Podcast Editing">
+        <h3>PODCAST</h3>
+        <p>Audio & video podcast.</p>
+      </div>
+
+      <div class="service">
+        <img src="../assets-studio/flyers.png" alt="Flyers">
+        <h3>FLYERS</h3>
+        <p>Promo graphics.</p>
+      </div>
+
+      <div class="service">
+        <img src="../assets-studio/social.png" alt="Social Media">
+        <h3>SOCIAL MEDIA</h3>
+        <p>Management & strategy.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">CREATIVE TEAM</h2>
+
+    <div class="team">
+
+      <div class="member">
+        <div class="avatar"><img src="../assets-studio/jonathan.png" alt="Jonathan"></div>
+        <h3>Jonathan</h3>
+        <div class="role">Operations & Client Relations Manager</div>
+        <div class="stars">★★★★★</div>
+        <a href="#" class="profile-btn studio-profile-btn" data-profile="jonathan">VIEW PROFILE</a>
+      </div>
+
+      <div class="member">
+        <div class="avatar"><img src="../assets-studio/mario.png" alt="Mario"></div>
+        <h3>Mario</h3>
+        <div class="role">Editor & Photographer</div>
+        <div class="stars">★★★★★</div>
+        <a href="#" class="profile-btn studio-profile-btn" data-profile="mario">VIEW PROFILE</a>
+      </div>
+
+      <div class="member">
+        <div class="avatar"><img src="../assets-studio/lena-vanessa.png" alt="Lena Vanessa"></div>
+        <h3>Lena Vanessa</h3>
+        <div class="role">Model & Content Creator</div>
+        <div class="stars">★★★★★</div>
+        <a href="#" class="profile-btn studio-profile-btn" data-profile="lena">VIEW PROFILE</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <h2>READY TO ELEVATE YOUR BRAND?</h2>
+    <p>Join brands that trust RAPCER for content and social media growth.</p>
+
+    <div class="footer-links">
+      <a href="https://instagram.com/rapcerj" target="_blank">INSTAGRAM</a>
+      <a href="https://tiktok.com/@rapcerj" target="_blank">TIKTOK</a>
+      <a href="mailto:rapcerj@gmail.com">EMAIL</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="studio-modal" id="studioModal">
+  <div class="studio-modal-box">
+    <button class="studio-close" id="studioClose">×</button>
+    <img id="studioImg" src="" alt="">
+    <div class="studio-profile-info">
+      <h3 id="studioName"></h3>
+      <span id="studioRole"></span>
+      <p id="studioText"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+const studioProfiles = {
+  jonathan: {
+    img: "../assets-studio/jonathan.png",
+    name: "Jonathan",
+    role: "Operations & Client Relations Manager",
+    text: "Jonathan supports client communication, project representation, sales coordination, client relations and international support for RAPCER content projects."
+  },
+  mario: {
+    img: "../assets-studio/mario.png",
+    name: "Mario",
+    role: "Editor & Photographer",
+    text: "Mario supports video editing, photography, videography, reels, social media content and creative production for RAPCER clients."
+  },
+  lena: {
+    img: "../assets-studio/lena-vanessa.png",
+    name: "Lena Vanessa",
+    role: "Model & Content Creator",
+    text: "Lena Vanessa supports brand content, modeling, social media campaigns, visual presentation and promotional content for RAPCER projects."
+  }
+};
+
+document.querySelectorAll(".studio-profile-btn").forEach(btn => {
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    const p = studioProfiles[this.dataset.profile];
+    document.getElementById("studioImg").src = p.img;
+    document.getElementById("studioName").textContent = p.name;
+    document.getElementById("studioRole").textContent = p.role;
+    document.getElementById("studioText").textContent = p.text;
+    document.getElementById("studioModal").classList.add("active");
+  });
+});
+
+document.getElementById("studioClose").onclick = () => {
+  document.getElementById("studioModal").classList.remove("active");
+};
+
+document.getElementById("studioModal").onclick = e => {
+  if(e.target.id === "studioModal"){
+    e.currentTarget.classList.remove("active");
+  }
+};
+</script>
+
+<script src="/rapcer-analytics.js" defer></script>
+</body>
+</html>
