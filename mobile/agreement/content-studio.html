@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Content Studio Agreement | RAPCER</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#02040b;color:white;font-family:Arial,Helvetica,sans-serif}
+.page{min-height:100vh;padding:18px;background:linear-gradient(135deg,#02040b,#061020,#02040b)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.top a{color:#00ffe0;text-decoration:none;border:1px solid rgba(0,255,220,.45);border-radius:999px;padding:10px 14px;font-size:12px;font-weight:900}
+.card{border:1px solid rgba(0,255,220,.35);border-radius:22px;padding:22px;background:rgba(0,0,0,.35)}
+h1{color:#00ffe0;font-size:28px;line-height:1.1;margin-bottom:12px}
+p,li{color:#dbeafe;font-size:14px;line-height:1.6}
+.box{margin-top:18px;border:1px solid rgba(0,255,220,.22);border-radius:16px;padding:16px;background:rgba(0,0,0,.25)}
+h2{color:#00ffe0;font-size:18px;margin-bottom:10px}
+ul{padding-left:20px}
+.actions{display:grid;gap:12px;margin-top:22px}
+.btn{min-height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:1px}
+.primary{background:linear-gradient(90deg,#00ffe0,#ff00c8);color:#02040b}
+.secondary{border:1px solid rgba(0,255,220,.55);color:#00ffe0}
+.note{margin-top:16px;font-size:12px;color:#9fb8c8}
+.agreement-check{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:18px 0;
+  color:#dbeafe;
+  font-size:13px;
+  line-height:1.5;
+}
+.agreement-check input{
+  width:18px;
+  height:18px;
+  margin-top:2px;
+  accent-color:#00ffe0;
+}
+.btn.disabled{
+  opacity:.45;
+  pointer-events:none;
+}
+
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <div class="top">
+    <a href="../content-studio/index.html">BACK</a>
+    <a href="../packages/index.html">PACKAGES</a>
+  </div>
+
+  <section class="card">
+    <h1>RAPCER CONTENT STUDIO AGREEMENT</h1>
+    <p>
+      This agreement confirms that the client is selecting a monthly Content Studio package from RAPCER.
+      Services begin only after the agreement is accepted and payment is completed.
+    </p>
+
+    <div class="box">
+      <h2>Services Included</h2>
+      <ul>
+        <li>Content creation based on the selected package.</li>
+        <li>Video editing, reels, flyers, short-form content or social media support as listed in the package.</li>
+        <li>Monthly service only for the package selected by the client.</li>
+        <li>Final deliverables depend on the package selected before payment.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Important Terms</h2>
+      <ul>
+        <li>Payment must be completed before work begins.</li>
+        <li>Monthly services cover one month from the service start date.</li>
+        <li>Extra work outside the selected package may require a separate quote.</li>
+        <li>RAPCER does not guarantee specific views, followers, viral results or sales numbers.</li>
+        <li>Client must provide access, materials, approvals or information needed to complete the service.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Selected Package</h2>
+      <p id="selectedPackageText">Loading selected package...</p>
+
+      <label class="agreement-check">
+        <input type="checkbox" id="acceptAgreement">
+        <span>I have read and accept the RAPCER Content Studio Agreement, including the services included, important terms and monthly payment conditions.</span>
+      </label>
+
+
+      <div class="actions">
+        <a id="payPackageBtn" class="btn primary" href="#" target="_blank">ACCEPT & PAY</a>
+        <a class="btn secondary" href="mailto:rapcerj@gmail.com?subject=RAPCER Content Studio Agreement Question">ASK A QUESTION</a>
+      </div>
+    </div>
+
+
+    <p class="note">
+      By continuing to payment, the client acknowledges and accepts the Content Studio service terms above.
+    </p>
+  </section>
+
+</main>
+<script>
+const params = new URLSearchParams(window.location.search);
+const selected = params.get("package") || "starter";
+
+const packages = {
+  starter: {
+    name: "STARTER PACKAGE",
+    price: "$799/month",
+    pay: "https://www.paypal.com/ncp/payment/EQXA73EJH5JWS"
+  },
+  growth: {
+    name: "GROWTH PACKAGE",
+    price: "$1,599/month",
+    pay: "https://www.paypal.com/ncp/payment/4ST2M9H9UPQVN"
+  },
+  premium: {
+    name: "PREMIUM PACKAGE",
+    price: "$2,999/month",
+    pay: "https://www.paypal.com/ncp/payment/BU22XCR2BRNGW"
+  }
+};
+
+const pkg = packages[selected] || packages.starter;
+document.getElementById("selectedPackageText").innerHTML = "<strong>" + pkg.name + "</strong><br>" + pkg.price;
+document.getElementById("payPackageBtn").href = pkg.pay;
+document.getElementById("payPackageBtn").textContent = "ACCEPT & PAY " + pkg.name;
+
+const acceptAgreement = document.getElementById("acceptAgreement");
+const payButton = document.getElementById("payPackageBtn");
+payButton.classList.add("disabled");
+
+acceptAgreement.addEventListener("change", function(){
+  if(this.checked){
+    payButton.classList.remove("disabled");
+  }else{
+    payButton.classList.add("disabled");
+  }
+});
+
+</script>
+
+</body>
+</html>
