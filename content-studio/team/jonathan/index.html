@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Jonathan Portfolio | RAPCER</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#02040b;color:white;font-family:Arial,Helvetica,sans-serif}
+.page{min-height:100vh;padding:18px;background:linear-gradient(135deg,#02040b,#061020,#02040b)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.top a{color:#00ffe0;text-decoration:none;border:1px solid rgba(0,255,220,.5);border-radius:999px;padding:10px 14px;font-size:12px;font-weight:900}
+.hero,.section{border:1px solid rgba(0,255,220,.3);border-radius:22px;padding:20px;background:rgba(0,0,0,.35);margin-bottom:18px}
+.hero{text-align:center}
+.hero img{width:100%;max-height:360px;object-fit:contain;border-radius:18px;background:#050713;margin-bottom:16px}
+h1,h2{color:#00ffe0}
+h1{font-size:32px}
+.role{color:#ff3bd4;font-weight:900;font-size:12px;letter-spacing:1px;margin:8px 0 14px}
+p,li{color:#dbeafe;font-size:14px;line-height:1.6}
+ul{padding-left:20px;margin-top:10px}
+.grid{display:grid;gap:12px;margin-top:14px}
+.card{border:1px solid rgba(0,255,220,.22);border-radius:16px;padding:16px;background:rgba(0,0,0,.25)}
+.btn{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:12px;background:linear-gradient(90deg,#00ffe0,#ff00c8);color:#02040b;text-decoration:none;font-weight:900;font-size:12px;letter-spacing:1px;margin-top:16px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid rgba(0,255,220,.25);background:#050713}
+.sub-title{font-size:18px!important;margin-top:18px!important;margin-bottom:10px!important}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.video-slot{min-height:140px;border:1px solid rgba(255,0,200,.4);border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,255,220,.06),rgba(255,0,200,.08));color:#00ffe0;font-size:12px;font-weight:900;letter-spacing:2px}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr)}.video-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<main class="page">
+
+<div class="top">
+  <a href="../../index.html">BACK</a>
+  <a href="../../../packages/index.html">PACKAGES</a>
+</div>
+
+<section class="hero">
+  <img src="../../../assets/content-studio/jonathan.png" alt="Jonathan">
+  <h1>Jonathan</h1>
+  <div class="role">OPERATIONS & CLIENT RELATIONS MANAGER</div>
+  <p>Jonathan supports client communication, sales coordination, project representation and international support for RAPCER content projects.</p>
+</section>
+
+<section class="section">
+  <h2>Specialties</h2>
+  <ul>
+    <li>Client Relations</li>
+    <li>Project Coordination</li>
+    <li>Sales Support</li>
+    <li>Business Representation</li>
+    <li>International Support</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Featured Work</h2>
+  <p>Jonathan can showcase selected photos and videos directly on this page.</p>
+
+  <h2 class="sub-title">Photos</h2>
+  <div class="gallery compact-gallery">
+    <img src="../../../assets/content-studio/video.png" alt="Photo 1">
+    <img src="../../../assets/content-studio/reels.png" alt="Photo 2">
+    <img src="../../../assets/content-studio/flyers.png" alt="Photo 3">
+    <img src="../../../assets/content-studio/social.png" alt="Photo 4">
+  </div>
+
+  <h2 class="sub-title">Videos</h2>
+  <div class="video-grid">
+    <div class="video-slot">VIDEO 1</div>
+    <div class="video-slot">VIDEO 2</div>
+    <div class="video-slot">VIDEO 3</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Work With Jonathan</h2>
+  <p>All project requests stay under RAPCER so the client experience remains organized and professional.</p>
+  <a class="btn" href="mailto:rapcerj@gmail.com?subject=Work With Jonathan - RAPCER">REQUEST THROUGH RAPCER</a>
+</section>
+
+</main>
+</body>
+</html>
