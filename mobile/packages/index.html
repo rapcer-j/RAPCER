@@ -316,6 +316,130 @@ gtag("config", "G-JBD3JJEJ3W");
 }
 
 </style>
+<style id="rapcer-mobile-final-match">
+
+/* MOBILE SERVICES — SAME IDENTITY AS DESKTOP */
+.content-studio-feature{
+  min-height:330px!important;
+  background-color:#02050c!important;
+  background-image:url("../assets-studio/studio_movil.png")!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center center!important;
+}
+
+.digital-help-feature{
+  min-height:330px!important;
+  background-color:#07101c!important;
+  background-image:url("../assets-studio/digital-help-hero-v2.png")!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center top!important;
+}
+
+.content-studio-feature::before,
+.digital-help-feature::before{
+  background:linear-gradient(
+    180deg,
+    rgba(2,4,11,.10) 0%,
+    rgba(2,4,11,.42) 42%,
+    rgba(2,4,11,.97) 100%
+  )!important;
+}
+
+/* VIDEO PREVIEWS */
+.mobile-portfolio-video{
+  aspect-ratio:9 / 13!important;
+  max-height:490px!important;
+  background:#000!important;
+}
+
+.mobile-portfolio-video video{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+
+/* MOBILE TEAM */
+.mobile-team-section{
+  margin:54px 0 44px!important;
+}
+
+.mobile-team-heading{
+  margin-bottom:22px!important;
+  padding:0 12px!important;
+  text-align:center!important;
+}
+
+.mobile-team-heading span{
+  display:block!important;
+  margin-bottom:8px!important;
+  color:#00ffe0!important;
+  font-size:10px!important;
+  font-weight:900!important;
+  letter-spacing:3px!important;
+}
+
+.mobile-team-heading h2{
+  margin:0!important;
+  color:#fff!important;
+  font-size:27px!important;
+}
+
+.mobile-team-grid{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:16px!important;
+}
+
+.mobile-team-card{
+  padding:16px!important;
+  text-align:center!important;
+  border:1px solid rgba(0,255,224,.30)!important;
+  border-radius:20px!important;
+  background:linear-gradient(
+    145deg,
+    rgba(0,255,224,.06),
+    rgba(255,0,200,.06)
+  )!important;
+}
+
+.mobile-team-card img{
+  width:100%!important;
+  height:220px!important;
+  display:block!important;
+  margin-bottom:16px!important;
+  border-radius:15px!important;
+  object-fit:cover!important;
+  object-position:center top!important;
+  background:#050713!important;
+}
+
+.mobile-team-card h3{
+  margin:0 0 6px!important;
+  color:#00ffe0!important;
+  font-size:22px!important;
+}
+
+.mobile-team-card span{
+  display:block!important;
+  margin-bottom:10px!important;
+  color:#ff3bd4!important;
+  font-size:10px!important;
+  font-weight:900!important;
+  letter-spacing:1px!important;
+  text-transform:uppercase!important;
+}
+
+.mobile-team-card p{
+  margin:0!important;
+  color:#dbeafe!important;
+  font-size:13px!important;
+  line-height:1.55!important;
+}
+
+</style>
 </head>
 
 <body>
@@ -460,9 +584,8 @@ gtag("config", "G-JBD3JJEJ3W");
 
       <div class="mobile-portfolio-video">
 
-        <video controls playsinline preload="metadata">
-          <source
-            src="../assets-studio/tattoo-mobile.mp4"
+        <video controls playsinline preload="metadata" poster="../assets-studio/tattoo-poster.jpg">
+          <source src="../assets-studio/tattoo-mobile.mp4"
             type="video/mp4">
         </video>
 
@@ -497,9 +620,8 @@ gtag("config", "G-JBD3JJEJ3W");
 
       <div class="mobile-portfolio-video">
 
-        <video controls playsinline preload="metadata">
-          <source
-            src="../assets-studio/barbershop-mobile.mp4"
+        <video controls playsinline preload="metadata" poster="../assets-studio/barbershop-poster.jpg">
+          <source src="../assets-studio/barbershop-mobile.mp4"
             type="video/mp4">
         </video>
 
@@ -534,9 +656,8 @@ gtag("config", "G-JBD3JJEJ3W");
 
       <div class="mobile-portfolio-video">
 
-        <video controls playsinline preload="metadata">
-          <source
-            src="../assets-studio/restaurant-mobile.mp4"
+        <video controls playsinline preload="metadata" poster="../assets-studio/restaurant-poster.jpg">
+          <source src="../assets-studio/restaurant-mobile.mp4"
             type="video/mp4">
         </video>
 
@@ -571,9 +692,8 @@ gtag("config", "G-JBD3JJEJ3W");
 
       <div class="mobile-portfolio-video">
 
-        <video controls playsinline preload="metadata">
-          <source
-            src="../assets-studio/professional-mobile.mp4"
+        <video controls playsinline preload="metadata" poster="../assets-studio/professional-poster.jpg">
+          <source src="../assets-studio/professional-mobile.mp4"
             type="video/mp4">
         </video>
 
@@ -847,6 +967,44 @@ gtag("config", "G-JBD3JJEJ3W");
 
 </section>
 
+
+<!-- ================================= -->
+<!-- TEAM                              -->
+<!-- ================================= -->
+
+<section class="mobile-team-section" id="rapcer-team">
+
+  <div class="mobile-team-heading">
+    <span data-en="THE PEOPLE BEHIND RAPCER" data-es="EL EQUIPO DETRÁS DE RAPCER">THE PEOPLE BEHIND RAPCER</span>
+    <h2 data-en="Meet The Team" data-es="Conoce El Equipo">Meet The Team</h2>
+  </div>
+
+  <div class="mobile-team-grid">
+
+    <article class="mobile-team-card">
+      <img src="../assets-studio/rayder.png" alt="Rayder">
+      <h3>Rayder</h3>
+      <span data-en="Founder & Systems Architect" data-es="Fundador y Arquitecto de Sistemas">Founder & Systems Architect</span>
+      <p data-en="Business strategy, digital systems, automation and client solutions." data-es="Estrategia de negocios, sistemas digitales, automatización y soluciones para clientes.">Business strategy, digital systems, automation and client solutions.</p>
+    </article>
+
+    <article class="mobile-team-card">
+      <img src="../assets-studio/jonathan.png" alt="Jonathan">
+      <h3>Jonathan</h3>
+      <span data-en="Operations & Client Relations Manager" data-es="Gerente de Operaciones y Relaciones con Clientes">Operations & Client Relations Manager</span>
+      <p data-en="Client communication, project coordination and international support." data-es="Comunicación con clientes, coordinación de proyectos y soporte internacional.">Client communication, project coordination and international support.</p>
+    </article>
+
+    <article class="mobile-team-card">
+      <img src="../assets-studio/mario.png" alt="Mario">
+      <h3>Mario</h3>
+      <span data-en="Editor & Photographer" data-es="Editor y Fotógrafo">Editor & Photographer</span>
+      <p data-en="Video editing, photography, videography and creative production." data-es="Edición de video, fotografía, videografía y producción creativa.">Video editing, photography, videography and creative production.</p>
+    </article>
+
+  </div>
+
+</section>
 
 <!-- ================================= -->
 <!-- REVIEWS                           -->
