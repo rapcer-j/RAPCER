@@ -3,68 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Packages | RAPCER</title>
+
 <link rel="stylesheet" href="../module.css">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+
+function gtag(){
+  dataLayer.push(arguments);
+}
+
 gtag("js", new Date());
 gtag("config", "G-JBD3JJEJ3W");
 </script>
 
 <style>
+
+/* ================================= */
+/* RAPCER MOBILE PACKAGES – FINAL    */
+/* ================================= */
+
+.rapcer-mobile-packages-hero{
+  padding:24px 18px 18px!important;
+  margin:0!important;
+  min-height:auto!important;
+  text-align:center!important;
+}
+
+.rapcer-mobile-packages-hero h1{
+  margin:0!important;
+  color:#00ffe0!important;
+  font-size:34px!important;
+  line-height:1!important;
+  letter-spacing:.3px!important;
+}
+
+.rapcer-mobile-packages-hero h2{
+  margin:7px 0 10px!important;
+  color:#ff20c9!important;
+  font-size:20px!important;
+  line-height:1.1!important;
+  font-weight:900!important;
+}
+
+.rapcer-mobile-packages-hero .lead{
+  max-width:330px!important;
+  margin:0 auto!important;
+  color:#dbeafe!important;
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+
+
+/* ================================= */
+/* SERVICE CARDS                     */
+/* ================================= */
+
 .rapcer-dual-services{
   display:grid;
   grid-template-columns:1fr;
-  gap:16px;
-  margin:26px 0;
+  gap:18px;
+  margin:24px 0 42px;
 }
 
 .rapcer-dual-services .service-box{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:320px;
+  padding:25px 22px;
   display:flex;
-  align-items:center;
-  gap:18px;
-  padding:22px 18px;
-  border:1px solid rgba(0,255,220,.35);
-  border-radius:20px;
-  background:linear-gradient(135deg,rgba(0,255,220,.08),rgba(255,0,200,.06));
+  align-items:flex-end;
+  border:1px solid rgba(0,255,224,.40);
+  border-radius:22px;
+  background-repeat:no-repeat;
+  background-color:#030711;
 }
 
-.rapcer-dual-services .service-icon{
-  width:64px;
-  height:64px;
-  min-width:64px;
-  border:1px solid rgba(0,255,220,.55);
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:34px;
-  background:rgba(0,0,0,.25);
+.rapcer-dual-services .service-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,4,11,.12) 0%,
+      rgba(2,4,11,.62) 50%,
+      rgba(2,4,11,.98) 100%
+    );
+}
+
+.rapcer-dual-services .service-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  text-align:left;
 }
 
 .rapcer-dual-services .service-content h2{
+  margin:0 0 10px;
   color:#00ffe0;
-  font-size:18px;
-  line-height:1.1;
-  margin-bottom:8px;
+  font-size:25px;
+  line-height:1.08;
 }
 
 .rapcer-dual-services .service-content p{
-  color:#dbeafe;
+  margin:0 0 17px;
+  color:#ffffff;
   font-size:13px;
-  line-height:1.45;
-  margin-bottom:12px;
+  line-height:1.55;
+  text-shadow:0 3px 12px rgba(0,0,0,.95);
 }
 
 .rapcer-dual-services .service-content a{
   display:inline-flex;
+  min-height:42px;
+  padding:0 18px;
   align-items:center;
   justify-content:center;
-  min-height:38px;
-  padding:0 14px;
   border-radius:999px;
   background:linear-gradient(90deg,#00ffe0,#ff00c8);
   color:#02040b;
@@ -73,42 +134,192 @@ gtag("config", "G-JBD3JJEJ3W");
   letter-spacing:1px;
 }
 
-@media(min-width:700px){
-  .rapcer-dual-services{
-    grid-template-columns:1fr 1fr;
-  }
+.content-studio-feature{
+  background-image:url("../assets-studio/studio_movil.png");
+  background-size:cover;
+  background-position:center;
 }
-.rapcer-mobile-packages-hero{
-  padding:18px 18px 12px!important;
-  margin:0!important;
+
+.digital-help-feature{
+  background-image:url("../assets-studio/digital-help-hero-v2.png");
+  background-size:cover;
+  background-position:center top;
+}
+
+
+/* ================================= */
+/* MOBILE PORTFOLIO                  */
+/* ================================= */
+
+.rapcer-mobile-portfolio{
+  margin:48px 0;
+}
+
+.mobile-portfolio-heading{
+  margin-bottom:22px;
+  padding:0 12px;
+  text-align:center;
+}
+
+.mobile-portfolio-heading span{
+  display:block;
+  margin-bottom:8px;
+  color:#00ffe0;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.mobile-portfolio-heading h2{
+  margin:0 0 10px;
+  color:#ffffff;
+  font-size:27px;
+  line-height:1.08;
+}
+
+.mobile-portfolio-heading p{
+  max-width:340px;
+  margin:0 auto;
+  color:#cbd5e1;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.mobile-portfolio-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.mobile-portfolio-card{
+  overflow:hidden;
+  border:1px solid rgba(0,255,224,.34);
+  border-radius:20px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0,255,224,.05),
+      rgba(255,0,200,.06)
+    ),
+    #050812;
+}
+
+.mobile-portfolio-video{
+  width:100%;
+  aspect-ratio:9 / 16;
+  max-height:570px;
+  overflow:hidden;
+  background:#000;
+}
+
+.mobile-portfolio-video video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  background:#000;
+}
+
+.mobile-portfolio-info{
+  padding:17px 18px 20px;
+}
+
+.mobile-portfolio-info span{
+  display:block;
+  margin-bottom:7px;
+  color:#ff3bd4;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.mobile-portfolio-info h3{
+  margin:0 0 8px;
+  color:#00ffe0;
+  font-size:21px;
+}
+
+.mobile-portfolio-info p{
+  margin:0;
+  color:#dbeafe;
+  font-size:13px;
+  line-height:1.55;
+}
+
+
+/* ================================= */
+/* BUSINESS LEVELS                   */
+/* ================================= */
+
+.rapcer-mobile-levels{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:20px!important;
+}
+
+.rapcer-mobile-levels .price{
   min-height:auto!important;
+  padding:25px!important;
+}
+
+.rapcer-mobile-levels .price p{
+  min-height:auto!important;
+}
+
+.rapcer-mobile-levels .price ul{
+  margin:20px 0 8px!important;
+}
+
+.rapcer-mobile-levels .price li{
+  margin-bottom:11px!important;
+}
+
+.mobile-level-label{
+  margin-top:20px;
+  padding-top:15px;
+  border-top:1px solid rgba(0,255,224,.20);
+  color:#ff3bd4;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.4px;
+}
+
+.mobile-custom-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0,255,224,.10),
+      rgba(255,0,200,.12)
+    ),
+    rgba(4,7,16,.96)!important;
+}
+
+.mobile-custom-card .package-actions{
+  margin-top:22px!important;
+}
+
+.mobile-custom-card .package-actions a{
+  width:100%!important;
   text-align:center!important;
 }
-.rapcer-mobile-packages-hero h1{
-  font-size:34px!important;
-  line-height:1!important;
-  margin:0!important;
-  color:#00ffe0!important;
-  letter-spacing:.5px!important;
+
+@media(min-width:700px){
+
+  .mobile-portfolio-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .mobile-portfolio-video{
+    max-height:500px;
+  }
 }
-.rapcer-mobile-packages-hero h2{
-  font-size:20px!important;
-  line-height:1.1!important;
-  margin:6px 0 8px!important;
-  color:#ff00c8!important;
-  font-weight:900!important;
-}
-.rapcer-mobile-packages-hero .lead{
-  max-width:320px!important;
-  margin:0 auto!important;
-  font-size:13px!important;
-  line-height:1.35!important;
-  color:#dbeafe!important;
-}
+
 </style>
 </head>
 
 <body>
+
 <main class="module rapcer-packages-v3">
 
 <nav class="nav">
@@ -117,151 +328,621 @@ gtag("config", "G-JBD3JJEJ3W");
   </div>
 </nav>
 
+
+<!-- ================================= -->
+<!-- HERO                              -->
+<!-- ================================= -->
+
 <section class="hero rapcer-mobile-packages-hero">
-  <h1 data-en="Build Your Business" data-es="Construye Tu Negocio">Build Your Business</h1>
-  <h2 data-en="with RAPCER" data-es="con RAPCER">with RAPCER</h2>
+
+  <h1
+    data-en="Build Your Business"
+    data-es="Construye Tu Negocio">
+    Build Your Business
+  </h1>
+
+  <h2
+    data-en="with RAPCER"
+    data-es="con RAPCER">
+    with RAPCER
+  </h2>
+
   <p class="lead">
-    <span data-en="Start with the right package. Grow without limits." data-es="Comienza con el paquete correcto. Crece sin límites.">Start with the right package. Grow without limits.</span>
+    <span
+      data-en="Professional digital systems, content and support built around your business goals."
+      data-es="Sistemas digitales, contenido y soporte profesional creados alrededor de las metas de tu negocio.">
+      Professional digital systems, content and support built around your business goals.
+    </span>
   </p>
+
 </section>
+
+
+<!-- ================================= -->
+<!-- CONTENT STUDIO / DIGITAL HELP     -->
+<!-- ================================= -->
 
 <div class="rapcer-dual-services">
 
-  <section class="review-cta service-box">
-    <div class="service-icon">🎥</div>
+  <section class="review-cta service-box content-studio-feature">
+
     <div class="service-content">
-      <h2 data-en="CONTENT STUDIO & SOCIAL MEDIA" data-es="ESTUDIO DE CONTENIDO Y REDES SOCIALES">CONTENT STUDIO & SOCIAL MEDIA</h2>
-      <p data-en="Content creation, video editing, photography, reels, TikTok content, YouTube editing, podcast editing and social media management." data-es="Creación de contenido, edición de video, fotografía, reels, contenido para TikTok, edición de YouTube, podcast y manejo de redes sociales.">Content creation, video editing, photography, reels, TikTok content, YouTube editing, podcast editing and social media management.</p>
-      <a href="../content-studio/index.html" data-en="OPEN CONTENT STUDIO" data-es="ABRIR CONTENT STUDIO">OPEN CONTENT STUDIO</a>
+
+      <h2
+        data-en="CONTENT STUDIO & SOCIAL MEDIA"
+        data-es="ESTUDIO DE CONTENIDO Y REDES SOCIALES">
+        CONTENT STUDIO & SOCIAL MEDIA
+      </h2>
+
+      <p
+        data-en="Professional video production, photography, reels, editing, promotional content and social media management."
+        data-es="Producción profesional de video, fotografía, reels, edición, contenido promocional y manejo de redes sociales.">
+        Professional video production, photography, reels, editing,
+        promotional content and social media management.
+      </p>
+
+      <a
+        href="../content-studio/index.html"
+        data-en="OPEN CONTENT STUDIO"
+        data-es="ABRIR CONTENT STUDIO">
+        OPEN CONTENT STUDIO
+      </a>
+
     </div>
+
   </section>
 
-  <section class="review-cta service-box">
-    <div class="service-icon">🎧</div>
+
+  <section class="review-cta service-box digital-help-feature">
+
     <div class="service-content">
-      <h2 data-en="DIGITAL HELP" data-es="AYUDA DIGITAL">DIGITAL HELP</h2>
-      <p data-en="Quick digital support for documents, forms, business setup, tech help and online systems." data-es="Soporte digital rápido para documentos, formularios, configuración de negocios, ayuda técnica y sistemas online.">Quick digital support for documents, forms, business setup, tech help and online systems.</p>
-      <a href="../digital-services/index.html" data-en="OPEN DIGITAL HELP" data-es="ABRIR AYUDA DIGITAL">OPEN DIGITAL HELP</a>
+
+      <h2
+        data-en="DIGITAL HELP"
+        data-es="AYUDA DIGITAL">
+        DIGITAL HELP
+      </h2>
+
+      <p
+        data-en="Digital support for documents, forms, business setup, technology assistance and online systems."
+        data-es="Soporte digital para documentos, formularios, configuración de negocios, asistencia tecnológica y sistemas online.">
+        Digital support for documents, forms, business setup,
+        technology assistance and online systems.
+      </p>
+
+      <a
+        href="../digital-services/index.html"
+        data-en="OPEN DIGITAL HELP"
+        data-es="ABRIR AYUDA DIGITAL">
+        OPEN DIGITAL HELP
+      </a>
+
     </div>
+
   </section>
 
 </div>
 
 
+<!-- ================================= -->
+<!-- PORTFOLIO                         -->
+<!-- ================================= -->
 
-<section class="pricing">
+<section class="rapcer-mobile-portfolio">
 
-<div class="price">
-  <span class="package-tag" data-en="FOR NEW BUSINESSES" data-es="PARA NEGOCIOS NUEVOS">FOR NEW BUSINESSES</span>
-  <h2 data-en="STARTER" data-es="INICIAL">STARTER</h2>
-  <p data-en="Perfect for local businesses starting their online presence." data-es="Perfecto para negocios locales que están comenzando su presencia en línea.">Perfect for local businesses starting their online presence.</p>
+  <div class="mobile-portfolio-heading">
 
-  <ul>
-    <li data-en="Modern landing page" data-es="Landing page moderna">Modern landing page</li>
-    <li data-en="Mobile responsive design" data-es="Diseño adaptable a móvil">Mobile responsive design</li>
-    <li data-en="Contact form setup" data-es="Configuración de formulario de contacto">Contact form setup</li>
-    <li data-en="Social media integration" data-es="Integración de redes sociales">Social media integration</li>
-    <li data-en="QR code setup" data-es="Configuración de código QR">QR code setup</li>
-    <li data-en="Google Maps integration" data-es="Integración con Google Maps">Google Maps integration</li>
-    <li data-en="Launch-ready deployment" data-es="Publicación lista para lanzamiento">Launch-ready deployment</li>
-  </ul>
+    <span
+      data-en="RAPCER CONTENT PORTFOLIO"
+      data-es="PORTAFOLIO DE CONTENIDO RAPCER">
+      RAPCER CONTENT PORTFOLIO
+    </span>
 
-  <div class="package-actions">
-    <a href="../agreement/service-agreement.html?package=starter" data-en="EXPLORE PACKAGE" data-es="VER PAQUETE">EXPLORE PACKAGE</a>
+    <h2
+      data-en="Featured Client Projects"
+      data-es="Proyectos Destacados">
+      Featured Client Projects
+    </h2>
+
+    <p
+      data-en="Real content created for businesses, brands and professional campaigns."
+      data-es="Contenido real creado para negocios, marcas y campañas profesionales.">
+      Real content created for businesses, brands and professional campaigns.
+    </p>
+
   </div>
-</div>
 
-<div class="price featured">
-  <span class="package-tag" data-en="MOST POPULAR" data-es="MÁS POPULAR">MOST POPULAR</span>
-  <h2 data-en="GROWTH" data-es="CRECIMIENTO">GROWTH</h2>
-  <p data-en="For businesses needing stronger visibility, booking and automation." data-es="Para negocios que necesitan más visibilidad, reservas y automatización.">For businesses needing stronger visibility, booking and automation.</p>
 
-  <ul>
-    <li data-en="Multi-page website" data-es="Sitio web de varias páginas">Multi-page website</li>
-    <li data-en="Advanced social integration" data-es="Integración avanzada de redes sociales">Advanced social integration</li>
-    <li data-en="QR integration" data-es="Integración de QR">QR integration</li>
-    <li data-en="Google Maps optimization" data-es="Optimización de Google Maps">Google Maps optimization</li>
-    <li data-en="Lead/contact system" data-es="Sistema de contactos y prospectos">Lead/contact system</li>
-    <li data-en="Booking system" data-es="Sistema de reservas">Booking system</li>
-    <li data-en="Business automation" data-es="Automatización de negocio">Business automation</li>
-  </ul>
+  <div class="mobile-portfolio-grid">
 
-  <div class="package-actions">
-    <a href="../agreement/service-agreement.html?package=growth" data-en="EXPLORE PACKAGE" data-es="VER PAQUETE">EXPLORE PACKAGE</a>
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata">
+          <source
+            src="../assets-studio/tattoo-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="CONTENT PRODUCTION"
+          data-es="PRODUCCIÓN DE CONTENIDO">
+          CONTENT PRODUCTION
+        </span>
+
+        <h3
+          data-en="Tattoo Studio"
+          data-es="Estudio de Tatuajes">
+          Tattoo Studio
+        </h3>
+
+        <p
+          data-en="Professional brand content and social media video production."
+          data-es="Contenido profesional de marca y producción de video para redes sociales.">
+          Professional brand content and social media video production.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata">
+          <source
+            src="../assets-studio/barbershop-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="BUSINESS PROMOTION"
+          data-es="PROMOCIÓN DE NEGOCIO">
+          BUSINESS PROMOTION
+        </span>
+
+        <h3
+          data-en="Barbershop"
+          data-es="Barbería">
+          Barbershop
+        </h3>
+
+        <p
+          data-en="Visual branding and promotional content for social media."
+          data-es="Identidad visual y contenido promocional para redes sociales.">
+          Visual branding and promotional content for social media.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata">
+          <source
+            src="../assets-studio/restaurant-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="FOOD CONTENT"
+          data-es="CONTENIDO DE COMIDA">
+          FOOD CONTENT
+        </span>
+
+        <h3
+          data-en="Restaurant"
+          data-es="Restaurante">
+          Restaurant
+        </h3>
+
+        <p
+          data-en="Food presentation, promotional video and digital campaign content."
+          data-es="Presentación de comida, video promocional y contenido para campañas digitales.">
+          Food presentation, promotional video and digital campaign content.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata">
+          <source
+            src="../assets-studio/professional-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="PROFESSIONAL PRESENTATION"
+          data-es="PRESENTACIÓN PROFESIONAL">
+          PROFESSIONAL PRESENTATION
+        </span>
+
+        <h3
+          data-en="Professional Profile"
+          data-es="Perfil Profesional">
+          Professional Profile
+        </h3>
+
+        <p
+          data-en="Interview production, personal branding and professional presentation."
+          data-es="Producción de entrevista, marca personal y presentación profesional.">
+          Interview production, personal branding and professional presentation.
+        </p>
+
+      </div>
+
+    </article>
+
+
   </div>
-</div>
-
-<div class="price">
-  <span class="package-tag" data-en="PRIVATE INFRASTRUCTURE" data-es="INFRAESTRUCTURA PRIVADA">PRIVATE INFRASTRUCTURE</span>
-  <h2 data-en="PREMIUM" data-es="PREMIUM">PREMIUM</h2>
-  <p data-en="Private access for businesses ready for advanced systems, automation and scalable infrastructure. Approval required before activation." data-es="Acceso privado para negocios listos para sistemas avanzados, automatización e infraestructura escalable. Se requiere aprobación antes de activar.">Private access for businesses ready for advanced systems, automation and scalable infrastructure. Approval required before activation.</p>
-
-  <ul>
-    <li data-en="Advanced website systems" data-es="Sistemas web avanzados">Advanced website systems</li>
-    <li data-en="Premium UI/UX" data-es="Diseño UI/UX premium">Premium UI/UX</li>
-    <li data-en="Advanced automation" data-es="Automatización avanzada">Advanced automation</li>
-    <li data-en="CRM & workflows" data-es="CRM y flujos de trabajo">CRM & workflows</li>
-    <li data-en="Premium integrations" data-es="Integraciones premium">Premium integrations</li>
-    <li data-en="Priority support" data-es="Soporte prioritario">Priority support</li>
-    <li data-en="Dedicated system structure" data-es="Estructura de sistema dedicada">Dedicated system structure</li>
-  </ul>
-
-  <div class="package-actions">
-    <a href="../onboarding/custom.html?package=premium" data-en="EXPLORE PACKAGE" data-es="VER PAQUETE">EXPLORE PACKAGE</a>
-  </div>
-</div>
-
-<div class="price">
-  <span class="package-tag" data-en="CUSTOM INFRASTRUCTURE" data-es="INFRAESTRUCTURA PERSONALIZADA">CUSTOM INFRASTRUCTURE</span>
-  <h2 data-en="CUSTOM" data-es="PERSONALIZADO">CUSTOM</h2>
-  <p data-en="Custom digital infrastructure and advanced business systems." data-es="Infraestructura digital personalizada y sistemas empresariales avanzados.">Custom digital infrastructure and advanced business systems.</p>
-
-  <ul>
-    <li data-en="Booking systems" data-es="Sistemas de reservas">Booking systems</li>
-    <li data-en="Payment integration" data-es="Integración de pagos">Payment integration</li>
-    <li data-en="Automation setup" data-es="Configuración de automatización">Automation setup</li>
-    <li data-en="Custom portals" data-es="Portales personalizados">Custom portals</li>
-    <li data-en="Business applications" data-es="Aplicaciones de negocio">Business applications</li>
-    <li data-en="Custom digital buildout" data-es="Construcción digital personalizada">Custom digital buildout</li>
-  </ul>
-
-  <div class="package-actions">
-    <a href="../onboarding/custom.html?package=custom" data-en="REQUEST QUOTE" data-es="SOLICITAR COTIZACIÓN">REQUEST QUOTE</a>
-  </div>
-</div>
 
 </section>
+
+
+<!-- ================================= -->
+<!-- BUSINESS LEVELS                   -->
+<!-- ================================= -->
+
+<section class="pricing rapcer-mobile-levels">
+
+
+  <div class="price">
+
+    <span
+      class="package-tag"
+      data-en="FOR NEW BUSINESSES"
+      data-es="PARA NEGOCIOS NUEVOS">
+      FOR NEW BUSINESSES
+    </span>
+
+    <h2
+      data-en="STARTER"
+      data-es="INICIAL">
+      STARTER
+    </h2>
+
+    <p
+      data-en="For businesses beginning their professional digital presence."
+      data-es="Para negocios que están comenzando su presencia digital profesional.">
+      For businesses beginning their professional digital presence.
+    </p>
+
+    <ul>
+      <li
+        data-en="Professional landing page"
+        data-es="Landing page profesional">
+        Professional landing page
+      </li>
+
+      <li
+        data-en="Mobile responsive design"
+        data-es="Diseño adaptable a móvil">
+        Mobile responsive design
+      </li>
+
+      <li
+        data-en="Contact and social integration"
+        data-es="Integración de contacto y redes">
+        Contact and social integration
+      </li>
+
+      <li
+        data-en="Launch-ready website"
+        data-es="Página lista para lanzamiento">
+        Launch-ready website
+      </li>
+    </ul>
+
+    <div
+      class="mobile-level-label"
+      data-en="BEST FOR NEW BUSINESSES"
+      data-es="IDEAL PARA NEGOCIOS NUEVOS">
+      BEST FOR NEW BUSINESSES
+    </div>
+
+  </div>
+
+
+  <div class="price featured">
+
+    <span
+      class="package-tag"
+      data-en="FOR GROWING BUSINESSES"
+      data-es="PARA NEGOCIOS EN CRECIMIENTO">
+      FOR GROWING BUSINESSES
+    </span>
+
+    <h2
+      data-en="GROWTH"
+      data-es="CRECIMIENTO">
+      GROWTH
+    </h2>
+
+    <p
+      data-en="For businesses ready to attract customers and improve operations."
+      data-es="Para negocios listos para atraer clientes y mejorar sus operaciones.">
+      For businesses ready to attract customers and improve operations.
+    </p>
+
+    <ul>
+      <li
+        data-en="Multi-page business website"
+        data-es="Sitio empresarial de varias páginas">
+        Multi-page business website
+      </li>
+
+      <li
+        data-en="Booking or lead system"
+        data-es="Sistema de reservas o prospectos">
+        Booking or lead system
+      </li>
+
+      <li
+        data-en="Google and social integration"
+        data-es="Integración con Google y redes">
+        Google and social integration
+      </li>
+
+      <li
+        data-en="Business automation"
+        data-es="Automatización del negocio">
+        Business automation
+      </li>
+    </ul>
+
+    <div
+      class="mobile-level-label"
+      data-en="BEST FOR GROWING BUSINESSES"
+      data-es="IDEAL PARA NEGOCIOS EN CRECIMIENTO">
+      BEST FOR GROWING BUSINESSES
+    </div>
+
+  </div>
+
+
+  <div class="price">
+
+    <span
+      class="package-tag"
+      data-en="FOR ESTABLISHED BUSINESSES"
+      data-es="PARA NEGOCIOS ESTABLECIDOS">
+      FOR ESTABLISHED BUSINESSES
+    </span>
+
+    <h2>PREMIUM</h2>
+
+    <p
+      data-en="Advanced systems and scalable infrastructure for serious business growth."
+      data-es="Sistemas avanzados e infraestructura escalable para crecimiento empresarial.">
+      Advanced systems and scalable infrastructure for serious business growth.
+    </p>
+
+    <ul>
+      <li
+        data-en="CRM and advanced workflows"
+        data-es="CRM y flujos avanzados">
+        CRM and advanced workflows
+      </li>
+
+      <li
+        data-en="Custom automation systems"
+        data-es="Sistemas de automatización personalizados">
+        Custom automation systems
+      </li>
+
+      <li
+        data-en="Premium integrations"
+        data-es="Integraciones premium">
+        Premium integrations
+      </li>
+
+      <li
+        data-en="Scalable infrastructure"
+        data-es="Infraestructura escalable">
+        Scalable infrastructure
+      </li>
+    </ul>
+
+    <div
+      class="mobile-level-label"
+      data-en="BEST FOR ESTABLISHED BUSINESSES"
+      data-es="IDEAL PARA NEGOCIOS ESTABLECIDOS">
+      BEST FOR ESTABLISHED BUSINESSES
+    </div>
+
+  </div>
+
+
+  <div class="price mobile-custom-card">
+
+    <span
+      class="package-tag"
+      data-en="CUSTOM SOLUTION"
+      data-es="SOLUCIÓN PERSONALIZADA">
+      CUSTOM SOLUTION
+    </span>
+
+    <h2
+      data-en="BUILD YOUR SOLUTION"
+      data-es="CREA TU SOLUCIÓN">
+      BUILD YOUR SOLUTION
+    </h2>
+
+    <p
+      data-en="Select exactly what your business needs and RAPCER will prepare a personalized proposal."
+      data-es="Selecciona exactamente lo que necesita tu negocio y RAPCER preparará una propuesta personalizada.">
+      Select exactly what your business needs and RAPCER will prepare
+      a personalized proposal.
+    </p>
+
+    <ul>
+      <li
+        data-en="Choose your required services"
+        data-es="Elige los servicios necesarios">
+        Choose your required services
+      </li>
+
+      <li
+        data-en="Explain your business goals"
+        data-es="Explica las metas de tu negocio">
+        Explain your business goals
+      </li>
+
+      <li
+        data-en="Receive a project review"
+        data-es="Recibe una revisión del proyecto">
+        Receive a project review
+      </li>
+
+      <li
+        data-en="Get a personalized quote"
+        data-es="Recibe una cotización personalizada">
+        Get a personalized quote
+      </li>
+    </ul>
+
+    <div class="package-actions">
+
+      <a
+        href="../onboarding/custom.html"
+        data-en="REQUEST A CUSTOM QUOTE"
+        data-es="SOLICITAR COTIZACIÓN PERSONALIZADA">
+        REQUEST A CUSTOM QUOTE
+      </a>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+<!-- ================================= -->
+<!-- REVIEWS                           -->
+<!-- ================================= -->
 
 <section class="review-cta">
-  <h2 data-en="Client Reviews" data-es="Reseñas de Clientes">Client Reviews</h2>
-  <p data-en="See what clients say about RAPCER systems or leave your own review." data-es="Mira lo que dicen los clientes sobre los sistemas RAPCER o deja tu propia reseña.">See what clients say about RAPCER systems or leave your own review.</p>
-  <a href="../reviews/index.html" data-en="OPEN REVIEWS" data-es="ABRIR RESEÑAS">OPEN REVIEWS</a>
+
+  <h2
+    data-en="Client Reviews"
+    data-es="Reseñas de Clientes">
+    Client Reviews
+  </h2>
+
+  <p
+    data-en="See what clients say about RAPCER systems or leave your own review."
+    data-es="Mira lo que dicen los clientes sobre RAPCER o deja tu propia reseña.">
+    See what clients say about RAPCER systems or leave your own review.
+  </p>
+
+  <a
+    href="../reviews/index.html"
+    data-en="OPEN REVIEWS"
+    data-es="ABRIR RESEÑAS">
+    OPEN REVIEWS
+  </a>
+
 </section>
 
+
+<!-- ================================= -->
+<!-- SOCIAL                            -->
+<!-- ================================= -->
+
 <div class="results-social">
+
   <span>@RAPCER</span>
-  <a href="https://instagram.com/rapcerj" target="_blank" rel="noopener">IG</a>
-  <a href="https://facebook.com/rapcer" target="_blank" rel="noopener">FB</a>
-  <a href="https://tiktok.com/@rapcerj" target="_blank" rel="noopener">TT</a>
-  <a href="mailto:rapcerj@gmail.com?subject=RAPCER Contact">EMAIL</a>
+
+  <a
+    href="https://instagram.com/rapcerj"
+    target="_blank"
+    rel="noopener">
+    IG
+  </a>
+
+  <a
+    href="https://facebook.com/rapcer"
+    target="_blank"
+    rel="noopener">
+    FB
+  </a>
+
+  <a
+    href="https://tiktok.com/@rapcerj"
+    target="_blank"
+    rel="noopener">
+    TT
+  </a>
+
+  <a href="mailto:rapcerj@gmail.com?subject=RAPCER Contact">
+    EMAIL
+  </a>
+
 </div>
 
 </main>
 
+
 <script>
 (function(){
+
   var params = new URLSearchParams(window.location.search);
   var from = params.get("from");
+
   var target = "../../app-mobile.html";
-  if(from === "desktop") target = "../../desktop/index.html";
+
+  if(from === "desktop"){
+    target = "../../desktop/index.html";
+  }
+
   var brand = document.getElementById("rapcerBackBrand");
   var btn = document.getElementById("rapcerBackBtn");
-  if(brand) brand.href = target;
-  if(btn) btn.href = target;
+
+  if(brand){
+    brand.href = target;
+  }
+
+  if(btn){
+    btn.href = target;
+  }
+
 })();
 </script>
+
 <script src="../../rapcer-language.js?v=9" defer></script>
 <script src="../module.js"></script>
 <script src="/rapcer-analytics.js" defer></script>
+
 </body>
 </html>
