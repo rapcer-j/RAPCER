@@ -1,1 +1,1 @@
-AQUI VA TODO EL JS COMPLETO
+/* RAPCER Mobile shared JavaScript */

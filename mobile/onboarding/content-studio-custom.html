@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Content Studio Onboarding | RAPCER</title>
+
+<link rel="stylesheet" href="../module.css">
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#02040b;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+.content-onboarding{
+  width:min(100%,950px);
+  margin:0 auto;
+  padding:18px 16px 60px;
+}
+
+.content-nav{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:22px;
+}
+
+.content-nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:0 16px;
+  border:1px solid rgba(0,255,224,.35);
+  border-radius:999px;
+  color:#00ffe0;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:900;
+}
+
+.onboarding-header,
+.form-section{
+  margin-bottom:20px;
+  padding:24px 20px;
+  border:1px solid rgba(0,255,224,.25);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at top left,rgba(0,255,224,.09),transparent 35%),
+    radial-gradient(circle at bottom right,rgba(255,0,200,.09),transparent 40%),
+    rgba(4,8,18,.88);
+}
+
+.onboarding-header h1{
+  margin:0 0 14px;
+  color:#00ffe0;
+  font-size:34px;
+  line-height:1.05;
+}
+
+.onboarding-header p{
+  margin:0;
+  color:#dbeafe;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.form-section h2{
+  margin:0 0 18px;
+  color:#00ffe0;
+  font-size:23px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  padding:15px;
+  border:1px solid rgba(0,255,224,.22);
+  border-radius:14px;
+  background:#050713;
+  color:#fff;
+  font-size:14px;
+  outline:none;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+  margin-bottom:12px;
+}
+
+.service-category{
+  margin-top:25px;
+}
+
+.service-category h3{
+  margin:0 0 13px;
+  color:#ff3bd4;
+  font-size:18px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+
+.service-card{
+  cursor:pointer;
+}
+
+.service-card input{
+  display:none;
+}
+
+.service-card span{
+  display:block;
+  padding:16px;
+  border:1px solid rgba(0,255,224,.23);
+  border-radius:15px;
+  background:#050713;
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+}
+
+.service-card input:checked + span{
+  background:linear-gradient(90deg,#00ffe0,#55d8ff,#ff00c8);
+  color:#02040b;
+}
+
+.service-card input:checked + span::before{
+  content:"✓ ";
+}
+
+.preview-box{
+  margin-top:24px;
+  padding:18px;
+  border:1px solid rgba(0,255,224,.25);
+  border-radius:16px;
+  background:rgba(0,0,0,.30);
+}
+
+.preview-box h3{
+  margin:0 0 10px;
+  color:#00ffe0;
+  font-size:17px;
+}
+
+#selectedServicesPreview{
+  color:#fff;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.submit-btn{
+  width:100%;
+  min-height:54px;
+  border:0;
+  border-radius:16px;
+  background:linear-gradient(90deg,#00ffe0,#55d8ff,#ff00c8);
+  color:#02040b;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+.language-row{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.language-row button{
+  min-width:70px;
+  min-height:38px;
+  border:1px solid rgba(0,255,224,.35);
+  border-radius:999px;
+  background:rgba(0,0,0,.30);
+  color:#fff;
+  font-weight:900;
+}
+
+@media(min-width:700px){
+  .form-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .onboarding-header h1{
+    font-size:46px;
+  }
+}
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+  dataLayer.push(arguments);
+}
+
+gtag("js",new Date());
+gtag("config","G-JBD3JJEJ3W");
+</script>
+</head>
+
+<body>
+
+<main class="content-onboarding">
+
+  <nav class="content-nav">
+    <a href="../agreement/content-studio-custom.html">BACK</a>
+    <a href="../content-studio/index.html">CONTENT STUDIO</a>
+  </nav>
+
+  <div class="language-row">
+    <button type="button" data-language="en">EN</button>
+    <button type="button" data-language="es">ES</button>
+  </div>
+
+  <section class="onboarding-header">
+    <h1
+      data-en="CONTENT STUDIO ONBOARDING"
+      data-es="FORMULARIO DE CONTENT STUDIO">
+      CONTENT STUDIO ONBOARDING
+    </h1>
+
+    <p
+      data-en="Tell RAPCER what content your business needs. RAPCER will review your request and prepare a personalized production proposal."
+      data-es="Dile a RAPCER qué contenido necesita tu negocio. RAPCER revisará tu solicitud y preparará una propuesta de producción personalizada.">
+      Tell RAPCER what content your business needs. RAPCER will review
+      your request and prepare a personalized production proposal.
+    </p>
+  </section>
+
+  <form id="contentStudioForm">
+
+    <section class="form-section">
+      <h2 data-en="Business Information" data-es="Información del Negocio">
+        Business Information
+      </h2>
+
+      <div class="form-grid">
+        <input name="Full Name" placeholder="Full Name" required>
+        <input name="Business Name" placeholder="Business Name" required>
+        <input name="Phone" placeholder="Phone / WhatsApp" required>
+        <input name="Email" type="email" placeholder="Email" required>
+        <input name="Location" placeholder="City / State / Country">
+        <input name="Business Type" placeholder="Business Type">
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2 data-en="Online Presence" data-es="Presencia en Línea">
+        Online Presence
+      </h2>
+
+      <div class="form-grid">
+        <input name="Instagram" placeholder="Instagram">
+        <input name="Facebook" placeholder="Facebook">
+        <input name="TikTok" placeholder="TikTok">
+        <input name="Website" placeholder="Website / Current Link">
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2 data-en="Content Project Details" data-es="Detalles del Proyecto de Contenido">
+        Content Project Details
+      </h2>
+
+      <textarea
+        name="Project Goals"
+        placeholder="Describe your campaign, promotion or content goals."
+        required></textarea>
+
+      <textarea
+        name="Content Description"
+        placeholder="Describe the products, services, people or location RAPCER should capture."
+        required></textarea>
+
+      <div class="form-grid">
+        <input name="Preferred Date" placeholder="Preferred production date">
+        <input name="Preferred Time" placeholder="Preferred production time">
+        <input name="Production Location" placeholder="Production location">
+        <input name="Deadline" placeholder="Expected delivery date">
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2 data-en="Select Content Services" data-es="Selecciona Servicios de Contenido">
+        Select Content Services
+      </h2>
+
+      <div class="service-category">
+        <h3 data-en="Photography & Video" data-es="Fotografía y Video">
+          Photography & Video
+        </h3>
+
+        <div class="service-grid">
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Professional Photography">
+            <span data-en="Professional Photography" data-es="Fotografía Profesional">Professional Photography</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Business Video">
+            <span data-en="Business Video" data-es="Video de Negocio">Business Video</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Product Video">
+            <span data-en="Product Video" data-es="Video de Producto">Product Video</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Interview Production">
+            <span data-en="Interview Production" data-es="Producción de Entrevista">Interview Production</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3 data-en="Editing & Social Content" data-es="Edición y Contenido Social">
+          Editing & Social Content
+        </h3>
+
+        <div class="service-grid">
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Video Editing">
+            <span data-en="Video Editing" data-es="Edición de Video">Video Editing</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Reels and TikTok">
+            <span data-en="Reels & TikTok" data-es="Reels y TikTok">Reels & TikTok</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="YouTube Content">
+            <span data-en="YouTube Content" data-es="Contenido para YouTube">YouTube Content</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Podcast Production">
+            <span data-en="Podcast Production" data-es="Producción de Podcast">Podcast Production</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3 data-en="Graphics & Management" data-es="Gráficos y Manejo">
+          Graphics & Management
+        </h3>
+
+        <div class="service-grid">
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Flyers and Graphics">
+            <span data-en="Flyers & Graphics" data-es="Flyers y Gráficos">Flyers & Graphics</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Social Media Management">
+            <span data-en="Social Media Management" data-es="Manejo de Redes Sociales">Social Media Management</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Content Strategy">
+            <span data-en="Content Strategy" data-es="Estrategia de Contenido">Content Strategy</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Custom Content Campaign">
+            <span data-en="Custom Content Campaign" data-es="Campaña de Contenido Personalizada">Custom Content Campaign</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="preview-box">
+        <h3 data-en="Selected Services" data-es="Servicios Seleccionados">
+          Selected Services
+        </h3>
+
+        <div id="selectedServicesPreview">Nothing selected yet.</div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2 data-en="Additional Information" data-es="Información Adicional">
+        Additional Information
+      </h2>
+
+      <textarea
+        name="Deliverables"
+        placeholder="How many photos, videos, reels or graphics do you need?"></textarea>
+
+      <textarea
+        name="Style Direction"
+        placeholder="Describe the visual style, colors, examples or references you prefer."></textarea>
+
+      <textarea
+        name="Additional Notes"
+        placeholder="Anything else RAPCER should know?"></textarea>
+    </section>
+
+    <button
+      class="submit-btn"
+      type="submit"
+      data-en="SUBMIT CONTENT REQUEST"
+      data-es="ENVIAR SOLICITUD DE CONTENIDO">
+      SUBMIT CONTENT REQUEST
+    </button>
+
+  </form>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+  emailjs.init({
+    publicKey:"C7Navz7uxe7mFVifP"
+  });
+
+  const form = document.getElementById("contentStudioForm");
+  const preview = document.getElementById("selectedServicesPreview");
+
+  function selectedServices(){
+    return Array.from(
+      document.querySelectorAll('input[name="Selected Services"]:checked')
+    ).map(function(item){
+      return item.value;
+    });
+  }
+
+  function updatePreview(){
+
+    const selected = selectedServices();
+
+    preview.innerHTML =
+      selected.length
+        ? selected.map(function(item){
+            return "✓ " + item;
+          }).join("<br>")
+        : "Nothing selected yet.";
+  }
+
+  document.querySelectorAll('input[name="Selected Services"]').forEach(function(box){
+    box.addEventListener("change",updatePreview);
+  });
+
+  form.addEventListener("submit",function(event){
+
+    event.preventDefault();
+
+    const selected = selectedServices();
+
+    if(!selected.length){
+      alert("Please select at least one Content Studio service.");
+      return;
+    }
+
+    const data = new FormData(form);
+
+    const formData = {
+      name:data.get("Full Name"),
+      email:data.get("Email"),
+      title:"CONTENT STUDIO CUSTOM REQUEST",
+      message:`
+Client Name:
+${data.get("Full Name")}
+
+Business Name:
+${data.get("Business Name")}
+
+Phone:
+${data.get("Phone")}
+
+Email:
+${data.get("Email")}
+
+Location:
+${data.get("Location")}
+
+Business Type:
+${data.get("Business Type")}
+
+Instagram:
+${data.get("Instagram")}
+
+Facebook:
+${data.get("Facebook")}
+
+TikTok:
+${data.get("TikTok")}
+
+Website:
+${data.get("Website")}
+
+Project Goals:
+${data.get("Project Goals")}
+
+Content Description:
+${data.get("Content Description")}
+
+Preferred Date:
+${data.get("Preferred Date")}
+
+Preferred Time:
+${data.get("Preferred Time")}
+
+Production Location:
+${data.get("Production Location")}
+
+Expected Deadline:
+${data.get("Deadline")}
+
+Selected Content Services:
+${selected.map(function(item){
+  return "- " + item;
+}).join("\n")}
+
+Deliverables:
+${data.get("Deliverables")}
+
+Style Direction:
+${data.get("Style Direction")}
+
+Additional Notes:
+${data.get("Additional Notes")}
+`
+    };
+
+    emailjs.send(
+      "service_0gwo1eh",
+      "template_0lpcu2b",
+      formData
+    )
+    .then(function(){
+
+      alert("Content Studio request sent successfully.");
+
+      window.location.href =
+        "../content-studio/index.html";
+
+    })
+    .catch(function(error){
+
+      console.error(error);
+
+      alert("The request could not be sent. Please contact RAPCER directly.");
+
+    });
+
+  });
+
+  function setLanguage(language){
+
+    localStorage.setItem("rapcerLang",language);
+
+    document.querySelectorAll("[data-en][data-es]").forEach(function(element){
+      element.textContent =
+        language === "es"
+          ? element.getAttribute("data-es")
+          : element.getAttribute("data-en");
+    });
+
+  }
+
+  document.querySelectorAll("[data-language]").forEach(function(button){
+    button.addEventListener("click",function(){
+      setLanguage(this.getAttribute("data-language"));
+    });
+  });
+
+  setLanguage(localStorage.getItem("rapcerLang") || "en");
+
+});
+</script>
+
+<script src="../../rapcer-analytics.js" defer></script>
+
+</body>
+</html>

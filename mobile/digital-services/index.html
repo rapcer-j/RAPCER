@@ -36,7 +36,7 @@ section{max-width:1100px;margin:auto;padding:34px 20px}
 .card h3{color:#07111f;margin-bottom:12px}
 .card ul{list-style:none;display:grid;gap:8px;font-size:14px;line-height:1.35}
 .card li:before{content:"✓ ";color:#0aa86b;font-weight:900}
-.price{margin-top:14px;font-size:18px;font-weight:900;color:#168bff}
+
 .contact{background:#07111f;color:white;border-radius:22px;padding:28px;text-align:center;margin-top:10px}
 .contact h2{font-size:30px;margin-bottom:10px}
 .contact p{opacity:.9;line-height:1.5}
@@ -55,6 +55,21 @@ header{flex-direction:column;gap:12px}
 .hero h1{font-size:34px}
 }
 
+
+.digital-help-main-action{
+  display:flex;
+  justify-content:center;
+  margin-top:28px;
+}
+
+.digital-help-main-action .btn{
+  width:min(100%,340px);
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
 </style>
 <link rel="stylesheet" href="digital-help-v11.css">
 <style>
@@ -97,50 +112,78 @@ header{flex-direction:column;gap:12px}
   </div>
 
   <div class="grid">
-    <a class="card" href="/mobile/digital-services/job-assist/index.html">
+    <div class="card">
       <h3 data-en="Job Assist" data-es="Asistencia de Empleo">Asistencia de Empleo</h3>
       <ul><li data-en="Resume help" data-es="Ayuda con currículum">Ayuda con currículum</li><li data-en="Job applications" data-es="Solicitudes de empleo">Solicitudes de empleo</li><li data-en="Indeed setup" data-es="Configuración de Indeed">Configuración de Indeed</li><li data-en="LinkedIn setup" data-es="Configuración de LinkedIn">Configuración de LinkedIn</li></ul>
-      <div class="price" data-en="From $25" data-es="Desde $25">Desde $25</div>
-    </a>
+    </div>
 
-    <a class="card" href="/mobile/digital-services/document-center/index.html">
+    <div class="card">
       <h3 data-en="Document Center" data-es="Centro de Documentos">Centro de Documentos</h3>
       <ul><li data-en="Scan documents" data-es="Escanear documentos">Escanear documentos</li><li data-en="PDF conversion" data-es="Conversión a PDF">Conversión a PDF</li><li data-en="Email delivery" data-es="Envío por correo electrónico">Envío por correo electrónico</li><li data-en="File uploads" data-es="Carga de archivos">Carga de archivos</li></ul>
-      <div class="price" data-en="From $15" data-es="Desde $15">Desde $15</div>
-    </a>
+    </div>
 
-    <a class="card" href="/mobile/digital-services/tech-help/index.html">
+    <div class="card">
       <h3 data-en="Tech Help" data-es="Ayuda Técnica">Ayuda Técnica</h3>
       <ul><li data-en="Gmail setup" data-es="Configuración de Gmail">Configuración de Gmail</li><li data-en="Account recovery" data-es="Recuperación de cuentas">Recuperación de cuentas</li><li data-en="Mobile apps" data-es="Aplicaciones móviles">Aplicaciones móviles</li><li data-en="Printer help" data-es="Ayuda con impresoras">Ayuda con impresoras</li></ul>
-      <div class="price" data-en="From $20" data-es="Desde $20">Desde $20</div>
-    </a>
+    </div>
 
-    <a class="card" href="/mobile/digital-services/business-start/index.html">
+    <div class="card">
       <h3 data-en="Business Start" data-es="Inicio de Negocio">Inicio de Negocio</h3>
       <ul><li data-en="Business email" data-es="Correo empresarial">Correo empresarial</li><li data-en="Google Business" data-es="Google Business">Google Business</li><li data-en="QR code" data-es="Código QR">Código QR</li><li data-en="Basic web presence" data-es="Presencia web básica">Presencia web básica</li></ul>
-      <div class="price" data-en="From $99" data-es="Desde $99">Desde $99</div>
-    </a>
+    </div>
 
-    <a class="card" href="/mobile/digital-services/online-forms/index.html">
+    <div class="card">
       <h3 data-en="Online Forms" data-es="Formularios en Línea">Formularios en Línea</h3>
       <ul><li data-en="School forms" data-es="Formularios escolares">Formularios escolares</li><li data-en="Housing forms" data-es="Formularios de vivienda">Formularios de vivienda</li><li data-en="Account registration" data-es="Registro de cuentas">Registro de cuentas</li><li data-en="Online submissions" data-es="Envíos en línea">Envíos en línea</li></ul>
-      <div class="price" data-en="From $15" data-es="Desde $15">Desde $15</div>
+    </div>
+  </div>
+
+  <div class="digital-help-main-action">
+    <a
+      class="btn primary"
+      href="../agreement/digital-help-custom.html"
+      data-en="REQUEST DIGITAL HELP"
+      data-es="SOLICITAR AYUDA DIGITAL">
+      REQUEST DIGITAL HELP
     </a>
   </div>
+
 </section>
 
 <section id="contact">
   <div class="contact">
-    <h2 data-en="Need Digital Help?" data-es="¿Necesitas Ayuda Digital?">¿Necesitas Ayuda Digital?</h2><p style="margin-top:10px;">Contacta a RAPCER directamente por correo y dinos en qué necesitas ayuda.</p>
-    <p>Dile a RAPCER en qué necesitas ayuda. Podemos ayudarte a organizar la tarea y guiarte durante el proceso digital.</p>
+    <h2 data-en="Need Digital Help?" data-es="¿Necesitas Ayuda Digital?">Need Digital Help?</h2>
+
+    <p
+      style="margin-top:10px;"
+      data-en="Contact RAPCER directly by email and tell us what you need help with."
+      data-es="Contacta a RAPCER directamente por correo y dinos en qué necesitas ayuda.">
+      Contact RAPCER directly by email and tell us what you need help with.
+    </p>
+    <p
+      data-en="Tell RAPCER what you need help with. We can help organize the task and guide you through the digital process."
+      data-es="Dile a RAPCER en qué necesitas ayuda. Podemos ayudarte a organizar la tarea y guiarte durante el proceso digital.">
+      Tell RAPCER what you need help with. We can help organize the task and guide you through the digital process.
+    </p>
     <div class="contact-buttons">
-      <a class="btn primary" href="mailto:rapcerj@gmail.com?subject=Ayuda Digital RAPCER Request">Enviar Correo a RAPCER</a>
+      <a
+        class="btn primary"
+        href="mailto:rapcerj@gmail.com?subject=RAPCER Digital Help Request"
+        data-en="Email RAPCER"
+        data-es="Enviar Correo a RAPCER">
+        Email RAPCER
+      </a>
       
     </div>
   </div>
 
   <div class="note">
-    <strong>Importante:</strong> Ayuda Digital RAPCER provides technology and administrative assistance only. Final pricing may vary depending on the complexity of the request. Services are reviewed before processing begins. RAPCER does not provide legal, tax, immigration, medical, insurance, or financial advice.
+    <strong data-en="Important:" data-es="Importante:">Important:</strong>
+    <span
+      data-en="RAPCER Digital Help provides technology and administrative assistance only. Final pricing may vary depending on the complexity of the request. Services are reviewed before processing begins. RAPCER does not provide legal, tax, immigration, medical, insurance, or financial advice."
+      data-es="Ayuda Digital RAPCER ofrece únicamente asistencia tecnológica y administrativa. El precio final puede variar según la complejidad de la solicitud. Los servicios se revisan antes de comenzar el proceso. RAPCER no ofrece asesoría legal, fiscal, migratoria, médica, de seguros ni financiera.">
+      RAPCER Digital Help provides technology and administrative assistance only. Final pricing may vary depending on the complexity of the request. Services are reviewed before processing begins. RAPCER does not provide legal, tax, immigration, medical, insurance, or financial advice.
+    </span>
   </div>
 </section>
 

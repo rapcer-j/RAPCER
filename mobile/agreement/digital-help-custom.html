@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Digital Help Agreement | RAPCER</title>
+
+<link rel="stylesheet" href="../module.css">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#02040b;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+.digital-agreement{
+  width:min(100%,900px);
+  margin:0 auto;
+  padding:18px 16px 60px;
+}
+
+.digital-nav{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.digital-nav a{
+  min-height:44px;
+  padding:0 16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(0,255,224,.35);
+  border-radius:999px;
+  color:#00ffe0;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:900;
+}
+
+.language-row{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.language-row button{
+  min-width:68px;
+  min-height:38px;
+  border:1px solid rgba(0,255,224,.35);
+  border-radius:999px;
+  background:#050713;
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.agreement-card{
+  margin-bottom:18px;
+  padding:24px 20px;
+  border:1px solid rgba(0,255,224,.25);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at top left,rgba(0,255,224,.10),transparent 38%),
+    radial-gradient(circle at bottom right,rgba(255,0,200,.10),transparent 40%),
+    rgba(4,8,18,.90);
+}
+
+.agreement-card h1{
+  margin:0 0 14px;
+  color:#00ffe0;
+  font-size:34px;
+  line-height:1.05;
+}
+
+.agreement-card h2{
+  margin:0 0 15px;
+  color:#00ffe0;
+  font-size:23px;
+}
+
+.agreement-card p,
+.agreement-card li{
+  color:#dbeafe;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.agreement-card ul{
+  margin:0;
+  padding-left:20px;
+}
+
+.agreement-card li{
+  margin-bottom:8px;
+}
+
+.warning{
+  border-color:rgba(255,0,200,.35);
+}
+
+.warning h2{
+  color:#ff3bd4;
+}
+
+.accept-box{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:18px;
+  border:1px solid rgba(0,255,224,.28);
+  border-radius:17px;
+  background:rgba(0,0,0,.30);
+}
+
+.accept-box input{
+  width:22px;
+  height:22px;
+  margin-top:2px;
+  flex-shrink:0;
+  accent-color:#00ffe0;
+}
+
+.accept-box label{
+  color:#fff;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.continue-btn{
+  width:100%;
+  min-height:52px;
+  margin-top:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:linear-gradient(90deg,#00ffe0,#55d8ff,#ff00c8);
+  color:#02040b;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.continue-btn.disabled{
+  pointer-events:none;
+  opacity:.35;
+}
+
+@media(min-width:700px){
+  .agreement-card{
+    padding:30px;
+  }
+
+  .agreement-card h1{
+    font-size:46px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="digital-agreement">
+
+  <nav class="digital-nav">
+    <a href="../digital-services/index.html">BACK</a>
+    <a href="../packages/index.html">PACKAGES</a>
+  </nav>
+
+  <div class="language-row">
+    <button type="button" data-language="en">EN</button>
+    <button type="button" data-language="es">ES</button>
+  </div>
+
+  <section class="agreement-card">
+
+    <h1
+      data-en="DIGITAL HELP TERMS & CONDITIONS"
+      data-es="TÉRMINOS Y CONDICIONES DE AYUDA DIGITAL">
+      DIGITAL HELP TERMS & CONDITIONS
+    </h1>
+
+    <p
+      data-en="Review the RAPCER Digital Help process before submitting your request."
+      data-es="Revisa el proceso de Ayuda Digital RAPCER antes de enviar tu solicitud.">
+      Review the RAPCER Digital Help process before submitting your request.
+    </p>
+
+  </section>
+
+  <section class="agreement-card">
+
+    <h2
+      data-en="How the Process Works"
+      data-es="Cómo Funciona el Proceso">
+      How the Process Works
+    </h2>
+
+    <ul>
+      <li
+        data-en="Select the services you need."
+        data-es="Selecciona los servicios que necesitas.">
+        Select the services you need.
+      </li>
+
+      <li
+        data-en="Explain your request in a few words."
+        data-es="Explica tu solicitud en pocas palabras.">
+        Explain your request in a few words.
+      </li>
+
+      <li
+        data-en="RAPCER reviews the request and contacts you by email."
+        data-es="RAPCER revisa la solicitud y se comunica contigo por correo.">
+        RAPCER reviews the request and contacts you by email.
+      </li>
+
+      <li
+        data-en="Pricing and instructions are confirmed privately."
+        data-es="El precio y las instrucciones se confirman de manera privada.">
+        Pricing and instructions are confirmed privately.
+      </li>
+
+      <li
+        data-en="A private payment link is sent only when RAPCER confirms it is ready."
+        data-es="El enlace privado de pago se envía solamente cuando RAPCER confirme que está listo.">
+        A private payment link is sent only when RAPCER confirms it is ready.
+      </li>
+    </ul>
+
+  </section>
+
+  <section class="agreement-card">
+
+    <h2
+      data-en="Available Assistance"
+      data-es="Asistencia Disponible">
+      Available Assistance
+    </h2>
+
+    <ul>
+      <li data-en="Job applications and résumés" data-es="Solicitudes de empleo y currículums">Job applications and résumés</li>
+      <li data-en="PDFs and document organization" data-es="PDFs y organización de documentos">PDFs and document organization</li>
+      <li data-en="Email, accounts, apps and devices" data-es="Correo, cuentas, aplicaciones y dispositivos">Email, accounts, apps and devices</li>
+      <li data-en="Google Business, QR codes and basic business setup" data-es="Google Business, códigos QR y configuración básica de negocio">Google Business, QR codes and basic business setup</li>
+      <li data-en="General online forms and registrations" data-es="Formularios generales y registros en línea">General online forms and registrations</li>
+    </ul>
+
+  </section>
+
+  <section class="agreement-card warning">
+
+    <h2 data-en="Important" data-es="Importante">Important</h2>
+
+    <p
+      data-en="Do not send payment before RAPCER reviews the request. Digital Help provides technology and administrative assistance only. RAPCER does not provide legal, tax, immigration, medical, insurance or financial advice."
+      data-es="No envíes ningún pago antes de que RAPCER revise la solicitud. Ayuda Digital ofrece únicamente asistencia tecnológica y administrativa. RAPCER no ofrece asesoría legal, fiscal, migratoria, médica, de seguros ni financiera.">
+      Do not send payment before RAPCER reviews the request. Digital Help
+      provides technology and administrative assistance only.
+    </p>
+
+  </section>
+
+  <section class="agreement-card">
+
+    <div class="accept-box">
+
+      <input type="checkbox" id="agreeCheck">
+
+      <label
+        for="agreeCheck"
+        data-en="I have read and accept the RAPCER Digital Help terms. I understand that RAPCER must review my request before confirming service, pricing or payment."
+        data-es="He leído y acepto los términos de Ayuda Digital RAPCER. Entiendo que RAPCER debe revisar mi solicitud antes de confirmar el servicio, precio o pago.">
+        I have read and accept the RAPCER Digital Help terms.
+      </label>
+
+    </div>
+
+    <a id="continueBtn" class="continue-btn disabled"
+      data-en="CONTINUE TO DIGITAL HELP REQUEST"
+      data-es="CONTINUAR A LA SOLICITUD DE AYUDA DIGITAL">
+      CONTINUE TO DIGITAL HELP REQUEST
+    </a>
+
+  </section>
+
+</main>
+
+<script>
+(function(){
+
+  const params = new URLSearchParams(window.location.search);
+  const service = params.get("service") || "";
+
+  const checkbox = document.getElementById("agreeCheck");
+  const continueBtn = document.getElementById("continueBtn");
+
+  checkbox.addEventListener("change",function(){
+
+    if(checkbox.checked){
+
+      continueBtn.classList.remove("disabled");
+
+      continueBtn.href =
+        "../onboarding/digital-help-custom.html" +
+        (service ? "?service=" + encodeURIComponent(service) : "");
+
+    }else{
+
+      continueBtn.classList.add("disabled");
+      continueBtn.removeAttribute("href");
+
+    }
+
+  });
+
+  function setLanguage(language){
+
+    localStorage.setItem("rapcerLang",language);
+
+    document.querySelectorAll("[data-en][data-es]").forEach(function(element){
+      element.textContent =
+        language === "es"
+          ? element.getAttribute("data-es")
+          : element.getAttribute("data-en");
+    });
+
+  }
+
+  document.querySelectorAll("[data-language]").forEach(function(button){
+    button.addEventListener("click",function(){
+      setLanguage(button.getAttribute("data-language"));
+    });
+  });
+
+  setLanguage(localStorage.getItem("rapcerLang") || "en");
+
+})();
+</script>
+
+<script src="../../rapcer-analytics.js" defer></script>
+
+</body>
+</html>

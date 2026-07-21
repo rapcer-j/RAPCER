@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Digital Help Request | RAPCER</title>
+
+<link rel="stylesheet" href="../module.css">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#02040b;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+.digital-onboarding{
+  width:min(100%,950px);
+  margin:0 auto;
+  padding:18px 16px 60px;
+}
+
+.digital-nav{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.digital-nav a{
+  min-height:44px;
+  padding:0 16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(0,255,224,.35);
+  border-radius:999px;
+  color:#00ffe0;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:900;
+}
+
+.language-row{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.language-row button{
+  min-width:68px;
+  min-height:38px;
+  border:1px solid rgba(0,255,224,.35);
+  border-radius:999px;
+  background:#050713;
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.header-card,
+.form-section{
+  margin-bottom:18px;
+  padding:24px 20px;
+  border:1px solid rgba(0,255,224,.25);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at top left,rgba(0,255,224,.09),transparent 38%),
+    radial-gradient(circle at bottom right,rgba(255,0,200,.09),transparent 40%),
+    rgba(4,8,18,.90);
+}
+
+.header-card h1{
+  margin:0 0 14px;
+  color:#00ffe0;
+  font-size:34px;
+  line-height:1.05;
+}
+
+.header-card p{
+  margin:0;
+  color:#dbeafe;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.form-section h2{
+  margin:0 0 18px;
+  color:#00ffe0;
+  font-size:23px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:15px;
+  border:1px solid rgba(0,255,224,.22);
+  border-radius:14px;
+  background:#050713;
+  color:#fff;
+  font-size:14px;
+  outline:none;
+}
+
+textarea{
+  min-height:125px;
+  resize:vertical;
+}
+
+.category{
+  margin-top:26px;
+}
+
+.category h3{
+  margin:0 0 13px;
+  color:#ff3bd4;
+  font-size:18px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:11px;
+}
+
+.service-card{
+  cursor:pointer;
+}
+
+.service-card input{
+  display:none;
+}
+
+.service-card span{
+  display:block;
+  padding:15px;
+  border:1px solid rgba(0,255,224,.23);
+  border-radius:15px;
+  background:#050713;
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+}
+
+.service-card input:checked + span{
+  background:linear-gradient(90deg,#00ffe0,#55d8ff,#ff00c8);
+  color:#02040b;
+}
+
+.service-card input:checked + span::before{
+  content:"✓ ";
+}
+
+.preview-box{
+  margin-top:24px;
+  padding:18px;
+  border:1px solid rgba(0,255,224,.25);
+  border-radius:16px;
+  background:rgba(0,0,0,.30);
+}
+
+.preview-box h3{
+  margin:0 0 10px;
+  color:#00ffe0;
+  font-size:17px;
+}
+
+#selectedServicesPreview{
+  color:#fff;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.submit-btn{
+  width:100%;
+  min-height:54px;
+  border:0;
+  border-radius:16px;
+  background:linear-gradient(90deg,#00ffe0,#55d8ff,#ff00c8);
+  color:#02040b;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+  cursor:pointer;
+}
+
+@media(min-width:700px){
+  .form-grid,
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .header-card h1{
+    font-size:46px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="digital-onboarding">
+
+  <nav class="digital-nav">
+    <a href="../agreement/digital-help-custom.html">BACK</a>
+    <a href="../digital-services/index.html">DIGITAL HELP</a>
+  </nav>
+
+  <div class="language-row">
+    <button type="button" data-language="en">EN</button>
+    <button type="button" data-language="es">ES</button>
+  </div>
+
+  <section class="header-card">
+
+    <h1
+      data-en="DIGITAL HELP REQUEST"
+      data-es="SOLICITUD DE AYUDA DIGITAL">
+      DIGITAL HELP REQUEST
+    </h1>
+
+    <p
+      data-en="Select what you need and explain the request. RAPCER will review it and contact you by email."
+      data-es="Selecciona lo que necesitas y explica la solicitud. RAPCER la revisará y se comunicará contigo por correo.">
+      Select what you need and explain the request.
+    </p>
+
+  </section>
+
+  <form id="digitalHelpForm">
+
+    <section class="form-section">
+
+      <h2 data-en="Contact Information" data-es="Información de Contacto">
+        Contact Information
+      </h2>
+
+      <div class="form-grid">
+        <input name="Full Name" placeholder="Full Name" required>
+        <input name="Email" type="email" placeholder="Email" required>
+        <input name="Phone" placeholder="Phone / WhatsApp">
+        <input name="Location" placeholder="City / State / Country">
+      </div>
+
+    </section>
+
+    <section class="form-section">
+
+      <h2
+        data-en="Select Digital Help Services"
+        data-es="Selecciona Servicios de Ayuda Digital">
+        Select Digital Help Services
+      </h2>
+
+      <div class="category" data-category="job-assist">
+
+        <h3 data-en="Job Assist" data-es="Asistencia de Empleo">Job Assist</h3>
+
+        <div class="service-grid">
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Resume Creation or Update">
+            <span data-en="Résumé Creation or Update" data-es="Creación o Actualización de Currículum">Résumé Creation or Update</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Job Applications">
+            <span data-en="Job Applications" data-es="Solicitudes de Empleo">Job Applications</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Indeed or LinkedIn Setup">
+            <span data-en="Indeed or LinkedIn Setup" data-es="Configuración de Indeed o LinkedIn">Indeed or LinkedIn Setup</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Cover Letter">
+            <span data-en="Cover Letter" data-es="Carta de Presentación">Cover Letter</span>
+          </label>
+
+        </div>
+      </div>
+
+      <div class="category" data-category="document-center">
+
+        <h3 data-en="Document Center" data-es="Centro de Documentos">Document Center</h3>
+
+        <div class="service-grid">
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Scan Documents">
+            <span data-en="Scan Documents" data-es="Escanear Documentos">Scan Documents</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="PDF Conversion">
+            <span data-en="PDF Conversion" data-es="Conversión a PDF">PDF Conversion</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Merge or Split PDF">
+            <span data-en="Merge or Split PDF" data-es="Unir o Dividir PDF">Merge or Split PDF</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Document Upload or Email Delivery">
+            <span data-en="Document Upload or Email Delivery" data-es="Carga o Envío de Documentos">Document Upload or Email Delivery</span>
+          </label>
+
+        </div>
+      </div>
+
+      <div class="category" data-category="tech-help">
+
+        <h3 data-en="Tech Help" data-es="Ayuda Técnica">Tech Help</h3>
+
+        <div class="service-grid">
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Gmail or Email Setup">
+            <span data-en="Gmail or Email Setup" data-es="Configuración de Gmail o Correo">Gmail or Email Setup</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Account Recovery Help">
+            <span data-en="Account Recovery Help" data-es="Ayuda con Recuperación de Cuenta">Account Recovery Help</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Mobile App Setup">
+            <span data-en="Mobile App Setup" data-es="Configuración de Aplicaciones">Mobile App Setup</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Printer or Device Help">
+            <span data-en="Printer or Device Help" data-es="Ayuda con Impresora o Dispositivo">Printer or Device Help</span>
+          </label>
+
+        </div>
+      </div>
+
+      <div class="category" data-category="business-start">
+
+        <h3 data-en="Business Start" data-es="Inicio de Negocio">Business Start</h3>
+
+        <div class="service-grid">
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Business Email">
+            <span data-en="Business Email" data-es="Correo Empresarial">Business Email</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Google Business Setup">
+            <span data-en="Google Business Setup" data-es="Configuración de Google Business">Google Business Setup</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="QR Code">
+            <span data-en="QR Code" data-es="Código QR">QR Code</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Basic Online Presence">
+            <span data-en="Basic Online Presence" data-es="Presencia Básica en Línea">Basic Online Presence</span>
+          </label>
+
+        </div>
+      </div>
+
+      <div class="category" data-category="online-forms">
+
+        <h3 data-en="Online Forms" data-es="Formularios en Línea">Online Forms</h3>
+
+        <div class="service-grid">
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="School Forms">
+            <span data-en="School Forms" data-es="Formularios Escolares">School Forms</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Housing Forms">
+            <span data-en="Housing Forms" data-es="Formularios de Vivienda">Housing Forms</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Employment Forms">
+            <span data-en="Employment Forms" data-es="Formularios de Empleo">Employment Forms</span>
+          </label>
+
+          <label class="service-card">
+            <input type="checkbox" name="Selected Services" value="Online Registration or Submission">
+            <span data-en="Online Registration or Submission" data-es="Registro o Envío en Línea">Online Registration or Submission</span>
+          </label>
+
+        </div>
+      </div>
+
+      <div class="preview-box">
+
+        <h3 data-en="Selected Services" data-es="Servicios Seleccionados">
+          Selected Services
+        </h3>
+
+        <div id="selectedServicesPreview">Nothing selected yet.</div>
+
+      </div>
+
+    </section>
+
+    <section class="form-section">
+
+      <h2 data-en="Explain What You Need" data-es="Explica lo que Necesitas">
+        Explain What You Need
+      </h2>
+
+      <textarea
+        name="Request Details"
+        placeholder="Tell RAPCER what you need help with."
+        required></textarea>
+
+      <textarea
+        name="Additional Notes"
+        placeholder="Add any deadlines, links, documents or important details."></textarea>
+
+    </section>
+
+    <button type="submit" class="submit-btn"
+      data-en="SUBMIT DIGITAL HELP REQUEST"
+      data-es="ENVIAR SOLICITUD DE AYUDA DIGITAL">
+      SUBMIT DIGITAL HELP REQUEST
+    </button>
+
+  </form>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+  emailjs.init({
+    publicKey:"C7Navz7uxe7mFVifP"
+  });
+
+  const form = document.getElementById("digitalHelpForm");
+  const preview = document.getElementById("selectedServicesPreview");
+  const params = new URLSearchParams(window.location.search);
+  const requestedCategory = params.get("service");
+
+  function getSelected(){
+    return Array.from(
+      document.querySelectorAll('input[name="Selected Services"]:checked')
+    ).map(function(item){
+      return item.value;
+    });
+  }
+
+  function updatePreview(){
+
+    const selected = getSelected();
+
+    preview.innerHTML =
+      selected.length
+        ? selected.map(function(item){
+            return "✓ " + item;
+          }).join("<br>")
+        : "Nothing selected yet.";
+
+  }
+
+  document.querySelectorAll('input[name="Selected Services"]').forEach(function(box){
+    box.addEventListener("change",updatePreview);
+  });
+
+  if(requestedCategory){
+
+    const category =
+      document.querySelector('[data-category="' + requestedCategory + '"]');
+
+    if(category){
+
+      const firstOption =
+        category.querySelector('input[name="Selected Services"]');
+
+      if(firstOption){
+        firstOption.checked = true;
+      }
+
+      setTimeout(function(){
+        category.scrollIntoView({behavior:"smooth",block:"start"});
+      },250);
+
+    }
+
+  }
+
+  updatePreview();
+
+  form.addEventListener("submit",function(event){
+
+    event.preventDefault();
+
+    const selected = getSelected();
+
+    if(!selected.length){
+      alert("Please select at least one Digital Help service.");
+      return;
+    }
+
+    const data = new FormData(form);
+
+    const formData = {
+      name:data.get("Full Name"),
+      email:data.get("Email"),
+      title:"RAPCER DIGITAL HELP REQUEST",
+      message:`
+Client Name:
+${data.get("Full Name")}
+
+Email:
+${data.get("Email")}
+
+Phone:
+${data.get("Phone")}
+
+Location:
+${data.get("Location")}
+
+Selected Services:
+${selected.map(function(item){
+  return "- " + item;
+}).join("\n")}
+
+Request Details:
+${data.get("Request Details")}
+
+Additional Notes:
+${data.get("Additional Notes")}
+`
+    };
+
+    emailjs.send(
+      "service_0gwo1eh",
+      "template_0lpcu2b",
+      formData
+    )
+    .then(function(){
+
+      alert("Digital Help request sent successfully.");
+
+      window.location.href =
+        "../digital-services/index.html";
+
+    })
+    .catch(function(error){
+
+      console.error(error);
+
+      alert("The request could not be sent. Please contact RAPCER directly.");
+
+    });
+
+  });
+
+  function setLanguage(language){
+
+    localStorage.setItem("rapcerLang",language);
+
+    document.querySelectorAll("[data-en][data-es]").forEach(function(element){
+      element.textContent =
+        language === "es"
+          ? element.getAttribute("data-es")
+          : element.getAttribute("data-en");
+    });
+
+  }
+
+  document.querySelectorAll("[data-language]").forEach(function(button){
+    button.addEventListener("click",function(){
+      setLanguage(button.getAttribute("data-language"));
+    });
+  });
+
+  setLanguage(localStorage.getItem("rapcerLang") || "en");
+
+});
+</script>
+
+<script src="../../rapcer-analytics.js" defer></script>
+
+</body>
+</html>
