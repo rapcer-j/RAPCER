@@ -103,8 +103,7 @@ function saveCreator(){
     const items = getItems();
     items.push({name,type,url,image});
     setItems(items);
-    renderItems();
-    window.location.href = "/mobile/project-hub/community/" + type + "/index.html";
+    window.location.href = "../community/" + type + "/index.html";
     document.getElementById("cName").value="";
     document.getElementById("cUrl").value="";
     document.getElementById("cImage").value="";
@@ -134,7 +133,6 @@ function renderItems(){
   document.getElementById("liveList").innerHTML = items.filter(i=>i.type==="live").map(card).join("");
   document.getElementById("groupsList").innerHTML = items.filter(i=>i.type==="groups").map(card).join("");
 }
-renderItems();
 </script>
 <script src="../../../rapcer-language.js?v=16" defer></script>
 </body>
