@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Professional Showcase | RAPCER</title>
+<link rel="stylesheet" href="../showcase.css">
+</head>
+
+<body>
+
+<main class="showcase-page">
+
+<nav class="showcase-nav">
+  <a class="showcase-btn" href="../index.html">← INDUSTRIES</a>
+  <a class="showcase-btn" href="../../../app-mobile.html">RAPCER HOME</a>
+</nav>
+
+<section class="industry-page-hero">
+  <span class="showcase-kicker">RAPCER PROFESSIONAL SHOWCASE</span>
+
+  <h1 data-en="Professional Promotion" data-es="Promoción Profesional">
+    Professional Promotion
+  </h1>
+
+  <p
+    data-en="Professional profiles, interviews, authority content and personal branding campaigns."
+    data-es="Perfiles profesionales, entrevistas, contenido de autoridad y campañas de marca personal.">
+    Professional profiles, interviews, authority content and personal branding campaigns.
+  </p>
+</section>
+
+<section class="client-section">
+  <div class="client-heading">
+    <span>FEATURED PROFESSIONAL WORK</span>
+    <h2 data-en="Client Projects" data-es="Proyectos de Clientes">Client Projects</h2>
+  </div>
+
+  <div class="client-grid">
+
+    <article class="client-card">
+      <div class="client-video">
+        <video controls playsinline preload="metadata"
+               poster="../../assets-studio/professional-poster.jpg">
+          <source src="../../assets-studio/professional-mobile.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+
+      <div class="client-info">
+        <small>PROFESSIONAL PRESENTATION</small>
+        <h3 data-en="Professional Profile" data-es="Perfil Profesional">
+          Professional Profile
+        </h3>
+
+        <p
+          data-en="Interview production, authority content and professional personal branding."
+          data-es="Producción de entrevistas, contenido de autoridad y marca personal profesional.">
+          Interview production, authority content and professional personal branding.
+        </p>
+      </div>
+    </article>
+
+    <article class="future-card">
+      <div>
+        <h3 data-en="More Professionals Coming Soon" data-es="Más Profesionales Próximamente">
+          More Professionals Coming Soon
+        </h3>
+
+        <p
+          data-en="Future professionals, personal brands and promotional campaigns will appear here."
+          data-es="Los futuros profesionales, marcas personales y campañas promocionales aparecerán aquí.">
+          Future professionals, personal brands and promotional campaigns will appear here.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="promo-box">
+  <h2 data-en="Feature Your Professional Brand Here" data-es="Promociona tu Marca Profesional Aquí">
+    Feature Your Professional Brand Here
+  </h2>
+
+  <p
+    data-en="RAPCER can produce your professional presentation and promote your brand through industry pages, social media, WhatsApp and QR campaigns."
+    data-es="RAPCER puede producir tu presentación profesional y promocionar tu marca mediante páginas de industria, redes sociales, WhatsApp y campañas QR.">
+    RAPCER can produce your professional presentation and promote your brand through industry pages, social media, WhatsApp and QR campaigns.
+  </p>
+
+  <a class="showcase-btn"
+     href="../../agreement/digital-help-custom.html?service=professional"
+     data-en="REQUEST PROFESSIONAL SERVICES"
+     data-es="SOLICITAR SERVICIOS PROFESIONALES">
+    REQUEST PROFESSIONAL SERVICES
+  </a>
+</section>
+
+
+<section class="showcase-social">
+
+  <span>@RAPCER</span>
+
+  <a
+    href="https://instagram.com/rapcerj"
+    target="_blank"
+    rel="noopener">
+    IG
+  </a>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=61592310327659"
+    target="_blank"
+    rel="noopener">
+    FB
+  </a>
+
+  <a
+    href="https://tiktok.com/@rapcerj"
+    target="_blank"
+    rel="noopener">
+    TT
+  </a>
+
+  <a
+    href="mailto:rapcerj@gmail.com?subject=RAPCER Showcase Contact">
+    EMAIL
+  </a>
+
+</section>
+</main>
+
+<script>
+function setLang(lang){
+  localStorage.setItem("rapcerLang",lang);
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-en]").forEach(function(el){
+    el.textContent=el.getAttribute("data-"+lang);
+  });
+}
+setLang(localStorage.getItem("rapcerLang")||"en");
+</script>
+
+<script src="../../../rapcer-language.js?v=16" defer></script>
+<script src="../../../rapcer-analytics.js" defer></script>
+
+</body>
+</html>

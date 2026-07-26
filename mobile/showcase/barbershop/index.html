@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Barbershop Showcase | RAPCER</title>
+<link rel="stylesheet" href="../showcase.css">
+</head>
+
+<body>
+
+<main class="showcase-page">
+
+<nav class="showcase-nav">
+  <a class="showcase-btn" href="../index.html">← INDUSTRIES</a>
+  <a class="showcase-btn" href="../../../app-mobile.html">RAPCER HOME</a>
+</nav>
+
+<section class="industry-page-hero">
+  <span class="showcase-kicker">RAPCER BARBERSHOP SHOWCASE</span>
+
+  <h1 data-en="Barbershop Promotion" data-es="Promoción para Barberías">
+    Barbershop Promotion
+  </h1>
+
+  <p
+    data-en="Professional videos, haircut transformations, shop presentation and promotional content created for barbershops."
+    data-es="Videos profesionales, transformaciones de cortes, presentación del local y contenido promocional creado para barberías.">
+    Professional videos, haircut transformations, shop presentation and promotional content created for barbershops.
+  </p>
+</section>
+
+<section class="client-section">
+
+  <div class="client-heading">
+    <span data-en="FEATURED BARBERSHOP WORK" data-es="TRABAJO DESTACADO DE BARBERÍA">
+      FEATURED BARBERSHOP WORK
+    </span>
+
+    <h2 data-en="Client Projects" data-es="Proyectos de Clientes">
+      Client Projects
+    </h2>
+  </div>
+
+  <div class="client-grid">
+
+    <article class="client-card">
+      <div class="client-video">
+        <video controls playsinline preload="metadata"
+               poster="../../assets-studio/barbershop-poster.jpg">
+          <source src="../../assets-studio/barbershop-mobile.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+
+      <div class="client-info">
+        <small>BUSINESS PROMOTION</small>
+        <h3>Barbershop</h3>
+
+        <p
+          data-en="Visual branding, barber presentation and promotional content prepared for social media."
+          data-es="Marca visual, presentación del barbero y contenido promocional preparado para redes sociales.">
+          Visual branding, barber presentation and promotional content prepared for social media.
+        </p>
+      </div>
+    </article>
+
+    <article class="future-card">
+      <div>
+        <h3 data-en="More Barbershops Coming Soon" data-es="Más Barberías Próximamente">
+          More Barbershops Coming Soon
+        </h3>
+
+        <p
+          data-en="Future RAPCER barbershop clients and promotional campaigns will appear here."
+          data-es="Los futuros clientes y campañas promocionales de barberías RAPCER aparecerán aquí.">
+          Future RAPCER barbershop clients and promotional campaigns will appear here.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+<section class="promo-box">
+  <h2 data-en="Feature Your Barbershop Here" data-es="Promociona tu Barbería Aquí">
+    Feature Your Barbershop Here
+  </h2>
+
+  <p
+    data-en="RAPCER can produce your content and feature your business inside this industry showcase, social media campaigns, WhatsApp promotions and QR presentations."
+    data-es="RAPCER puede producir tu contenido y promocionar tu negocio dentro de este showcase, campañas en redes, promociones por WhatsApp y presentaciones QR.">
+    RAPCER can produce your content and feature your business inside this industry showcase, social media campaigns, WhatsApp promotions and QR presentations.
+  </p>
+
+  <a class="showcase-btn"
+     href="../../agreement/digital-help-custom.html?service=barbershop"
+     data-en="REQUEST BARBERSHOP SERVICES"
+     data-es="SOLICITAR SERVICIOS PARA BARBERÍA">
+    REQUEST BARBERSHOP SERVICES
+  </a>
+</section>
+
+
+<section class="showcase-social">
+
+  <span>@RAPCER</span>
+
+  <a
+    href="https://instagram.com/rapcerj"
+    target="_blank"
+    rel="noopener">
+    IG
+  </a>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=61592310327659"
+    target="_blank"
+    rel="noopener">
+    FB
+  </a>
+
+  <a
+    href="https://tiktok.com/@rapcerj"
+    target="_blank"
+    rel="noopener">
+    TT
+  </a>
+
+  <a
+    href="mailto:rapcerj@gmail.com?subject=RAPCER Showcase Contact">
+    EMAIL
+  </a>
+
+</section>
+</main>
+
+<script>
+function setLang(lang){
+  localStorage.setItem("rapcerLang",lang);
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-en]").forEach(function(el){
+    el.textContent=el.getAttribute("data-"+lang);
+  });
+}
+setLang(localStorage.getItem("rapcerLang")||"en");
+</script>
+
+<script src="../../../rapcer-language.js?v=16" defer></script>
+<script src="../../../rapcer-analytics.js" defer></script>
+
+</body>
+</html>

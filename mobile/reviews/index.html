@@ -156,6 +156,101 @@
 }
 
 
+
+
+.video-category-section{
+  margin:12px 0 40px;
+}
+
+.video-category-heading{
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.video-category-heading span{
+  display:block;
+  margin-bottom:8px;
+  color:#00ffe0;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.video-category-heading h1{
+  margin:0 0 10px;
+  color:#ffffff;
+  font-size:31px;
+  line-height:1.08;
+}
+
+.video-category-heading p{
+  max-width:540px;
+  margin:0 auto;
+  color:#cbd5e1;
+  font-size:14px;
+  line-height:1.55;
+}
+
+.video-category-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.video-category-card{
+  display:block;
+  padding:22px;
+  border:1px solid rgba(0,255,224,.32);
+  border-radius:22px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0,255,224,.06),
+      rgba(255,0,200,.07)
+    ),
+    #050812;
+  color:#ffffff;
+  text-decoration:none;
+}
+
+.video-category-card small{
+  display:block;
+  margin-bottom:9px;
+  color:#ff3bd4;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.15em;
+}
+
+.video-category-card h2{
+  margin:0 0 9px;
+  color:#00ffe0;
+  font-size:23px;
+}
+
+.video-category-card p{
+  margin:0 0 16px;
+  color:#dbeafe;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.video-category-card strong{
+  color:#ffffff;
+  font-size:12px;
+  letter-spacing:.08em;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+(min-width:700px){
+  .video-category-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
@@ -172,59 +267,6 @@ gtag("config","G-JBD3JJEJ3W");
 
 <div class="results-wrap">
 
-<section class="results-hero">
-  <h1 data-en="CLIENT RESULTS" data-es="RESULTADOS DE CLIENTES">CLIENT RESULTS</h1>
-  <p data-en="Real projects, business concepts and digital systems built under RAPCER. Each result represents a business category that can be launched, improved or scaled with RAPCER systems." data-es="Proyectos reales, conceptos de negocio y sistemas digitales construidos bajo RAPCER. Cada resultado representa una categoría de negocio que puede lanzarse, mejorarse o escalarse con sistemas RAPCER.">
-    Real projects, business concepts and digital systems built under RAPCER. Each result represents a business category that can be launched, improved or scaled with RAPCER systems.
-  </p>
-</section>
-
-<section class="results-grid">
-
-  <article class="result-card">
-    <div class="result-icon">💈</div>
-    <h2 data-en="Barber Shop / Personal Care" data-es="Barbería / Cuidado Personal">Barber Shop / Personal Care</h2>
-    <p data-en="Modern presentation, digital service structure and online presence for personal care businesses." data-es="Presentación moderna, estructura digital de servicios y presencia en línea para negocios de cuidado personal.">Modern presentation, digital service structure and online presence for personal care businesses.</p>
-    <div class="tags"><span>LANDING</span><span>QR</span><span>BOOKING READY</span></div>
-  </article>
-
-  <article class="result-card">
-    <div class="result-icon">🍰</div>
-    <h2 data-en="Cristal Bakery" data-es="Repostería Cristal">Cristal Bakery</h2>
-    <p data-en="Branding and digital direction for a dessert business ready to present its work professionally." data-es="Branding y dirección digital para un negocio de postres listo para presentar su trabajo profesionalmente.">Branding and digital direction for a dessert business ready to present its work professionally.</p>
-    <div class="tags"><span>BRANDING</span><span>GALLERY</span><span>SOCIAL</span></div>
-  </article>
-
-  <article class="result-card">
-    <div class="result-icon">🏡</div>
-    <h2 data-en="Real Estate Concept" data-es="Concepto de Bienes Raíces">Real Estate Concept</h2>
-    <p data-en="Clean digital structure for property services, trust and client presentation." data-es="Estructura digital limpia para servicios de propiedades, confianza y presentación al cliente.">Clean digital structure for property services, trust and client presentation.</p>
-    <div class="tags"><span>TRUST</span><span>PROPERTY</span><span>LEADS</span></div>
-  </article>
-
-  <article class="result-card">
-    <div class="result-icon">💅</div>
-    <h2 data-en="Salon / Beauty" data-es="Salón / Belleza">Salon / Beauty</h2>
-    <p data-en="Digital identity direction, service presentation and online customer flow." data-es="Dirección de identidad digital, presentación de servicios y flujo de clientes en línea.">Digital identity direction, service presentation and online customer flow.</p>
-    <div class="tags"><span>BEAUTY</span><span>SERVICES</span><span>CONTACT</span></div>
-  </article>
-
-  <article class="result-card">
-    <div class="result-icon">🎥</div>
-    <h2 data-en="Creator Infrastructure" data-es="Infraestructura para Creadores">Creator Infrastructure</h2>
-    <p data-en="Systems for creators, brands and service providers that need to organize content, links and offers." data-es="Sistemas para creadores, marcas y proveedores de servicios que necesitan organizar contenido, enlaces y ofertas.">Systems for creators, brands and service providers that need to organize content, links and offers.</p>
-    <div class="tags"><span>CREATOR</span><span>LINKS</span><span>OFFERS</span></div>
-  </article>
-
-  <article class="result-card">
-    <div class="result-icon">📲</div>
-    <h2 data-en="Digital Menus / QR Systems" data-es="Menús Digitales / Sistemas QR">Digital Menus / QR Systems</h2>
-    <p data-en="Business experiences ready for QR, menus, contact pages and local promotion." data-es="Experiencias de negocio listas para QR, menús, páginas de contacto y promoción local.">Business experiences ready for QR, menus, contact pages and local promotion.</p>
-    <div class="tags"><span>QR</span><span>MENU</span><span>MOBILE</span></div>
-  </article>
-
-</section>
-
 <!-- PORTFOLIO                         -->
 <!-- ================================= -->
 
@@ -233,21 +275,21 @@ gtag("config","G-JBD3JJEJ3W");
   <div class="mobile-portfolio-heading">
 
     <span
-      data-en="RAPCER CONTENT PORTFOLIO"
-      data-es="PORTAFOLIO DE CONTENIDO RAPCER">
-      RAPCER CONTENT PORTFOLIO
+      data-en="CHOOSE YOUR BUSINESS CATEGORY"
+      data-es="ELIGE LA CATEGORÍA DE TU NEGOCIO">
+      CHOOSE YOUR BUSINESS CATEGORY
     </span>
 
     <h2
-      data-en="Featured Client Projects"
-      data-es="Proyectos Destacados">
-      Featured Client Projects
+      data-en="See the Work for Your Industry"
+      data-es="Mira el Trabajo para tu Industria">
+      See the Work for Your Industry
     </h2>
 
     <p
-      data-en="Real content created for businesses, brands and professional campaigns."
-      data-es="Contenido real creado para negocios, marcas y campañas profesionales.">
-      Real content created for businesses, brands and professional campaigns.
+      data-en="Choose your business category and watch the featured video directly inside its card."
+      data-es="Elige la categoría de tu negocio y mira el video destacado directamente dentro de su tarjeta.">
+      Choose your business category and watch the featured video directly inside its card.
     </p>
 
   </div>
