@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Barbershop Digital Services | RAPCER</title>
+
+<link rel="stylesheet" href="../../../module.css">
+
+<style>
+.barber-page{
+  max-width:760px;
+  margin:0 auto;
+}
+
+.barber-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:24px;
+}
+
+.barber-hero{
+  padding:28px 20px;
+  text-align:center;
+  border:1px solid rgba(0,255,210,.28);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at top,rgba(0,255,210,.13),transparent 46%),
+    rgba(0,0,0,.38);
+}
+
+.barber-badge{
+  display:inline-block;
+  margin-bottom:12px;
+  color:#35ffc8;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+
+.barber-hero h1{
+  margin:0 0 14px;
+  color:white;
+  font-size:38px;
+  line-height:1.05;
+}
+
+.barber-hero p{
+  max-width:620px;
+  margin:0 auto;
+  color:rgba(255,255,255,.78);
+  line-height:1.65;
+}
+
+.barber-video{
+  margin-top:26px;
+  overflow:hidden;
+  border:1px solid rgba(53,255,200,.32);
+  border-radius:24px;
+  background:#000;
+}
+
+.barber-video video{
+  display:block;
+  width:100%;
+  aspect-ratio:9/13;
+  max-height:620px;
+  object-fit:cover;
+  background:#000;
+}
+
+.barber-section{
+  margin-top:34px;
+}
+
+.barber-section-title{
+  margin-bottom:18px;
+  text-align:center;
+}
+
+.barber-section-title span{
+  color:#35ffc8;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+
+.barber-section-title h2{
+  margin:8px 0 0;
+  color:white;
+  font-size:29px;
+}
+
+.barber-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.barber-card{
+  padding:22px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:22px;
+  background:rgba(0,0,0,.34);
+}
+
+.barber-card h3{
+  margin:0 0 10px;
+  color:#35ffc8;
+  font-size:21px;
+}
+
+.barber-card p{
+  margin:0;
+  color:rgba(255,255,255,.76);
+  line-height:1.55;
+}
+
+.barber-client-promo{
+  margin-top:34px;
+  padding:25px 20px;
+  text-align:center;
+  border:1px solid rgba(255,60,210,.28);
+  border-radius:24px;
+  background:
+    linear-gradient(145deg,rgba(255,60,210,.08),rgba(0,255,210,.06)),
+    rgba(0,0,0,.35);
+}
+
+.barber-client-promo h2{
+  margin:0 0 12px;
+  color:white;
+}
+
+.barber-client-promo p{
+  margin:0;
+  color:rgba(255,255,255,.76);
+  line-height:1.6;
+}
+
+.barber-action{
+  margin-top:34px;
+  text-align:center;
+}
+
+.barber-action .btn{
+  display:flex;
+  width:min(100%,390px);
+  min-height:56px;
+  margin:0 auto;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+@media(min-width:700px){
+  .barber-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="module barber-page">
+
+<nav class="barber-nav">
+  <a class="btn" href="../index.html"
+     data-en="← SMALL BUSINESS"
+     data-es="← NEGOCIO PEQUEÑO">
+    ← SMALL BUSINESS
+  </a>
+
+  <a class="btn" href="../../../../app-mobile.html"
+     data-en="RAPCER HOME"
+     data-es="INICIO RAPCER">
+    RAPCER HOME
+  </a>
+</nav>
+
+<section class="barber-hero">
+
+  <span class="barber-badge"
+        data-en="RAPCER FOR BARBERSHOPS"
+        data-es="RAPCER PARA BARBERÍAS">
+    RAPCER FOR BARBERSHOPS
+  </span>
+
+  <h1
+    data-en="Make Your Barbershop Look Professional Online"
+    data-es="Haz que tu barbería se vea profesional en internet">
+    Make Your Barbershop Look Professional Online
+  </h1>
+
+  <p
+    data-en="Professional videos, photos, social media content, QR systems and digital presentation built specifically for barbershops."
+    data-es="Videos profesionales, fotos, contenido para redes sociales, sistemas QR y presentación digital creados específicamente para barberías.">
+    Professional videos, photos, social media content, QR systems and digital presentation built specifically for barbershops.
+  </p>
+
+</section>
+
+<section class="barber-video">
+
+  <video controls playsinline preload="metadata"
+         poster="../../../assets-studio/barbershop-poster.jpg">
+
+    <source
+      src="../../../assets-studio/barbershop-mobile.mp4"
+      type="video/mp4">
+
+  </video>
+
+</section>
+
+<section class="barber-section">
+
+  <div class="barber-section-title">
+    <span
+      data-en="WHAT RAPCER CAN CREATE"
+      data-es="LO QUE RAPCER PUEDE CREAR">
+      WHAT RAPCER CAN CREATE
+    </span>
+
+    <h2
+      data-en="Digital Services for Barbershops"
+      data-es="Servicios digitales para barberías">
+      Digital Services for Barbershops
+    </h2>
+  </div>
+
+  <div class="barber-grid">
+
+    <article class="barber-card">
+      <h3
+        data-en="Professional Videos"
+        data-es="Videos Profesionales">
+        Professional Videos
+      </h3>
+
+      <p
+        data-en="Haircut transformations, barber introductions, shop atmosphere, customer reactions and promotional reels."
+        data-es="Transformaciones de cortes, presentación de barberos, ambiente del local, reacciones de clientes y reels promocionales.">
+        Haircut transformations, barber introductions, shop atmosphere, customer reactions and promotional reels.
+      </p>
+    </article>
+
+    <article class="barber-card">
+      <h3
+        data-en="Photography"
+        data-es="Fotografía">
+        Photography
+      </h3>
+
+      <p
+        data-en="Professional photos of cuts, barbers, tools, chairs, products and the complete barbershop experience."
+        data-es="Fotos profesionales de cortes, barberos, herramientas, sillas, productos y la experiencia completa de la barbería.">
+        Professional photos of cuts, barbers, tools, chairs, products and the complete barbershop experience.
+      </p>
+    </article>
+
+    <article class="barber-card">
+      <h3
+        data-en="Social Media Content"
+        data-es="Contenido para Redes">
+        Social Media Content
+      </h3>
+
+      <p
+        data-en="Content prepared for Instagram, Facebook, TikTok, WhatsApp and local digital promotion."
+        data-es="Contenido preparado para Instagram, Facebook, TikTok, WhatsApp y promoción digital local.">
+        Content prepared for Instagram, Facebook, TikTok, WhatsApp and local digital promotion.
+      </p>
+    </article>
+
+    <article class="barber-card">
+      <h3
+        data-en="Landing Page and QR"
+        data-es="Landing Page y QR">
+        Landing Page and QR
+      </h3>
+
+      <p
+        data-en="A direct page where customers can see your work, services, contact information, booking links and social media."
+        data-es="Una página directa donde los clientes pueden ver tu trabajo, servicios, contacto, reservaciones y redes sociales.">
+        A direct page where customers can see your work, services, contact information, booking links and social media.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<section class="barber-client-promo">
+
+  <h2
+    data-en="Promotion Through RAPCER"
+    data-es="Promoción a Través de RAPCER">
+    Promotion Through RAPCER
+  </h2>
+
+  <p
+    data-en="Active RAPCER clients may also be featured through RAPCER pages, WhatsApp, social media, QR campaigns and industry-specific promotions."
+    data-es="Los clientes activos de RAPCER también podrán aparecer en páginas de RAPCER, WhatsApp, redes sociales, campañas QR y promociones específicas para su industria.">
+    Active RAPCER clients may also be featured through RAPCER pages, WhatsApp, social media, QR campaigns and industry-specific promotions.
+  </p>
+
+</section>
+
+<section class="barber-action">
+
+  <a
+    class="btn"
+    href="../../../agreement/digital-help-custom.html?service=barbershop"
+    data-en="REQUEST A BARBERSHOP PROJECT"
+    data-es="SOLICITAR PROYECTO PARA BARBERÍA">
+    REQUEST A BARBERSHOP PROJECT
+  </a>
+
+</section>
+
+</main>
+
+<script>
+function setLang(lang){
+  localStorage.setItem("rapcerLang",lang);
+  document.documentElement.lang=lang;
+
+  document.querySelectorAll("[data-en]").forEach(function(el){
+    el.textContent=el.getAttribute("data-"+lang);
+  });
+}
+
+setLang(localStorage.getItem("rapcerLang")||"en");
+</script>
+
+<script src="../../../../rapcer-language.js?v=16" defer></script>
+<script src="../../../../rapcer-analytics.js" defer></script>
+
+</body>
+</html>

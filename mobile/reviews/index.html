@@ -30,6 +30,132 @@
 .results-social span{color:#20ffd2;font-weight:900;letter-spacing:.18em;margin-right:8px}
 .results-social a{color:white;text-decoration:none;border:1px solid rgba(0,255,210,.35);border-radius:999px;padding:10px 18px;font-weight:800;letter-spacing:.08em}
 @media(max-width:800px){.result-footer{grid-template-columns:1fr}}
+/* MOBILE PORTFOLIO                  */
+/* ================================= */
+
+.rapcer-mobile-portfolio{
+  margin:48px 0;
+}
+
+.mobile-portfolio-heading{
+  margin-bottom:22px;
+  padding:0 12px;
+  text-align:center;
+}
+
+.mobile-portfolio-heading span{
+  display:block;
+  margin-bottom:8px;
+  color:#00ffe0;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.mobile-portfolio-heading h2{
+  margin:0 0 10px;
+  color:#ffffff;
+  font-size:27px;
+  line-height:1.08;
+}
+
+.mobile-portfolio-heading p{
+  max-width:340px;
+  margin:0 auto;
+  color:#cbd5e1;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.mobile-portfolio-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.mobile-portfolio-card{
+  overflow:hidden;
+  border:1px solid rgba(0,255,224,.34);
+  border-radius:20px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0,255,224,.05),
+      rgba(255,0,200,.06)
+    ),
+    #050812;
+}
+
+.mobile-portfolio-video{
+  width:100%;
+  aspect-ratio:9 / 16;
+  max-height:570px;
+  overflow:hidden;
+  background:#000;
+}
+
+.mobile-portfolio-video video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  background:#000;
+}
+
+.mobile-portfolio-info{
+  padding:17px 18px 20px;
+}
+
+.mobile-portfolio-info span{
+  display:block;
+  margin-bottom:7px;
+  color:#ff3bd4;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.mobile-portfolio-info h3{
+  margin:0 0 8px;
+  color:#00ffe0;
+  font-size:21px;
+}
+
+.mobile-portfolio-info p{
+  margin:0;
+  color:#dbeafe;
+  font-size:13px;
+  line-height:1.55;
+}
+
+
+/* ================================= */
+@media(min-width:700px){
+
+  .mobile-portfolio-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .mobile-portfolio-video{
+    max-height:500px;
+  }
+}
+/* VIDEO PREVIEWS */
+.mobile-portfolio-video{
+  aspect-ratio:9 / 13!important;
+  max-height:490px!important;
+  background:#000!important;
+}
+
+.mobile-portfolio-video video{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+
+
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBD3JJEJ3W"></script>
@@ -99,6 +225,187 @@ gtag("config","G-JBD3JJEJ3W");
 
 </section>
 
+<!-- PORTFOLIO                         -->
+<!-- ================================= -->
+
+<section class="rapcer-mobile-portfolio">
+
+  <div class="mobile-portfolio-heading">
+
+    <span
+      data-en="RAPCER CONTENT PORTFOLIO"
+      data-es="PORTAFOLIO DE CONTENIDO RAPCER">
+      RAPCER CONTENT PORTFOLIO
+    </span>
+
+    <h2
+      data-en="Featured Client Projects"
+      data-es="Proyectos Destacados">
+      Featured Client Projects
+    </h2>
+
+    <p
+      data-en="Real content created for businesses, brands and professional campaigns."
+      data-es="Contenido real creado para negocios, marcas y campañas profesionales.">
+      Real content created for businesses, brands and professional campaigns.
+    </p>
+
+  </div>
+
+
+  <div class="mobile-portfolio-grid">
+
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata" poster="../assets-studio/tattoo-poster.jpg">
+          <source src="../assets-studio/tattoo-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="CONTENT PRODUCTION"
+          data-es="PRODUCCIÓN DE CONTENIDO">
+          CONTENT PRODUCTION
+        </span>
+
+        <h3
+          data-en="Tattoo Studio"
+          data-es="Estudio de Tatuajes">
+          Tattoo Studio
+        </h3>
+
+        <p
+          data-en="Professional brand content and social media video production."
+          data-es="Contenido profesional de marca y producción de video para redes sociales.">
+          Professional brand content and social media video production.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata" poster="../assets-studio/barbershop-poster.jpg">
+          <source src="../assets-studio/barbershop-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="BUSINESS PROMOTION"
+          data-es="PROMOCIÓN DE NEGOCIO">
+          BUSINESS PROMOTION
+        </span>
+
+        <h3
+          data-en="Barbershop"
+          data-es="Barbería">
+          Barbershop
+        </h3>
+
+        <p
+          data-en="Visual branding and promotional content for social media."
+          data-es="Identidad visual y contenido promocional para redes sociales.">
+          Visual branding and promotional content for social media.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata" poster="../assets-studio/restaurant-poster.jpg">
+          <source src="../assets-studio/restaurant-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="FOOD CONTENT"
+          data-es="CONTENIDO DE COMIDA">
+          FOOD CONTENT
+        </span>
+
+        <h3
+          data-en="Restaurant"
+          data-es="Restaurante">
+          Restaurant
+        </h3>
+
+        <p
+          data-en="Food presentation, promotional video and digital campaign content."
+          data-es="Presentación de comida, video promocional y contenido para campañas digitales.">
+          Food presentation, promotional video and digital campaign content.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="mobile-portfolio-card">
+
+      <div class="mobile-portfolio-video">
+
+        <video controls playsinline preload="metadata" poster="../assets-studio/professional-poster.jpg">
+          <source src="../assets-studio/professional-mobile.mp4"
+            type="video/mp4">
+        </video>
+
+      </div>
+
+      <div class="mobile-portfolio-info">
+
+        <span
+          data-en="PROFESSIONAL PRESENTATION"
+          data-es="PRESENTACIÓN PROFESIONAL">
+          PROFESSIONAL PRESENTATION
+        </span>
+
+        <h3
+          data-en="Professional Profile"
+          data-es="Perfil Profesional">
+          Professional Profile
+        </h3>
+
+        <p
+          data-en="Interview production, personal branding and professional presentation."
+          data-es="Producción de entrevista, marca personal y presentación profesional.">
+          Interview production, personal branding and professional presentation.
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- ================================= -->
 <section class="result-footer">
   <div class="support-card">
     <h2 data-en="Support RAPCER Development" data-es="Apoyar el Desarrollo de RAPCER">Support RAPCER Development</h2>
